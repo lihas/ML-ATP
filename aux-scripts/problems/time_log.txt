@@ -1,0 +1,475 @@
+Command exited with non-zero status 1
+Axioms 0:00.01
+Command exited with non-zero status 1
+solutions 0:00.01
+SWC001-1.p 0:00.03
+SWC002-1.p 0:00.61
+SWC003-1.p 0:00.03
+SWC004-1.p 0:00.03
+SWC005-1.p 0:00.03
+SWC006-1.p 0:00.02
+SWC007-1.p 0:00.03
+SWC008-1.p 0:00.03
+SWC009-1.p 0:00.03
+SWC010-1.p 0:00.03
+SWC011-1.p 0:00.03
+SWC012-1.p 0:00.03
+SWC013-1.p 0:00.03
+SWC014-1.p 0:00.03
+SWC015-1.p 0:00.09
+SWC016-1.p 0:00.02
+SWC017-1.p 0:00.03
+SWC018-1.p 0:00.03
+SWC019-1.p 0:00.03
+SWC020-1.p 0:00.03
+SWC021-1.p 0:00.40
+SWC022-1.p 0:00.05
+SWC023-1.p 0:00.02
+SWC024-1.p 0:00.03
+SWC025-1.p 0:00.03
+SWC026-1.p 0:00.01
+SWC027-1.p 0:00.03
+SWC028-1.p 0:00.03
+SWC029-1.p 0:00.03
+SWC030-1.p 0:00.03
+SWC031-1.p 0:00.14
+SWC032-1.p 0:00.03
+Command exited with non-zero status 7
+SWC033-1.p 4:59.60
+Command exited with non-zero status 7
+SWC034-1.p 4:59.96
+SWC035-1.p 0:00.02
+SWC036-1.p 0:00.02
+SWC037-1.p 0:00.03
+SWC038-1.p 0:00.03
+SWC039-1.p 0:00.03
+SWC040-1.p 0:00.01
+SWC041-1.p 0:00.03
+SWC042-1.p 0:00.03
+SWC043-1.p 0:00.03
+SWC044-1.p 0:00.03
+SWC045-1.p 2:54.51
+SWC046-1.p 0:00.05
+SWC047-1.p 0:00.03
+SWC048-1.p 0:00.03
+SWC049-1.p 0:00.02
+SWC050-1.p 0:00.03
+SWC051-1.p 0:00.02
+SWC052-1.p 0:00.20
+SWC053-1.p 0:00.18
+SWC054-1.p 0:00.03
+SWC055-1.p 2:34.15
+SWC056-1.p 2:32.29
+SWC057-1.p 0:00.17
+SWC058-1.p 0:00.04
+SWC059-1.p 0:00.03
+SWC060-1.p 0:00.03
+SWC061-1.p 0:00.35
+SWC062-1.p 0:11.30
+SWC063-1.p 0:00.36
+Command exited with non-zero status 7
+SWC064-1.p 4:59.84
+SWC065-1.p 0:00.25
+SWC066-1.p 0:01.69
+SWC067-1.p 0:00.04
+SWC068-1.p 0:00.03
+SWC069-1.p 0:00.03
+SWC070-1.p 0:00.18
+SWC071-1.p 0:00.05
+SWC072-1.p 0:00.37
+SWC073-1.p 0:00.19
+Command exited with non-zero status 7
+SWC074-1.p 4:59.82
+SWC075-1.p 0:00.23
+SWC076-1.p 0:00.04
+SWC077-1.p 0:00.28
+SWC078-1.p 0:14.92
+SWC079-1.p 0:00.23
+SWC080-1.p 0:00.18
+SWC081-1.p 0:00.17
+SWC082-1.p 0:00.03
+SWC083-1.p 0:00.18
+SWC084-1.p 2:31.31
+SWC085-1.p 0:00.13
+SWC086-1.p 0:00.02
+SWC087-1.p 0:09.62
+SWC088-1.p 0:10.18
+SWC089-1.p 0:00.53
+SWC090-1.p 0:00.23
+SWC091-1.p 0:06.30
+SWC092-1.p 0:00.15
+SWC093-1.p 0:05.75
+SWC094-1.p 0:00.03
+SWC095-1.p 0:00.03
+SWC096-1.p 0:00.03
+SWC097-1.p 0:00.03
+SWC098-1.p 0:00.03
+SWC099-1.p 0:01.76
+SWC100-1.p 0:00.03
+SWC101-1.p 0:00.03
+SWC102-1.p 0:00.03
+SWC103-1.p 0:00.02
+SWC104-1.p 0:00.03
+SWC105-1.p 0:00.03
+SWC106-1.p 0:00.03
+SWC107-1.p 2:39.79
+SWC108-1.p 0:00.04
+SWC109-1.p 0:00.04
+SWC110-1.p 0:00.23
+SWC111-1.p 0:01.98
+SWC112-1.p 0:00.04
+SWC113-1.p 2:34.04
+SWC114-1.p 0:00.24
+SWC115-1.p 0:00.23
+SWC116-1.p 0:00.03
+SWC117-1.p 0:08.51
+SWC118-1.p 0:00.04
+SWC119-1.p 0:00.62
+SWC120-1.p 0:00.19
+SWC121-1.p 0:00.02
+SWC122-1.p 0:00.04
+SWC123-1.p 0:06.50
+SWC124-1.p 0:00.14
+SWC125-1.p 0:02.29
+SWC126-1.p 0:13.95
+SWC127-1.p 0:00.03
+SWC128-1.p 0:00.02
+SWC129-1.p 0:00.03
+SWC130-1.p 0:00.03
+SWC131-1.p 0:00.02
+SWC132-1.p 0:00.03
+SWC133-1.p 0:00.02
+SWC134-1.p 0:00.03
+SWC135-1.p 0:00.03
+SWC136-1.p 0:00.01
+Command exited with non-zero status 7
+SWC137-1.p 4:59.86
+SWC138-1.p 0:00.02
+SWC139-1.p 0:00.02
+SWC140-1.p 0:00.02
+SWC141-1.p 0:00.02
+SWC142-1.p 0:00.02
+SWC143-1.p 0:00.02
+SWC144-1.p 0:00.02
+SWC145-1.p 0:00.02
+SWC146-1.p 0:00.02
+SWC147-1.p 0:00.02
+Command exited with non-zero status 7
+SWC148-1.p 4:59.93
+SWC149-1.p 0:00.05
+SWC150-1.p 0:00.01
+SWC151-1.p 0:00.02
+SWC152-1.p 0:00.07
+SWC153-1.p 0:00.08
+Command exited with non-zero status 7
+SWC154-1.p 4:59.70
+SWC155-1.p 3:50.19
+Command exited with non-zero status 7
+SWC156-1.p 4:59.71
+Command exited with non-zero status 7
+SWC157-1.p 4:59.69
+Command exited with non-zero status 7
+SWC158-1.p 4:59.71
+Command exited with non-zero status 7
+SWC159-1.p 4:59.48
+SWC160-1.p 0:00.08
+SWC161-1.p 0:00.06
+SWC162-1.p 0:00.07
+SWC163-1.p 0:00.08
+SWC164-1.p 0:00.08
+SWC165-1.p 0:00.08
+SWC166-1.p 0:00.06
+SWC167-1.p 0:00.06
+SWC168-1.p 0:00.09
+SWC169-1.p 0:00.07
+SWC170-1.p 0:00.07
+SWC171-1.p 0:00.08
+SWC172-1.p 0:00.08
+SWC173-1.p 0:00.08
+SWC174-1.p 0:00.06
+SWC175-1.p 0:00.06
+SWC176-1.p 0:00.09
+SWC177-1.p 0:00.07
+SWC178-1.p 0:00.07
+SWC179-1.p 0:00.03
+Command exited with non-zero status 7
+SWC180-1.p 4:59.79
+SWC181-1.p 0:00.07
+SWC182-1.p 0:00.03
+SWC183-1.p 0:00.07
+SWC184-1.p 0:00.06
+SWC185-1.p 0:00.03
+Command exited with non-zero status 7
+SWC186-1.p 4:59.79
+SWC187-1.p 0:00.18
+SWC188-1.p 0:00.04
+SWC189-1.p 0:00.03
+SWC190-1.p 0:00.05
+SWC191-1.p 0:00.04
+SWC192-1.p 0:00.04
+SWC193-1.p 0:00.04
+Command exited with non-zero status 7
+SWC194-1.p 4:59.80
+Command exited with non-zero status 7
+SWC195-1.p 4:59.66
+Command exited with non-zero status 7
+SWC196-1.p 4:59.41
+SWC197-1.p 0:00.09
+SWC198-1.p 0:00.12
+Command exited with non-zero status 7
+SWC199-1.p 4:59.65
+SWC200-1.p 0:00.04
+Command exited with non-zero status 7
+SWC201-1.p 4:59.89
+Command exited with non-zero status 7
+SWC202-1.p 4:59.70
+SWC203-1.p 0:00.02
+SWC204-1.p 0:00.03
+SWC205-1.p 0:00.03
+SWC206-1.p 0:00.03
+SWC207-1.p 0:00.02
+SWC208-1.p 0:00.01
+SWC209-1.p 0:00.01
+SWC210-1.p 0:00.03
+SWC211-1.p 0:00.03
+Command exited with non-zero status 7
+SWC212-1.p 4:59.93
+SWC213-1.p 0:00.03
+SWC214-1.p 0:17.04
+Command exited with non-zero status 7
+SWC215-1.p 4:59.78
+Command exited with non-zero status 7
+SWC216-1.p 4:59.87
+SWC217-1.p 0:00.03
+SWC218-1.p 0:00.03
+SWC219-1.p 0:00.11
+SWC220-1.p 0:00.04
+SWC221-1.p 0:00.08
+SWC222-1.p 0:00.07
+SWC223-1.p 0:00.88
+SWC224-1.p 0:00.96
+SWC225-1.p 0:00.08
+SWC226-1.p 0:00.88
+SWC227-1.p 0:01.14
+SWC228-1.p 0:00.84
+SWC229-1.p 0:01.47
+SWC230-1.p 0:00.89
+SWC231-1.p 0:00.08
+SWC232-1.p 0:00.08
+SWC233-1.p 0:00.93
+SWC234-1.p 0:00.98
+SWC235-1.p 0:00.08
+SWC236-1.p 0:01.80
+SWC237-1.p 0:00.85
+SWC238-1.p 0:01.57
+SWC239-1.p 0:00.07
+SWC240-1.p 0:00.06
+SWC241-1.p 0:00.04
+SWC242-1.p 0:00.04
+SWC243-1.p 0:00.87
+SWC244-1.p 0:00.68
+SWC245-1.p 0:00.98
+SWC246-1.p 0:00.09
+SWC247-1.p 0:00.69
+SWC248-1.p 0:01.81
+SWC249-1.p 0:00.68
+SWC250-1.p 0:00.85
+SWC251-1.p 0:01.57
+SWC252-1.p 0:00.07
+SWC253-1.p 0:00.09
+SWC254-1.p 0:00.02
+SWC255-1.p 0:00.01
+SWC256-1.p 0:00.03
+SWC257-1.p 0:00.02
+SWC258-1.p 0:00.03
+SWC259-1.p 0:00.03
+Command exited with non-zero status 7
+SWC260-1.p 4:59.62
+Command exited with non-zero status 7
+SWC261-1.p 4:59.59
+SWC262-1.p 0:00.02
+Command exited with non-zero status 7
+SWC263-1.p 4:59.94
+SWC264-1.p 2:31.63
+Command exited with non-zero status 7
+SWC265-1.p 4:59.96
+Command exited with non-zero status 7
+SWC266-1.p 4:59.86
+Command exited with non-zero status 7
+SWC267-1.p 4:59.55
+Command exited with non-zero status 7
+SWC268-1.p 4:59.62
+SWC269-1.p 0:00.02
+SWC270-1.p 0:20.91
+SWC271-1.p 0:28.87
+SWC272-1.p 0:49.97
+SWC273-1.p 0:22.46
+SWC274-1.p 0:26.95
+SWC275-1.p 0:00.03
+SWC276-1.p 0:00.03
+SWC277-1.p 0:00.03
+Command exited with non-zero status 7
+SWC278-1.p 4:59.56
+SWC279-1.p 0:00.06
+Command exited with non-zero status 7
+SWC280-1.p 4:59.62
+Command exited with non-zero status 7
+SWC281-1.p 4:59.69
+Command exited with non-zero status 7
+SWC282-1.p 4:59.77
+Command exited with non-zero status 7
+SWC283-1.p 4:59.76
+SWC284-1.p 0:00.27
+SWC285-1.p 0:00.07
+SWC286-1.p 0:00.03
+SWC287-1.p 0:00.02
+SWC288-1.p 0:00.03
+SWC289-1.p 0:00.01
+Command exited with non-zero status 7
+SWC290-1.p 4:59.98
+SWC291-1.p 0:00.01
+SWC292-1.p 0:00.02
+SWC293-1.p 0:00.02
+SWC294-1.p 0:00.02
+SWC295-1.p 0:00.53
+Command exited with non-zero status 7
+SWC296-1.p 4:59.81
+SWC297-1.p 0:00.28
+SWC298-1.p 0:00.06
+SWC299-1.p 0:00.08
+SWC300-1.p 0:00.06
+Command exited with non-zero status 7
+SWC301-1.p 4:59.70
+SWC302-1.p 0:00.08
+SWC303-1.p 0:00.08
+SWC304-1.p 0:00.06
+SWC305-1.p 0:00.08
+SWC306-1.p 0:00.06
+SWC307-1.p 0:00.05
+SWC308-1.p 0:00.07
+SWC309-1.p 0:00.03
+SWC310-1.p 0:00.05
+SWC311-1.p 0:00.03
+SWC312-1.p 0:00.03
+SWC313-1.p 0:00.06
+SWC314-1.p 0:00.03
+SWC315-1.p 0:00.04
+SWC316-1.p 0:00.03
+SWC317-1.p 0:00.03
+Command exited with non-zero status 7
+SWC318-1.p 4:59.94
+Command exited with non-zero status 7
+SWC319-1.p 4:59.82
+SWC320-1.p 0:00.03
+Command exited with non-zero status 7
+SWC321-1.p 4:59.98
+SWC322-1.p 0:00.03
+SWC323-1.p 0:00.03
+SWC324-1.p 0:00.07
+SWC325-1.p 0:00.03
+Command exited with non-zero status 7
+SWC326-1.p 4:59.82
+SWC327-1.p 0:00.04
+SWC328-1.p 0:00.03
+SWC329-1.p 2:32.31
+SWC330-1.p 0:00.04
+SWC331-1.p 0:00.25
+SWC332-1.p 0:00.03
+SWC333-1.p 0:00.02
+Command exited with non-zero status 7
+SWC334-1.p 4:59.62
+SWC335-1.p 2:32.22
+SWC336-1.p 0:00.04
+Command exited with non-zero status 7
+SWC337-1.p 4:59.58
+Command exited with non-zero status 7
+SWC338-1.p 4:59.82
+SWC339-1.p 0:00.04
+SWC340-1.p 3:44.59
+SWC341-1.p 2:31.30
+SWC342-1.p 2:32.31
+SWC343-1.p 0:00.26
+Command exited with non-zero status 7
+SWC344-1.p 4:59.68
+SWC345-1.p 2:32.32
+SWC346-1.p 0:00.04
+SWC347-1.p 0:00.13
+SWC348-1.p 0:00.03
+SWC349-1.p 0:00.02
+SWC350-1.p 0:00.02
+SWC351-1.p 0:00.03
+SWC352-1.p 0:00.03
+SWC353-1.p 0:00.03
+SWC354-1.p 0:00.19
+SWC355-1.p 0:00.12
+SWC356-1.p 2:31.32
+SWC357-1.p 0:00.16
+SWC358-1.p 0:00.02
+SWC359-1.p 0:00.02
+SWC360-1.p 0:00.02
+SWC361-1.p 0:00.02
+SWC362-1.p 0:00.02
+SWC363-1.p 0:05.39
+SWC364-1.p 0:00.05
+SWC365-1.p 0:00.02
+SWC366-1.p 0:00.03
+SWC367-1.p 0:00.02
+SWC368-1.p 2:31.31
+SWC369-1.p 0:00.02
+SWC370-1.p 0:00.25
+SWC371-1.p 0:00.13
+SWC372-1.p 0:00.13
+SWC373-1.p 0:00.03
+SWC374-1.p 2:31.32
+SWC375-1.p 0:00.01
+SWC376-1.p 3:55.09
+SWC377-1.p 3:48.68
+SWC378-1.p 0:00.06
+SWC379-1.p 0:00.03
+SWC380-1.p 0:00.03
+SWC381-1.p 0:00.03
+SWC382-1.p 0:00.23
+SWC383-1.p 2:41.26
+SWC384-1.p 0:00.04
+SWC385-1.p 0:00.02
+SWC386-1.p 0:00.03
+SWC387-1.p 0:00.03
+SWC388-1.p 0:00.44
+SWC389-1.p 0:00.04
+SWC390-1.p 0:12.89
+SWC391-1.p 0:00.02
+SWC392-1.p 0:00.06
+SWC393-1.p 0:00.27
+SWC394-1.p 0:00.35
+SWC395-1.p 0:00.58
+SWC396-1.p 0:00.15
+SWC397-1.p 0:00.30
+SWC398-1.p 0:00.04
+SWC399-1.p 0:00.26
+SWC400-1.p 0:00.46
+SWC401-1.p 0:00.47
+SWC402-1.p 0:00.24
+SWC403-1.p 0:00.47
+SWC404-1.p 0:00.68
+SWC405-1.p 0:00.03
+SWC406-1.p 0:00.03
+SWC407-1.p 0:00.06
+SWC408-1.p 0:00.03
+SWC409-1.p 0:14.54
+SWC410-1.p 0:00.58
+SWC411-1.p 0:00.03
+SWC412-1.p 3:45.54
+SWC413-1.p 4:07.46
+SWC414-1.p 4:07.92
+SWC415-1.p 0:00.03
+SWC416-1.p 0:00.03
+SWC417-1.p 0:00.03
+SWC418-1.p 0:00.04
+SWC419-1.p 0:00.03
+SWC420-1.p 0:00.12
+SWC421-1.p 0:00.05
+SWC422-1.p 0:00.03
+Command exited with non-zero status 7
+SWC423-1.p 5:00.01
+Command exited with non-zero status 5
+SWC425^7.p 0:00.00
