@@ -1,0 +1,17 @@
+# Version: 1.9
+# No SInE strategy applied
+# Trying AutoSched0 for 151 seconds
+# AutoSched0-Mode selected heuristic G_E___208_C18_F1_SE_CS_SP_PS_S2k
+# and selection function SelectCQArNTEqFirst.
+#
+# Preprocessing time       : 0.014 s
+# Presaturation interreduction done
+# No success with AutoSched0
+# Trying AutoSched1 for 73 seconds
+# AutoSched1-Mode selected heuristic G_E___208_C41_F1_AE_CS_SP_PS_S00
+# and selection function NoSelection.
+#
+# Preprocessing time       : 0.017 s
+# Presaturation interreduction done
+# No success with AutoSched1
+# Trying AutoSched2 for 23 seconds

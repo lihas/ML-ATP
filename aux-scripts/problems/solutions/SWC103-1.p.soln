@@ -1,0 +1,30 @@
+# Version: 1.9
+# No SInE strategy applied
+# Trying AutoSched0 for 151 seconds
+# AutoSched0-Mode selected heuristic G_E___208_C18_F1_SE_CS_SP_PS_S2k
+# and selection function SelectCQArNTEqFirst.
+#
+# Preprocessing time       : 0.013 s
+# Presaturation interreduction done
+
+# Proof found!
+# SZS status Unsatisfiable
+# SZS output start CNFRefutation.
+cnf(c_0_0, negated_conjecture, (neq(sk2,nil)), file('SWC103-1.p', co1_7)).
+cnf(c_0_1, negated_conjecture, (sk2=sk4), file('SWC103-1.p', co1_5)).
+cnf(c_0_2, negated_conjecture, (~neq(sk1,nil)|~frontsegP(sk2,sk1)), file('SWC103-1.p', co1_9)).
+cnf(c_0_3, negated_conjecture, (sk1=sk3), file('SWC103-1.p', co1_6)).
+cnf(c_0_4, negated_conjecture, (frontsegP(sk4,sk3)|~neq(sk4,nil)), file('SWC103-1.p', co1_11)).
+cnf(c_0_5, negated_conjecture, (neq(sk3,nil)|~neq(sk4,nil)), file('SWC103-1.p', co1_10)).
+cnf(c_0_6, negated_conjecture, (neq(sk4,nil)), inference(rw,[status(thm)],[c_0_0, c_0_1])).
+cnf(c_0_7, negated_conjecture, (~neq(sk3,nil)|~frontsegP(sk4,sk3)), inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[c_0_2, c_0_1]), c_0_3]), c_0_3])).
+cnf(c_0_8, negated_conjecture, (frontsegP(sk4,sk3)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[c_0_4, c_0_6])])).
+cnf(c_0_9, negated_conjecture, (~neq(sk3,nil)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[c_0_7, c_0_8])])).
+cnf(c_0_10, negated_conjecture, ($false), inference(sr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[c_0_5, c_0_6])]), c_0_9]), ['proof']).
+# SZS output end CNFRefutation.
+
+# -------------------------------------------------
+# User time                : 0.017 s
+# System time              : 0.003 s
+# Total time               : 0.020 s
+# Maximum resident set size: 1880 pages
