@@ -1,0 +1,41 @@
+# Version: 1.9
+# No SInE strategy applied
+# Trying AutoSched0 for 151 seconds
+# AutoSched0-Mode selected heuristic G_E___208_C18_F1_SE_CS_SP_PS_S2k
+# and selection function SelectCQArNTEqFirst.
+#
+# Preprocessing time       : 0.013 s
+# Presaturation interreduction done
+
+# Proof found!
+# SZS status Unsatisfiable
+# SZS output start CNFRefutation.
+cnf(c_0_0, negated_conjecture, (~ssList(X1)|~neq(X1,nil)|~frontsegP(sk2,X1)|~frontsegP(sk1,X1)), file('SWC020-1.p', co1_7)).
+cnf(c_0_1, negated_conjecture, (sk1=sk3), file('SWC020-1.p', co1_6)).
+cnf(c_0_2, negated_conjecture, (sk2=sk4), file('SWC020-1.p', co1_5)).
+cnf(c_0_3, negated_conjecture, (ssList(sk1)), file('SWC020-1.p', co1_1)).
+cnf(c_0_4, axiom, (frontsegP(X1,X1)|~ssList(X1)), file('Axioms/SWC001-0.ax', clause61)).
+cnf(c_0_5, axiom, (frontsegP(X1,nil)|~ssList(X1)), file('Axioms/SWC001-0.ax', clause60)).
+cnf(c_0_6, axiom, (ssList(nil)), file('Axioms/SWC001-0.ax', clause8)).
+cnf(c_0_7, negated_conjecture, (ssList(sk2)), file('SWC020-1.p', co1_2)).
+cnf(c_0_8, negated_conjecture, (nil=sk3|frontsegP(sk4,sk3)), file('SWC020-1.p', co1_12)).
+cnf(c_0_9, negated_conjecture, (nil=sk3|neq(sk3,nil)), file('SWC020-1.p', co1_11)).
+cnf(c_0_10, negated_conjecture, (nil!=sk2|nil!=sk1), file('SWC020-1.p', co1_8)).
+cnf(c_0_11, negated_conjecture, (nil=sk4|neq(sk3,nil)), file('SWC020-1.p', co1_9)).
+cnf(c_0_12, negated_conjecture, (~neq(X1,nil)|~frontsegP(sk3,X1)|~frontsegP(sk4,X1)|~ssList(X1)), inference(rw,[status(thm)],[inference(rw,[status(thm)],[c_0_0, c_0_1]), c_0_2])).
+cnf(c_0_13, negated_conjecture, (ssList(sk3)), inference(rw,[status(thm)],[c_0_3, c_0_1])).
+cnf(c_0_14, negated_conjecture, (~neq(sk3,nil)|~frontsegP(sk4,sk3)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_12, c_0_4]), c_0_13])])).
+cnf(c_0_15, negated_conjecture, (~neq(nil,nil)|~frontsegP(sk4,nil)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_12, c_0_5]), c_0_6]), c_0_13])])).
+cnf(c_0_16, negated_conjecture, (ssList(sk4)), inference(rw,[status(thm)],[c_0_7, c_0_2])).
+cnf(c_0_17, negated_conjecture, (sk3=nil), inference(csr,[status(thm)],[inference(spm,[status(thm)],[c_0_14, c_0_8]), c_0_9])).
+cnf(c_0_18, negated_conjecture, (~neq(nil,nil)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_15, c_0_5]), c_0_16])])).
+cnf(c_0_19, negated_conjecture, (sk3!=nil|sk4!=nil), inference(rw,[status(thm)],[inference(rw,[status(thm)],[c_0_10, c_0_1]), c_0_2])).
+cnf(c_0_20, negated_conjecture, (sk4=nil), inference(sr,[status(thm)],[inference(rw,[status(thm)],[c_0_11, c_0_17]), c_0_18])).
+cnf(c_0_21, negated_conjecture, ($false), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[c_0_19, c_0_17])]), c_0_20])]), ['proof']).
+# SZS output end CNFRefutation.
+
+# -------------------------------------------------
+# User time                : 0.026 s
+# System time              : 0.004 s
+# Total time               : 0.030 s
+# Maximum resident set size: 1880 pages

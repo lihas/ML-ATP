@@ -1,0 +1,53 @@
+# Version: 1.9
+# No SInE strategy applied
+# Trying AutoSched0 for 151 seconds
+# AutoSched0-Mode selected heuristic G_E___208_C18_F1_SE_CS_SP_PS_S2k
+# and selection function SelectCQArNTEqFirst.
+#
+# Preprocessing time       : 0.012 s
+# Presaturation interreduction done
+
+# Proof found!
+# SZS status Unsatisfiable
+# SZS output start CNFRefutation.
+cnf(c_0_0, negated_conjecture, (sk3=X1|~ssList(X1)|~ssList(X2)|~ssList(X3)|tl(sk4)!=X2|app(X2,X3)!=X1|~ssItem(X4)|cons(X4,nil)!=X3|hd(sk4)!=X4|~neq(nil,sk4)|~neq(nil,sk4)|~neq(sk4,nil)), file('SWC311-1.p', co1_8)).
+cnf(c_0_1, negated_conjecture, (sk1=sk3), file('SWC311-1.p', co1_6)).
+cnf(c_0_2, negated_conjecture, (sk2=sk4), file('SWC311-1.p', co1_5)).
+cnf(c_0_3, axiom, (ssList(app(X2,X1))|~ssList(X1)|~ssList(X2)), file('Axioms/SWC001-0.ax', clause85)).
+cnf(c_0_4, axiom, (neq(X2,X1)|X2=X1|~ssList(X1)|~ssList(X2)), file('Axioms/SWC001-0.ax', clause100)).
+cnf(c_0_5, axiom, (ssList(nil)), file('Axioms/SWC001-0.ax', clause8)).
+cnf(c_0_6, negated_conjecture, (ssList(sk2)), file('SWC311-1.p', co1_2)).
+cnf(c_0_7, negated_conjecture, (nil=sk2|neq(sk2,nil)), file('SWC311-1.p', co1_9)).
+cnf(c_0_8, axiom, (ssItem(hd(X1))|nil=X1|~ssList(X1)), file('Axioms/SWC001-0.ax', clause76)).
+cnf(c_0_9, axiom, (ssList(tl(X1))|nil=X1|~ssList(X1)), file('Axioms/SWC001-0.ax', clause75)).
+cnf(c_0_10, axiom, (ssList(cons(X1,X2))|~ssItem(X1)|~ssList(X2)), file('Axioms/SWC001-0.ax', clause86)).
+cnf(c_0_11, negated_conjecture, (nil=sk2|~ssItem(X1)|~ssList(X2)|app(cons(X1,nil),X2)!=sk2|app(X2,cons(X1,nil))!=sk1), file('SWC311-1.p', co1_10)).
+cnf(c_0_12, axiom, (app(cons(X1,nil),X2)=cons(X1,X2)|~ssItem(X1)|~ssList(X2)), file('Axioms/SWC001-0.ax', clause120)).
+cnf(c_0_13, axiom, (cons(hd(X1),tl(X1))=X1|nil=X1|~ssList(X1)), file('Axioms/SWC001-0.ax', clause104)).
+cnf(c_0_14, negated_conjecture, (nil=sk3|nil!=sk4), file('SWC311-1.p', co1_7)).
+cnf(c_0_15, axiom, (X1!=X2|~neq(X1,X2)|~ssList(X2)|~ssList(X1)), file('Axioms/SWC001-0.ax', clause115)).
+cnf(c_0_16, negated_conjecture, (neq(sk2,nil)|nil!=sk1), file('SWC311-1.p', co1_11)).
+cnf(c_0_17, negated_conjecture, (sk3=X1|tl(sk4)!=X2|hd(sk4)!=X4|app(X2,X3)!=X1|cons(X4,nil)!=X3|~ssList(X3)|~ssList(X2)|~ssList(X1)|~ssItem(X4)|~neq(nil,sk4)|~neq(sk4,nil)), inference(cn,[status(thm)],[c_0_0])).
+cnf(c_0_18, negated_conjecture, (app(tl(sk2),cons(hd(sk2),nil))=sk1|~neq(nil,sk2)|~neq(sk2,nil)|~ssItem(hd(sk2))|~ssList(cons(hd(sk2),nil))|~ssList(tl(sk2))), inference(csr,[status(thm)],[inference(er,[status(thm)],[inference(er,[status(thm)],[inference(er,[status(thm)],[inference(er,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[c_0_17, c_0_1]), c_0_2]), c_0_2]), c_0_2]), c_0_2])])])])]), c_0_3])).
+cnf(c_0_19, negated_conjecture, (app(tl(sk2),cons(hd(sk2),nil))=sk1|sk2=nil|~ssItem(hd(sk2))|~ssList(cons(hd(sk2),nil))|~ssList(tl(sk2))), inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_18, c_0_4]), c_0_5]), c_0_6])]), c_0_7])).
+cnf(c_0_20, negated_conjecture, (app(tl(sk2),cons(hd(sk2),nil))=sk1|sk2=nil|~ssList(cons(hd(sk2),nil))|~ssList(tl(sk2))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_19, c_0_8]), c_0_6])])).
+cnf(c_0_21, negated_conjecture, (app(tl(sk2),cons(hd(sk2),nil))=sk1|sk2=nil|~ssList(cons(hd(sk2),nil))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_20, c_0_9]), c_0_6])])).
+cnf(c_0_22, negated_conjecture, (app(tl(sk2),cons(hd(sk2),nil))=sk1|sk2=nil|~ssItem(hd(sk2))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_21, c_0_10]), c_0_5])])).
+cnf(c_0_23, negated_conjecture, (app(tl(sk2),cons(hd(sk2),nil))=sk1|sk2=nil), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_22, c_0_8]), c_0_6])])).
+cnf(c_0_24, negated_conjecture, (sk2=nil|app(cons(hd(sk2),nil),tl(sk2))!=sk2|~ssItem(hd(sk2))|~ssList(tl(sk2))), inference(spm,[status(thm)],[c_0_11, c_0_23])).
+cnf(c_0_25, negated_conjecture, (sk2=nil|cons(hd(sk2),tl(sk2))!=sk2|~ssItem(hd(sk2))|~ssList(tl(sk2))), inference(spm,[status(thm)],[c_0_24, c_0_12])).
+cnf(c_0_26, negated_conjecture, (sk2=nil|~ssItem(hd(sk2))|~ssList(tl(sk2))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_25, c_0_13]), c_0_6])])).
+cnf(c_0_27, negated_conjecture, (sk2=nil|~ssList(tl(sk2))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_26, c_0_8]), c_0_6])])).
+cnf(c_0_28, negated_conjecture, (sk1=nil|sk2!=nil), inference(rw,[status(thm)],[inference(rw,[status(thm)],[c_0_14, c_0_1]), c_0_2])).
+cnf(c_0_29, negated_conjecture, (sk2=nil), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_27, c_0_9]), c_0_6])])).
+cnf(c_0_30, negated_conjecture, (sk1=nil), inference(cn,[status(thm)],[inference(rw,[status(thm)],[c_0_28, c_0_29])])).
+cnf(c_0_31, plain, (~neq(X1,X1)|~ssList(X1)), inference(er,[status(thm)],[c_0_15])).
+cnf(c_0_32, negated_conjecture, (neq(nil,nil)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[c_0_16, c_0_29]), c_0_30])])).
+cnf(c_0_33, negated_conjecture, ($false), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_31, c_0_32]), c_0_5])]), ['proof']).
+# SZS output end CNFRefutation.
+
+# -------------------------------------------------
+# User time                : 0.030 s
+# System time              : 0.004 s
+# Total time               : 0.033 s
+# Maximum resident set size: 1884 pages

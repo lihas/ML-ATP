@@ -1,0 +1,111 @@
+   --------------------------------------------------------------------------
+
+                   TSTP Solution File: SWC194-1 by E---1.9.1
+
+                     [1]View Problem - [2]Process Solution
+
+   --------------------------------------------------------------------------
+
+ %------------------------------------------------------------------------------
+ % File       : E---1.9.1
+ % Problem    : [3]SWC194-1 : TPTP v6.4.0. Released v2.4.0.
+ % Transform  : none
+ % Format     : tptp:raw
+ % Command    : eprover --auto-schedule --definitional-cnf=24 -R --print-version --tstp-format -s --proof-object --cpu-limit=%d %s
+
+ % Computer   : n114.star.cs.uiowa.edu
+ % Model      : x86_64 x86_64
+ % CPU        : Intel(R) Xeon(R) CPU E5-2609 0 2.40GHz
+ % Memory     : 32218.75MB
+ % OS         : Linux 3.10.0-327.10.1.el7.x86_64
+ % CPULimit   : 300s
+ % DateTime   : Wed May 11 11:17:01 EDT 2016
+
+ % Result     : Timeout 288.88s
+ % Output     : None
+ % Verified   :
+ % Statistics : -
+
+ % Comments   :
+ %------------------------------------------------------------------------------
+ %----No solution output by system
+ %------------------------------------------------------------------------------
+ %----ORIGINAL SYSTEM OUTPUT
+ % 0.00/0.03  % Problem    : SWC194-1 : TPTP v6.4.0. Released v2.4.0.
+ % 0.00/0.04  % Command    : eprover --auto-schedule --definitional-cnf=24 -R --print-version --tstp-format -s --proof-object --cpu-limit=%d %s
+ % 0.03/0.22  % Computer   : n114.star.cs.uiowa.edu
+ % 0.03/0.22  % Model      : x86_64 x86_64
+ % 0.03/0.22  % CPU        : Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz
+ % 0.03/0.22  % Memory     : 32218.75MB
+ % 0.03/0.22  % OS         : Linux 3.10.0-327.10.1.el7.x86_64
+ % 0.03/0.22  % CPULimit   : 300
+ % 0.03/0.22  % DateTime   : Tue May 10 20:37:23 CDT 2016
+ % 0.03/0.22  % CPUTime    :
+ % 0.03/0.22  # Version: 1.9.1pre011
+ % 0.03/0.23  # No SInE strategy applied
+ % 0.03/0.23  # Trying AutoSched0 for 151 seconds
+ % 151.11/151.23  # AutoSched0-Mode selected heuristic G_E___208_C18_F1_SE_CS_SP_PS_S2k
+ % 151.11/151.23  # and selection function SelectCQArNTEqFirst.
+ % 151.11/151.23  #
+ % 151.11/151.23  # Preprocessing time       : 0.009 s
+ % 151.11/151.23  # Presaturation interreduction done
+ % 151.41/151.50  # No success with AutoSched0
+ % 151.41/151.50  # Trying AutoSched1 for 73 seconds
+ % 224.35/224.50  # AutoSched1-Mode selected heuristic G_E___208_C41_F1_AE_CS_SP_PS_S00
+ % 224.35/224.50  # and selection function NoSelection.
+ % 224.35/224.50  #
+ % 224.35/224.50  # Preprocessing time       : 0.010 s
+ % 224.35/224.50  # Presaturation interreduction done
+ % 224.53/224.70  # No success with AutoSched1
+ % 224.53/224.70  # Trying AutoSched2 for 23 seconds
+ % 247.56/247.70  # AutoSched2-Mode selected heuristic G_E___208_C18_F1_SE_CS_SP_PS_S2p
+ % 247.56/247.70  # and selection function SelectCQIArNXTEqFirst.
+ % 247.56/247.70  #
+ % 247.56/247.70  # Preprocessing time       : 0.010 s
+ % 247.56/247.70  # Presaturation interreduction done
+ % 247.65/247.75  # No success with AutoSched2
+ % 247.65/247.75  # Trying AutoSched3 for 17 seconds
+ % 264.66/264.75  # AutoSched3-Mode selected heuristic G_E___200_B02_F1_SE_CS_SP_PI_S0S
+ % 264.66/264.75  # and selection function SelectComplexG.
+ % 264.66/264.75  #
+ % 264.66/264.75  # Preprocessing time       : 0.010 s
+ % 264.76/264.87  # No success with AutoSched3
+ % 264.76/264.87  # Trying AutoSched4 for 12 seconds
+ % 276.77/276.87  # AutoSched4-Mode selected heuristic G_E___060_C18_F1_PI_SE_CS_SP_S0Y
+ % 276.77/276.87  # and selection function SelectMaxLComplexAvoidPosPred.
+ % 276.77/276.87  #
+ % 276.77/276.87  # Preprocessing time       : 0.010 s
+ % 276.87/276.91  # No success with AutoSched4
+ % 276.87/276.91  # Trying AutoSched5 for 8 seconds
+ % 284.89/284.91  # AutoSched5-Mode selected heuristic G_E___107_B03_F1_PI_AE_Q4_CS_SP_PS_S0Y
+ % 284.89/284.91  # and selection function SelectMaxLComplexAvoidPosPred.
+ % 284.89/284.91  #
+ % 284.89/284.91  # Preprocessing time       : 0.010 s
+ % 284.89/284.91  # Presaturation interreduction done
+ % 284.89/284.94  # No success with AutoSched5
+ % 284.89/284.94  # Trying AutoSched6 for 4 seconds
+ % 288.88/288.94  # AutoSched6-Mode selected heuristic G_E___200_B02_F1_AE_CS_SP_PI_S2k
+ % 288.88/288.94  # and selection function SelectCQArNTEqFirst.
+ % 288.88/288.94  #
+ % 288.88/288.94  # Preprocessing time       : 0.010 s
+ % 288.88/288.95  # No success with AutoSched6
+ % 288.88/288.95  # Trying AutoSched7 for 11 seconds
+ % 299.89/299.95  # AutoSched7-Mode selected heuristic G_E___107_C45_F1_PI_AE_Q7_CS_SP_PS_S0Y
+ % 299.89/299.95  # and selection function SelectMaxLComplexAvoidPosPred.
+ % 299.89/299.95  #
+ % 299.89/299.95  # Preprocessing time       : 0.010 s
+ % 299.89/299.95  # Presaturation interreduction done
+ % 299.89/299.99
+ % 299.89/299.99  # Failure: Resource limit exceeded (time)
+ % 299.89/299.99  # SZS status ResourceOut
+ % 299.89/299.99  eprover: CPU time limit exceeded, terminating
+ % 299.89/299.99  # No success with AutoSched7
+ % 299.89/299.99
+ % 299.89/299.99  # -------------------------------------------------
+ % 299.89/299.99  # User time                : 292.603 s
+ % 299.89/299.99  # System time              : 7.342 s
+ % 299.89/299.99  # Total time               : 299.945 s
+ % 299.89/299.99  # Maximum resident set size: 1864 pages
+ %------------------------------------------------------------------------------
+
+   --------------------------------------------------------------------------
