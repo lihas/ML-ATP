@@ -1,0 +1,171 @@
+   --------------------------------------------------------------------------
+
+                   TSTP Solution File: SWC359+1 by E---1.9.1
+
+                     [1]View Problem - [2]Process Solution
+
+   --------------------------------------------------------------------------
+
+ %------------------------------------------------------------------------------
+ % File       : E---1.9.1
+ % Problem    : [3]SWC359+1 : TPTP v6.4.0. Released v2.4.0.
+ % Transform  : none
+ % Format     : tptp:raw
+ % Command    : eprover --auto-schedule --definitional-cnf=24 -R --print-version --tstp-format -s --proof-object --cpu-limit=%d %s
+
+ % Computer   : n098.star.cs.uiowa.edu
+ % Model      : x86_64 x86_64
+ % CPU        : Intel(R) Xeon(R) CPU E5-2609 0 2.40GHz
+ % Memory     : 32218.75MB
+ % OS         : Linux 3.10.0-327.10.1.el7.x86_64
+ % CPULimit   : 300s
+ % DateTime   : Wed May 11 11:17:38 EDT 2016
+
+ % Result     : Theorem 0.03s
+ % Output     : CNFRefutation 0.03s
+ % Verified   :
+ % Statistics : Number of formulae       :    9 (  18 expanded)
+ %              Number of clauses        :    6 (   6 expanded)
+ %              Number of leaves         :    1 (   4 expanded)
+ %              Depth                    :    5
+ %              Number of atoms          :   51 ( 186 expanded)
+ %              Number of equality atoms :    8 (  26 expanded)
+ %              Maximal formula depth    :   21 (   7 average)
+ %              Maximal clause size      :   15 (   1 average)
+ %              Maximal term depth       :    1 (   1 average)
+
+ % Comments   :
+ %------------------------------------------------------------------------------
+ fof(c_0_0,conjecture,(
+     ! [X1] :
+       ( ssList(X1)
+      => ! [X2] :
+           ( ssList(X2)
+          => ! [X3] :
+               ( ssList(X3)
+              => ! [X4] :
+                   ( ssList(X4)
+                  => ( X2 != X4
+                     | X1 != X3
+                     | ~ neq(X2,nil)
+                     | ~ segmentP(X4,X3)
+                     | ~ equalelemsP(X3)
+                     | ? [X5] :
+                         ( ssList(X5)
+                         & neq(X3,X5)
+                         & segmentP(X4,X5)
+                         & segmentP(X5,X3)
+                         & equalelemsP(X5) )
+                     | segmentP(X2,X1) ) ) ) ) ) ),
+     file('/export/starexec/sandbox2/benchmark/theBenchmark.p',co1)).
+
+ fof(c_0_1,negated_conjecture,(
+     ~ ! [X1] :
+         ( ssList(X1)
+        => ! [X2] :
+             ( ssList(X2)
+            => ! [X3] :
+                 ( ssList(X3)
+                => ! [X4] :
+                     ( ssList(X4)
+                    => ( X2 != X4
+                       | X1 != X3
+                       | ~ neq(X2,nil)
+                       | ~ segmentP(X4,X3)
+                       | ~ equalelemsP(X3)
+                       | ? [X5] :
+                           ( ssList(X5)
+                           & neq(X3,X5)
+                           & segmentP(X4,X5)
+                           & segmentP(X5,X3)
+                           & equalelemsP(X5) )
+                       | segmentP(X2,X1) ) ) ) ) ) ),
+     inference(fof_simplification,[status(thm)],[inference(assume_negation,[status(cth)],[c_0_0])])).
+
+ fof(c_0_2,negated_conjecture,(
+     ! [X10] :
+       ( ssList(esk48_0)
+       & ssList(esk49_0)
+       & ssList(esk50_0)
+       & ssList(esk51_0)
+       & esk49_0 = esk51_0
+       & esk48_0 = esk50_0
+       & neq(esk49_0,nil)
+       & segmentP(esk51_0,esk50_0)
+       & equalelemsP(esk50_0)
+       & ( ~ ssList(X10)
+         | ~ neq(esk50_0,X10)
+         | ~ segmentP(esk51_0,X10)
+         | ~ segmentP(X10,esk50_0)
+         | ~ equalelemsP(X10) )
+       & ~ segmentP(esk49_0,esk48_0) ) ),
+     inference(shift_quantors,[status(thm)],[inference(skolemize,[status(esa)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_1])])])])).
+
+ cnf(c_0_3,negated_conjecture,
+     ( ~ segmentP(esk49_0,esk48_0) ),
+     inference(split_conjunct,[status(thm)],[[4]c_0_2])).
+
+ cnf(c_0_4,negated_conjecture,
+     ( esk49_0 = esk51_0 ),
+     inference(split_conjunct,[status(thm)],[[5]c_0_2])).
+
+ cnf(c_0_5,negated_conjecture,
+     ( esk48_0 = esk50_0 ),
+     inference(split_conjunct,[status(thm)],[[6]c_0_2])).
+
+ cnf(c_0_6,negated_conjecture,
+     ( segmentP(esk51_0,esk50_0) ),
+     inference(split_conjunct,[status(thm)],[[7]c_0_2])).
+
+ cnf(c_0_7,negated_conjecture,
+     ( ~ segmentP(esk51_0,esk50_0) ),
+     inference(rw,[status(thm)],[inference(rw,[status(thm)],[[8]c_0_3,c_0_4]),[9]c_0_5])).
+
+ cnf(c_0_8,negated_conjecture,
+     ( $false ),
+     inference(sr,[status(thm)],[[10]c_0_6,[11]c_0_7]),
+     [proof]).
+ %------------------------------------------------------------------------------
+ %----ORIGINAL SYSTEM OUTPUT
+ % 0.00/0.03  % Problem    : SWC359+1 : TPTP v6.4.0. Released v2.4.0.
+ % 0.00/0.04  % Command    : eprover --auto-schedule --definitional-cnf=24 -R --print-version --tstp-format -s --proof-object --cpu-limit=%d %s
+ % 0.03/0.23  % Computer   : n098.star.cs.uiowa.edu
+ % 0.03/0.23  % Model      : x86_64 x86_64
+ % 0.03/0.23  % CPU        : Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz
+ % 0.03/0.23  % Memory     : 32218.75MB
+ % 0.03/0.23  % OS         : Linux 3.10.0-327.10.1.el7.x86_64
+ % 0.03/0.23  % CPULimit   : 300
+ % 0.03/0.23  % DateTime   : Tue May 10 20:42:23 CDT 2016
+ % 0.03/0.23  % CPUTime    :
+ % 0.03/0.23  # Version: 1.9.1pre011
+ % 0.03/0.23  # No SInE strategy applied
+ % 0.03/0.23  # Trying AutoSched0 for 151 seconds
+ % 0.03/0.25  # AutoSched0-Mode selected heuristic G_E___208_C18_F1_SE_CS_SP_PS_S4c
+ % 0.03/0.25  # and selection function SelectCQPrecWNTNp.
+ % 0.03/0.25  #
+ % 0.03/0.25  # Preprocessing time       : 0.014 s
+ % 0.03/0.25  # Presaturation interreduction done
+ % 0.03/0.25
+ % 0.03/0.25  # Proof found!
+ % 0.03/0.25  # SZS status Theorem
+ % 0.03/0.25  # SZS output start CNFRefutation
+ % 0.03/0.25  fof(c_0_0, conjecture, (![X1]:(ssList(X1)=>![X2]:(ssList(X2)=>![X3]:(ssList(X3)=>![X4]:(ssList(X4)=>((((((X2!=X4|X1!=X3)|~(neq(X2,nil)))|~(segmentP(X4,X3)))|~(equalelemsP(X3)))|?[X5]:((((ssList(X5)&neq(X3,X5))&segmentP(X4,X5))&segmentP(X5,X3))&equalelemsP(X5)))|segmentP(X2,X1))))))), file('/export/starexec/sandbox2/benchmark/theBenchmark.p', co1)).
+ % 0.03/0.25  fof(c_0_1, negated_conjecture, (~(![X1]:(ssList(X1)=>![X2]:(ssList(X2)=>![X3]:(ssList(X3)=>![X4]:(ssList(X4)=>((((((X2!=X4|X1!=X3)|~neq(X2,nil))|~segmentP(X4,X3))|~equalelemsP(X3))|?[X5]:((((ssList(X5)&neq(X3,X5))&segmentP(X4,X5))&segmentP(X5,X3))&equalelemsP(X5)))|segmentP(X2,X1)))))))), inference(fof_simplification,[status(thm)],[inference(assume_negation,[status(cth)],[c_0_0])])).
+ % 0.03/0.25  fof(c_0_2, negated_conjecture, (![X10]:(ssList(esk48_0)&(ssList(esk49_0)&(ssList(esk50_0)&(ssList(esk51_0)&((((((esk49_0=esk51_0&esk48_0=esk50_0)&neq(esk49_0,nil))&segmentP(esk51_0,esk50_0))&equalelemsP(esk50_0))&((((~ssList(X10)|~neq(esk50_0,X10))|~segmentP(esk51_0,X10))|~segmentP(X10,esk50_0))|~equalelemsP(X10)))&~segmentP(esk49_0,esk48_0))))))), inference(shift_quantors,[status(thm)],[inference(skolemize,[status(esa)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_1])])])])).
+ % 0.03/0.25  cnf(c_0_3, negated_conjecture, (~segmentP(esk49_0,esk48_0)), inference(split_conjunct,[status(thm)],[c_0_2])).
+ % 0.03/0.25  cnf(c_0_4, negated_conjecture, (esk49_0=esk51_0), inference(split_conjunct,[status(thm)],[c_0_2])).
+ % 0.03/0.25  cnf(c_0_5, negated_conjecture, (esk48_0=esk50_0), inference(split_conjunct,[status(thm)],[c_0_2])).
+ % 0.03/0.25  cnf(c_0_6, negated_conjecture, (segmentP(esk51_0,esk50_0)), inference(split_conjunct,[status(thm)],[c_0_2])).
+ % 0.03/0.25  cnf(c_0_7, negated_conjecture, (~segmentP(esk51_0,esk50_0)), inference(rw,[status(thm)],[inference(rw,[status(thm)],[c_0_3, c_0_4]), c_0_5])).
+ % 0.03/0.25  cnf(c_0_8, negated_conjecture, ($false), inference(sr,[status(thm)],[c_0_6, c_0_7]), ['proof']).
+ % 0.03/0.25  # SZS output end CNFRefutation
+ % 0.03/0.25  # Training examples: 0 positive, 0 negative
+ % 0.03/0.25
+ % 0.03/0.25  # -------------------------------------------------
+ % 0.03/0.25  # User time                : 0.015 s
+ % 0.03/0.25  # System time              : 0.002 s
+ % 0.03/0.25  # Total time               : 0.018 s
+ % 0.03/0.25  # Maximum resident set size: 1872 pages
+ %------------------------------------------------------------------------------
+
+   --------------------------------------------------------------------------

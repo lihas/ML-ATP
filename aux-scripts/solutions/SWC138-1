@@ -1,0 +1,91 @@
+   --------------------------------------------------------------------------
+
+                   TSTP Solution File: SWC138-1 by E---1.9.1
+
+                     [1]View Problem - [2]Process Solution
+
+   --------------------------------------------------------------------------
+
+ %------------------------------------------------------------------------------
+ % File       : E---1.9.1
+ % Problem    : [3]SWC138-1 : TPTP v6.4.0. Released v2.4.0.
+ % Transform  : none
+ % Format     : tptp:raw
+ % Command    : eprover --auto-schedule --definitional-cnf=24 -R --print-version --tstp-format -s --proof-object --cpu-limit=%d %s
+
+ % Computer   : n145.star.cs.uiowa.edu
+ % Model      : x86_64 x86_64
+ % CPU        : Intel(R) Xeon(R) CPU E5-2609 0 2.40GHz
+ % Memory     : 32218.75MB
+ % OS         : Linux 3.10.0-327.10.1.el7.x86_64
+ % CPULimit   : 300s
+ % DateTime   : Wed May 11 11:16:48 EDT 2016
+
+ % Result     : Unsatisfiable 0.02s
+ % Output     : CNFRefutation 0.02s
+ % Verified   :
+ % Statistics : Number of clauses        :    4 (   4 expanded)
+ %              Number of leaves         :    3 (   3 expanded)
+ %              Depth                    :    1
+ %              Number of atoms          :    4 (   4 expanded)
+ %              Number of equality atoms :    1 (   1 expanded)
+ %              Maximal clause size      :    1 (   1 average)
+ %              Maximal term depth       :    1 (   1 average)
+
+ % Comments   :
+ %------------------------------------------------------------------------------
+ cnf(c_0_0,negated_conjecture,
+     ( neq(sk2,nil) ),
+     file('/export/starexec/sandbox/benchmark/theBenchmark.p',co1_7)).
+
+ cnf(c_0_1,negated_conjecture,
+     ( sk2 = sk4 ),
+     file('/export/starexec/sandbox/benchmark/theBenchmark.p',co1_5)).
+
+ cnf(c_0_2,negated_conjecture,
+     ( ~ neq(sk4,nil) ),
+     file('/export/starexec/sandbox/benchmark/theBenchmark.p',co1_8)).
+
+ cnf(c_0_3,negated_conjecture,
+     ( $false ),
+     inference(sr,[status(thm)],[inference(rw,[status(thm)],[[4]c_0_0,c_0_1]),[5]c_0_2]),
+     [proof]).
+ %------------------------------------------------------------------------------
+ %----ORIGINAL SYSTEM OUTPUT
+ % 0.00/0.03  % Problem    : SWC138-1 : TPTP v6.4.0. Released v2.4.0.
+ % 0.00/0.04  % Command    : eprover --auto-schedule --definitional-cnf=24 -R --print-version --tstp-format -s --proof-object --cpu-limit=%d %s
+ % 0.02/0.23  % Computer   : n145.star.cs.uiowa.edu
+ % 0.02/0.23  % Model      : x86_64 x86_64
+ % 0.02/0.23  % CPU        : Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz
+ % 0.02/0.23  % Memory     : 32218.75MB
+ % 0.02/0.23  % OS         : Linux 3.10.0-327.10.1.el7.x86_64
+ % 0.02/0.23  % CPULimit   : 300
+ % 0.02/0.23  % DateTime   : Tue May 10 20:35:08 CDT 2016
+ % 0.02/0.23  % CPUTime    :
+ % 0.02/0.23  # Version: 1.9.1pre011
+ % 0.02/0.23  # No SInE strategy applied
+ % 0.02/0.23  # Trying AutoSched0 for 151 seconds
+ % 0.02/0.24  # AutoSched0-Mode selected heuristic G_E___208_C18_F1_SE_CS_SP_PS_S2k
+ % 0.02/0.24  # and selection function SelectCQArNTEqFirst.
+ % 0.02/0.24  #
+ % 0.02/0.24  # Preprocessing time       : 0.009 s
+ % 0.02/0.24  # Presaturation interreduction done
+ % 0.02/0.24
+ % 0.02/0.24  # Proof found!
+ % 0.02/0.24  # SZS status Unsatisfiable
+ % 0.02/0.24  # SZS output start CNFRefutation
+ % 0.02/0.24  cnf(c_0_0, negated_conjecture, (neq(sk2,nil)), file('/export/starexec/sandbox/benchmark/theBenchmark.p', co1_7)).
+ % 0.02/0.24  cnf(c_0_1, negated_conjecture, (sk2=sk4), file('/export/starexec/sandbox/benchmark/theBenchmark.p', co1_5)).
+ % 0.02/0.24  cnf(c_0_2, negated_conjecture, (~neq(sk4,nil)), file('/export/starexec/sandbox/benchmark/theBenchmark.p', co1_8)).
+ % 0.02/0.24  cnf(c_0_3, negated_conjecture, ($false), inference(sr,[status(thm)],[inference(rw,[status(thm)],[c_0_0, c_0_1]), c_0_2]), ['proof']).
+ % 0.02/0.24  # SZS output end CNFRefutation
+ % 0.02/0.24  # Training examples: 0 positive, 0 negative
+ % 0.02/0.24
+ % 0.02/0.24  # -------------------------------------------------
+ % 0.02/0.24  # User time                : 0.013 s
+ % 0.02/0.24  # System time              : 0.000 s
+ % 0.02/0.24  # Total time               : 0.013 s
+ % 0.02/0.24  # Maximum resident set size: 1860 pages
+ %------------------------------------------------------------------------------
+
+   --------------------------------------------------------------------------

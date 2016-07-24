@@ -1,0 +1,1565 @@
+   --------------------------------------------------------------------------
+
+                   TSTP Solution File: SWC089+1 by E---1.9.1
+
+                     [1]View Problem - [2]Process Solution
+
+   --------------------------------------------------------------------------
+
+ %------------------------------------------------------------------------------
+ % File       : E---1.9.1
+ % Problem    : [3]SWC089+1 : TPTP v6.4.0. Released v2.4.0.
+ % Transform  : none
+ % Format     : tptp:raw
+ % Command    : eprover --auto-schedule --definitional-cnf=24 -R --print-version --tstp-format -s --proof-object --cpu-limit=%d %s
+
+ % Computer   : n151.star.cs.uiowa.edu
+ % Model      : x86_64 x86_64
+ % CPU        : Intel(R) Xeon(R) CPU E5-2609 0 2.40GHz
+ % Memory     : 32218.75MB
+ % OS         : Linux 3.10.0-327.10.1.el7.x86_64
+ % CPULimit   : 300s
+ % DateTime   : Wed May 11 11:16:36 EDT 2016
+
+ % Result     : Theorem 0.06s
+ % Output     : CNFRefutation 0.06s
+ % Verified   :
+ % Statistics : Number of formulae       :  179 (19304 expanded)
+ %              Number of clauses        :  125 (7912 expanded)
+ %              Number of leaves         :   27 (4977 expanded)
+ %              Depth                    :   36
+ %              Number of atoms          :  683 (201209 expanded)
+ %              Number of equality atoms :  232 (68488 expanded)
+ %              Maximal formula depth    :   31 (   5 average)
+ %              Maximal clause size      :   27 (   3 average)
+ %              Maximal term depth       :    6 (   1 average)
+
+ % Comments   :
+ %------------------------------------------------------------------------------
+ fof(c_0_0,conjecture,(
+     ! [X1] :
+       ( ssList(X1)
+      => ! [X2] :
+           ( ssList(X2)
+          => ! [X3] :
+               ( ssList(X3)
+              => ! [X4] :
+                   ( ssList(X4)
+                  => ( X2 != X4
+                     | X1 != X3
+                     | ~ neq(X2,nil)
+                     | ? [X5] :
+                         ( ssList(X5)
+                         & neq(X5,nil)
+                         & segmentP(X2,X5)
+                         & segmentP(X1,X5) )
+                     | ( nil != X3
+                       & nil = X4 )
+                     | ( neq(X4,nil)
+                       & ( ~ neq(X3,nil)
+                         | ? [X6] :
+                             ( ssList(X6)
+                             & X4 != X6
+                             & ? [X7] :
+                                 ( ssList(X7)
+                                 & ? [X8] :
+                                     ( ssList(X8)
+                                     & tl(X3) = X7
+                                     & app(X7,X8) = X6
+                                     & ? [X9] :
+                                         ( ssItem(X9)
+                                         & cons(X9,nil) = X8
+                                         & hd(X3) = X9
+                                         & neq(nil,X3) )
+                                     & neq(nil,X3) ) ) ) ) ) ) ) ) ) ) ),
+     file('/export/starexec/sandbox2/benchmark/theBenchmark.p',co1)).
+
+ fof(c_0_1,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ! [X2] :
+           ( ssList(X2)
+          => ssList(app(X1,X2)) ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax26)).
+
+ fof(c_0_2,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ( nil != X1
+        => ssList(tl(X1)) ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax24)).
+
+ fof(c_0_3,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ! [X2] :
+           ( ssItem(X2)
+          => ssList(cons(X2,X1)) ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax16)).
+
+ fof(c_0_4,axiom,(
+     ssList(nil) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax17)).
+
+ fof(c_0_5,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ( nil != X1
+        => ssItem(hd(X1)) ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax22)).
+
+ fof(c_0_6,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ( singletonP(X1)
+       <=> ? [X2] :
+             ( ssItem(X2)
+             & cons(X2,nil) = X1 ) ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax4)).
+
+ fof(c_0_7,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ( nil != X1
+        => cons(hd(X1),tl(X1)) = X1 ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax78)).
+
+ fof(c_0_8,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ! [X2] :
+           ( ssList(X2)
+          => ( nil != X1
+            => tl(app(X1,X2)) = app(tl(X1),X2) ) ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax86)).
+
+ fof(c_0_9,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ! [X2] :
+           ( ssList(X2)
+          => ( nil = app(X1,X2)
+           <=> ( nil = X2
+               & nil = X1 ) ) ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax83)).
+
+ fof(c_0_10,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ! [X2] :
+           ( ssList(X2)
+          => ( neq(X1,X2)
+           <=> X1 != X2 ) ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax15)).
+
+ fof(c_0_11,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ! [X2] :
+           ( ssItem(X2)
+          => tl(cons(X2,X1)) = X1 ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax25)).
+
+ fof(c_0_12,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ! [X2] :
+           ( ssItem(X2)
+          => cons(X2,X1) != X1 ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax18)).
+
+ fof(c_0_13,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => app(X1,nil) = X1 ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax84)).
+
+ fof(c_0_14,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ! [X2] :
+           ( ssItem(X2)
+          => nil != cons(X2,X1) ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax21)).
+
+ fof(c_0_15,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ! [X2] :
+           ( ssList(X2)
+          => ( nil != X1
+            => hd(app(X1,X2)) = hd(X1) ) ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax85)).
+
+ fof(c_0_16,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ! [X2] :
+           ( ssItem(X2)
+          => cons(X2,X1) = app(cons(X2,nil),X1) ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax81)).
+
+ fof(c_0_17,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ! [X2] :
+           ( ssItem(X2)
+          => hd(cons(X2,X1)) = X2 ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax23)).
+
+ fof(c_0_18,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ! [X2] :
+           ( ssList(X2)
+          => ( frontsegP(X1,X2)
+           <=> ? [X3] :
+                 ( ssList(X3)
+                 & app(X2,X3) = X1 ) ) ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax5)).
+
+ fof(c_0_19,axiom,(
+     ! [X1] :
+       ( ssItem(X1)
+      => ! [X2] :
+           ( ssItem(X2)
+          => ! [X3] :
+               ( ssList(X3)
+              => ! [X4] :
+                   ( ssList(X4)
+                  => ( frontsegP(cons(X1,X3),cons(X2,X4))
+                   <=> ( X1 = X2
+                       & frontsegP(X3,X4) ) ) ) ) ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax44)).
+
+ fof(c_0_20,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ( nil = X1
+         | ? [X2] :
+             ( ssList(X2)
+             & ? [X3] :
+                 ( ssItem(X3)
+                 & cons(X3,X2) = X1 ) ) ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax20)).
+
+ fof(c_0_21,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => frontsegP(X1,X1) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax42)).
+
+ fof(c_0_22,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ! [X2] :
+           ( ssList(X2)
+          => ! [X3] :
+               ( ssList(X3)
+              => ( app(X2,X3) = app(X2,X1)
+                => X3 = X1 ) ) ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax80)).
+
+ fof(c_0_23,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => ! [X2] :
+           ( ssList(X2)
+          => ( segmentP(X1,X2)
+           <=> ? [X3] :
+                 ( ssList(X3)
+                 & ? [X4] :
+                     ( ssList(X4)
+                     & app(app(X3,X2),X4) = X1 ) ) ) ) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax7)).
+
+ fof(c_0_24,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => app(nil,X1) = X1 ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax28)).
+
+ fof(c_0_25,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => segmentP(X1,X1) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax55)).
+
+ fof(c_0_26,axiom,(
+     ! [X1] :
+       ( ssList(X1)
+      => segmentP(X1,nil) ) ),
+     file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax',ax57)).
+
+ fof(c_0_27,negated_conjecture,(
+     ~ ! [X1] :
+         ( ssList(X1)
+        => ! [X2] :
+             ( ssList(X2)
+            => ! [X3] :
+                 ( ssList(X3)
+                => ! [X4] :
+                     ( ssList(X4)
+                    => ( X2 != X4
+                       | X1 != X3
+                       | ~ neq(X2,nil)
+                       | ? [X5] :
+                           ( ssList(X5)
+                           & neq(X5,nil)
+                           & segmentP(X2,X5)
+                           & segmentP(X1,X5) )
+                       | ( nil != X3
+                         & nil = X4 )
+                       | ( neq(X4,nil)
+                         & ( ~ neq(X3,nil)
+                           | ? [X6] :
+                               ( ssList(X6)
+                               & X4 != X6
+                               & ? [X7] :
+                                   ( ssList(X7)
+                                   & ? [X8] :
+                                       ( ssList(X8)
+                                       & tl(X3) = X7
+                                       & app(X7,X8) = X6
+                                       & ? [X9] :
+                                           ( ssItem(X9)
+                                           & cons(X9,nil) = X8
+                                           & hd(X3) = X9
+                                           & neq(nil,X3) )
+                                       & neq(nil,X3) ) ) ) ) ) ) ) ) ) ) ),
+     inference(fof_simplification,[status(thm)],[inference(assume_negation,[status(cth)],[c_0_0])])).
+
+ fof(c_0_28,negated_conjecture,(
+     ! [X14,X15,X16,X17,X18] :
+       ( ssList(esk48_0)
+       & ssList(esk49_0)
+       & ssList(esk50_0)
+       & ssList(esk51_0)
+       & esk49_0 = esk51_0
+       & esk48_0 = esk50_0
+       & neq(esk49_0,nil)
+       & ( ~ ssList(X14)
+         | ~ neq(X14,nil)
+         | ~ segmentP(esk49_0,X14)
+         | ~ segmentP(esk48_0,X14) )
+       & ( nil = esk50_0
+         | nil != esk51_0 )
+       & ( neq(esk50_0,nil)
+         | ~ neq(esk51_0,nil) )
+       & ( ~ ssList(X15)
+         | esk51_0 = X15
+         | ~ ssList(X16)
+         | ~ ssList(X17)
+         | tl(esk50_0) != X16
+         | app(X16,X17) != X15
+         | ~ ssItem(X18)
+         | cons(X18,nil) != X17
+         | hd(esk50_0) != X18
+         | ~ neq(nil,esk50_0)
+         | ~ neq(nil,esk50_0)
+         | ~ neq(esk51_0,nil) ) ) ),
+     inference(distribute,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(skolemize,[status(esa)],[inference(variable_rename,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_27])])])])])])).
+
+ cnf(c_0_29,negated_conjecture,
+     ( esk51_0 = X4
+     | ~ neq(esk51_0,nil)
+     | ~ neq(nil,esk50_0)
+     | ~ neq(nil,esk50_0)
+     | hd(esk50_0) != X1
+     | cons(X1,nil) != X2
+     | ~ ssItem(X1)
+     | app(X3,X2) != X4
+     | tl(esk50_0) != X3
+     | ~ ssList(X2)
+     | ~ ssList(X3)
+     | ~ ssList(X4) ),
+     inference(split_conjunct,[status(thm)],[[4]c_0_28])).
+
+ cnf(c_0_30,negated_conjecture,
+     ( neq(esk49_0,nil) ),
+     inference(split_conjunct,[status(thm)],[[5]c_0_28])).
+
+ cnf(c_0_31,negated_conjecture,
+     ( esk49_0 = esk51_0 ),
+     inference(split_conjunct,[status(thm)],[[6]c_0_28])).
+
+ fof(c_0_32,plain,(
+     ! [X3,X4] :
+       ( ~ ssList(X3)
+       | ~ ssList(X4)
+       | ssList(app(X3,X4)) ) ),
+     inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_1])])])).
+
+ cnf(c_0_33,negated_conjecture,
+     ( esk51_0 = X4
+     | hd(esk50_0) != X1
+     | tl(esk50_0) != X3
+     | app(X3,X2) != X4
+     | cons(X1,nil) != X2
+     | ~ ssItem(X1)
+     | ~ ssList(X4)
+     | ~ ssList(X3)
+     | ~ ssList(X2)
+     | ~ neq(nil,esk50_0)
+     | ~ neq(esk51_0,nil) ),
+     inference(cn,[status(thm)],[[7]c_0_29])).
+
+ cnf(c_0_34,negated_conjecture,
+     ( neq(esk51_0,nil) ),
+     inference(rw,[status(thm)],[[8]c_0_30,[9]c_0_31])).
+
+ cnf(c_0_35,plain,
+     ( ssList(app(X1,X2))
+     | ~ ssList(X2)
+     | ~ ssList(X1) ),
+     inference(split_conjunct,[status(thm)],[[10]c_0_32])).
+
+ fof(c_0_36,plain,(
+     ! [X2] :
+       ( ~ ssList(X2)
+       | nil = X2
+       | ssList(tl(X2)) ) ),
+     inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_2])])).
+
+ cnf(c_0_37,negated_conjecture,
+     ( ssList(esk48_0) ),
+     inference(split_conjunct,[status(thm)],[[11]c_0_28])).
+
+ cnf(c_0_38,negated_conjecture,
+     ( esk48_0 = esk50_0 ),
+     inference(split_conjunct,[status(thm)],[[12]c_0_28])).
+
+ cnf(c_0_39,negated_conjecture,
+     ( app(tl(esk50_0),cons(hd(esk50_0),nil)) = esk51_0
+     | ~ ssList(cons(hd(esk50_0),nil))
+     | ~ ssList(tl(esk50_0))
+     | ~ neq(nil,esk50_0)
+     | ~ ssItem(hd(esk50_0)) ),
+     inference(csr,[status(thm)],[inference(er,[status(thm)],[inference(er,[status(thm)],[inference(er,[status(thm)],[inference(er,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[[13]c_0_33,c_0_34])])])])])]),[14]c_0_35])).
+
+ cnf(c_0_40,plain,
+     ( ssList(tl(X1))
+     | nil = X1
+     | ~ ssList(X1) ),
+     inference(split_conjunct,[status(thm)],[[15]c_0_36])).
+
+ cnf(c_0_41,negated_conjecture,
+     ( ssList(esk50_0) ),
+     inference(rw,[status(thm)],[[16]c_0_37,[17]c_0_38])).
+
+ fof(c_0_42,plain,(
+     ! [X3,X4] :
+       ( ~ ssList(X3)
+       | ~ ssItem(X4)
+       | ssList(cons(X4,X3)) ) ),
+     inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_3])])])).
+
+ cnf(c_0_43,negated_conjecture,
+     ( app(tl(esk50_0),cons(hd(esk50_0),nil)) = esk51_0
+     | esk50_0 = nil
+     | ~ ssList(cons(hd(esk50_0),nil))
+     | ~ neq(nil,esk50_0)
+     | ~ ssItem(hd(esk50_0)) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[18]c_0_39,c_0_40]),c_0_41])])).
+
+ cnf(c_0_44,plain,
+     ( ssList(cons(X1,X2))
+     | ~ ssItem(X1)
+     | ~ ssList(X2) ),
+     inference(split_conjunct,[status(thm)],[[19]c_0_42])).
+
+ cnf(c_0_45,plain,
+     ( ssList(nil) ),
+     inference(split_conjunct,[status(thm)],[[20]c_0_4])).
+
+ fof(c_0_46,plain,(
+     ! [X2] :
+       ( ~ ssList(X2)
+       | nil = X2
+       | ssItem(hd(X2)) ) ),
+     inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_5])])).
+
+ fof(c_0_47,plain,(
+     ! [X3,X5] :
+       ( ( ssItem(esk5_1(X3))
+         | ~ singletonP(X3)
+         | ~ ssList(X3) )
+       & ( cons(esk5_1(X3),nil) = X3
+         | ~ singletonP(X3)
+         | ~ ssList(X3) )
+       & ( ~ ssItem(X5)
+         | cons(X5,nil) != X3
+         | singletonP(X3)
+         | ~ ssList(X3) ) ) ),
+     inference(distribute,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(skolemize,[status(esa)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_6])])])])])).
+
+ fof(c_0_48,plain,(
+     ! [X2] :
+       ( ~ ssList(X2)
+       | nil = X2
+       | cons(hd(X2),tl(X2)) = X2 ) ),
+     inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_7])])).
+
+ fof(c_0_49,plain,(
+     ! [X3,X4] :
+       ( ~ ssList(X3)
+       | ~ ssList(X4)
+       | nil = X3
+       | tl(app(X3,X4)) = app(tl(X3),X4) ) ),
+     inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_8])])])).
+
+ fof(c_0_50,plain,(
+     ! [X3,X4] :
+       ( ( nil = X4
+         | nil != app(X3,X4)
+         | ~ ssList(X4)
+         | ~ ssList(X3) )
+       & ( nil = X3
+         | nil != app(X3,X4)
+         | ~ ssList(X4)
+         | ~ ssList(X3) )
+       & ( nil != X4
+         | nil != X3
+         | nil = app(X3,X4)
+         | ~ ssList(X4)
+         | ~ ssList(X3) ) ) ),
+     inference(distribute,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_9])])])])).
+
+ cnf(c_0_51,negated_conjecture,
+     ( app(tl(esk50_0),cons(hd(esk50_0),nil)) = esk51_0
+     | esk50_0 = nil
+     | ~ neq(nil,esk50_0)
+     | ~ ssItem(hd(esk50_0)) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[21]c_0_43,c_0_44]),c_0_45])])).
+
+ cnf(c_0_52,plain,
+     ( ssItem(hd(X1))
+     | nil = X1
+     | ~ ssList(X1) ),
+     inference(split_conjunct,[status(thm)],[[22]c_0_46])).
+
+ fof(c_0_53,plain,(
+     ! [X3,X4] :
+       ( ( ~ neq(X3,X4)
+         | X3 != X4
+         | ~ ssList(X4)
+         | ~ ssList(X3) )
+       & ( X3 = X4
+         | neq(X3,X4)
+         | ~ ssList(X4)
+         | ~ ssList(X3) ) ) ),
+     inference(distribute,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_10])])])])).
+
+ fof(c_0_54,plain,(
+     ! [X3,X4] :
+       ( ~ ssList(X3)
+       | ~ ssItem(X4)
+       | tl(cons(X4,X3)) = X3 ) ),
+     inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_11])])])).
+
+ cnf(c_0_55,plain,
+     ( singletonP(X1)
+     | ~ ssList(X1)
+     | cons(X2,nil) != X1
+     | ~ ssItem(X2) ),
+     inference(split_conjunct,[status(thm)],[[23]c_0_47])).
+
+ fof(c_0_56,plain,(
+     ! [X3,X4] :
+       ( ~ ssList(X3)
+       | ~ ssItem(X4)
+       | cons(X4,X3) != X3 ) ),
+     inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_12])])])).
+
+ cnf(c_0_57,plain,
+     ( cons(hd(X1),tl(X1)) = X1
+     | nil = X1
+     | ~ ssList(X1) ),
+     inference(split_conjunct,[status(thm)],[[24]c_0_48])).
+
+ cnf(c_0_58,plain,
+     ( tl(app(X1,X2)) = app(tl(X1),X2)
+     | nil = X1
+     | ~ ssList(X2)
+     | ~ ssList(X1) ),
+     inference(split_conjunct,[status(thm)],[[25]c_0_49])).
+
+ cnf(c_0_59,plain,
+     ( nil = X1
+     | ~ ssList(X1)
+     | ~ ssList(X2)
+     | nil != app(X1,X2) ),
+     inference(split_conjunct,[status(thm)],[[26]c_0_50])).
+
+ cnf(c_0_60,negated_conjecture,
+     ( app(tl(esk50_0),cons(hd(esk50_0),nil)) = esk51_0
+     | esk50_0 = nil
+     | ~ neq(nil,esk50_0) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[27]c_0_51,c_0_52]),c_0_41])])).
+
+ cnf(c_0_61,plain,
+     ( neq(X1,X2)
+     | X1 = X2
+     | ~ ssList(X1)
+     | ~ ssList(X2) ),
+     inference(split_conjunct,[status(thm)],[[28]c_0_53])).
+
+ cnf(c_0_62,plain,
+     ( tl(cons(X1,X2)) = X2
+     | ~ ssItem(X1)
+     | ~ ssList(X2) ),
+     inference(split_conjunct,[status(thm)],[[29]c_0_54])).
+
+ cnf(c_0_63,plain,
+     ( cons(esk5_1(X1),nil) = X1
+     | ~ ssList(X1)
+     | ~ singletonP(X1) ),
+     inference(split_conjunct,[status(thm)],[[30]c_0_47])).
+
+ cnf(c_0_64,plain,
+     ( ssItem(esk5_1(X1))
+     | ~ ssList(X1)
+     | ~ singletonP(X1) ),
+     inference(split_conjunct,[status(thm)],[[31]c_0_47])).
+
+ cnf(c_0_65,plain,
+     ( singletonP(cons(X1,nil))
+     | ~ ssList(cons(X1,nil))
+     | ~ ssItem(X1) ),
+     inference(er,[status(thm)],[[32]c_0_55])).
+
+ cnf(c_0_66,plain,
+     ( cons(X1,X2) != X2
+     | ~ ssItem(X1)
+     | ~ ssList(X2) ),
+     inference(split_conjunct,[status(thm)],[[33]c_0_56])).
+
+ cnf(c_0_67,plain,
+     ( cons(hd(app(X1,X2)),app(tl(X1),X2)) = app(X1,X2)
+     | nil = X1
+     | ~ ssList(X2)
+     | ~ ssList(X1) ),
+     inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[[34]c_0_57,c_0_58]),c_0_35]),[35]c_0_59])).
+
+ cnf(c_0_68,negated_conjecture,
+     ( app(tl(esk50_0),cons(hd(esk50_0),nil)) = esk51_0
+     | esk50_0 = nil ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[36]c_0_60,c_0_61]),c_0_41]),c_0_45])])).
+
+ cnf(c_0_69,plain,
+     ( tl(X1) = nil
+     | ~ singletonP(X1)
+     | ~ ssList(X1) ),
+     inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[37]c_0_62,c_0_63]),c_0_45])]),[38]c_0_64])).
+
+ cnf(c_0_70,plain,
+     ( singletonP(cons(X1,nil))
+     | ~ ssItem(X1) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[39]c_0_65,c_0_44]),c_0_45])])).
+
+ cnf(c_0_71,plain,
+     ( nil = X1
+     | tl(X1) != X1
+     | ~ ssList(X1) ),
+     inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[[40]c_0_66,c_0_57]),c_0_52]),[41]c_0_40])).
+
+ fof(c_0_72,plain,(
+     ! [X2] :
+       ( ~ ssList(X2)
+       | app(X2,nil) = X2 ) ),
+     inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_13])])).
+
+ cnf(c_0_73,negated_conjecture,
+     ( cons(hd(app(esk50_0,cons(hd(esk50_0),nil))),esk51_0) = app(esk50_0,cons(hd(esk50_0),nil))
+     | esk50_0 = nil
+     | ~ ssList(cons(hd(esk50_0),nil)) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[42]c_0_67,c_0_68]),c_0_41])])).
+
+ cnf(c_0_74,plain,
+     ( tl(cons(X1,nil)) = nil
+     | ~ ssList(cons(X1,nil))
+     | ~ ssItem(X1) ),
+     inference(spm,[status(thm)],[[43]c_0_69,[44]c_0_70])).
+
+ cnf(c_0_75,plain,
+     ( nil = X1
+     | app(tl(X1),X2) != app(X1,X2)
+     | ~ ssList(X2)
+     | ~ ssList(X1) ),
+     inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[[45]c_0_71,c_0_58]),c_0_35]),[46]c_0_59])).
+
+ cnf(c_0_76,plain,
+     ( app(X1,nil) = X1
+     | ~ ssList(X1) ),
+     inference(split_conjunct,[status(thm)],[[47]c_0_72])).
+
+ fof(c_0_77,plain,(
+     ! [X3,X4] :
+       ( ~ ssList(X3)
+       | ~ ssItem(X4)
+       | nil != cons(X4,X3) ) ),
+     inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_14])])])).
+
+ cnf(c_0_78,negated_conjecture,
+     ( cons(hd(app(esk50_0,cons(hd(esk50_0),nil))),esk51_0) = app(esk50_0,cons(hd(esk50_0),nil))
+     | esk50_0 = nil
+     | ~ ssItem(hd(esk50_0)) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[48]c_0_73,c_0_44]),c_0_45])])).
+
+ fof(c_0_79,plain,(
+     ! [X3,X4] :
+       ( ~ ssList(X3)
+       | ~ ssList(X4)
+       | nil = X3
+       | hd(app(X3,X4)) = hd(X3) ) ),
+     inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_15])])])).
+
+ cnf(c_0_80,plain,
+     ( tl(cons(X1,nil)) = nil
+     | ~ ssItem(X1) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[49]c_0_74,c_0_44]),c_0_45])])).
+
+ cnf(c_0_81,plain,
+     ( nil = X1
+     | tl(X1) != app(X1,nil)
+     | ~ ssList(X1) ),
+     inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[50]c_0_75,c_0_76]),c_0_45])]),[51]c_0_40])).
+
+ cnf(c_0_82,plain,
+     ( nil != cons(X1,X2)
+     | ~ ssItem(X1)
+     | ~ ssList(X2) ),
+     inference(split_conjunct,[status(thm)],[[52]c_0_77])).
+
+ fof(c_0_83,plain,(
+     ! [X3,X4] :
+       ( ~ ssList(X3)
+       | ~ ssItem(X4)
+       | cons(X4,X3) = app(cons(X4,nil),X3) ) ),
+     inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_16])])])).
+
+ cnf(c_0_84,negated_conjecture,
+     ( cons(hd(app(esk50_0,cons(hd(esk50_0),nil))),esk51_0) = app(esk50_0,cons(hd(esk50_0),nil))
+     | esk50_0 = nil ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[53]c_0_78,c_0_52]),c_0_41])])).
+
+ cnf(c_0_85,plain,
+     ( hd(app(X1,X2)) = hd(X1)
+     | nil = X1
+     | ~ ssList(X2)
+     | ~ ssList(X1) ),
+     inference(split_conjunct,[status(thm)],[[54]c_0_79])).
+
+ cnf(c_0_86,plain,
+     ( cons(hd(cons(X1,nil)),nil) = cons(X1,nil)
+     | cons(X1,nil) = nil
+     | ~ ssList(cons(X1,nil))
+     | ~ ssItem(X1) ),
+     inference(spm,[status(thm)],[[55]c_0_57,[56]c_0_80])).
+
+ cnf(c_0_87,plain,
+     ( app(cons(X1,X2),nil) != X2
+     | ~ ssList(X2)
+     | ~ ssItem(X1) ),
+     inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[[57]c_0_81,c_0_62]),c_0_44]),[58]c_0_82])).
+
+ cnf(c_0_88,plain,
+     ( cons(X1,X2) = app(cons(X1,nil),X2)
+     | ~ ssItem(X1)
+     | ~ ssList(X2) ),
+     inference(split_conjunct,[status(thm)],[[59]c_0_83])).
+
+ cnf(c_0_89,negated_conjecture,
+     ( app(esk50_0,cons(hd(esk50_0),nil)) = cons(hd(esk50_0),esk51_0)
+     | esk50_0 = nil
+     | ~ ssList(cons(hd(esk50_0),nil)) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[60]c_0_84,c_0_85]),c_0_41])])).
+
+ cnf(c_0_90,negated_conjecture,
+     ( ssList(esk49_0) ),
+     inference(split_conjunct,[status(thm)],[[61]c_0_28])).
+
+ cnf(c_0_91,plain,
+     ( cons(hd(cons(X1,nil)),nil) = cons(X1,nil)
+     | cons(X1,nil) = nil
+     | ~ ssItem(X1) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[62]c_0_86,c_0_44]),c_0_45])])).
+
+ cnf(c_0_92,plain,
+     ( cons(X1,nil) != nil
+     | ~ ssItem(X1) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[63]c_0_87,c_0_88]),c_0_45])])).
+
+ fof(c_0_93,plain,(
+     ! [X3,X4] :
+       ( ~ ssList(X3)
+       | ~ ssItem(X4)
+       | hd(cons(X4,X3)) = X4 ) ),
+     inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_17])])])).
+
+ cnf(c_0_94,negated_conjecture,
+     ( app(esk50_0,cons(hd(esk50_0),nil)) = cons(hd(esk50_0),esk51_0)
+     | esk50_0 = nil
+     | ~ ssItem(hd(esk50_0)) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[64]c_0_89,c_0_44]),c_0_45])])).
+
+ cnf(c_0_95,negated_conjecture,
+     ( ssList(esk51_0) ),
+     inference(rw,[status(thm)],[[65]c_0_90,[66]c_0_31])).
+
+ cnf(c_0_96,plain,
+     ( ssList(cons(X1,nil))
+     | ~ ssItem(hd(cons(X1,nil)))
+     | ~ ssItem(X1) ),
+     inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[67]c_0_44,c_0_91]),c_0_45])]),[68]c_0_92])).
+
+ cnf(c_0_97,plain,
+     ( hd(cons(X1,X2)) = X1
+     | ~ ssItem(X1)
+     | ~ ssList(X2) ),
+     inference(split_conjunct,[status(thm)],[[69]c_0_93])).
+
+ cnf(c_0_98,negated_conjecture,
+     ( app(esk50_0,cons(hd(esk50_0),nil)) = cons(hd(esk50_0),esk51_0)
+     | esk50_0 = nil ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[70]c_0_94,c_0_52]),c_0_41])])).
+
+ cnf(c_0_99,negated_conjecture,
+     ( esk50_0 = nil
+     | app(esk50_0,cons(hd(esk50_0),nil)) != nil
+     | ~ ssItem(hd(app(esk50_0,cons(hd(esk50_0),nil)))) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[71]c_0_82,c_0_84]),c_0_95])])).
+
+ cnf(c_0_100,plain,
+     ( ssList(cons(X1,nil))
+     | ~ ssItem(X1) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[72]c_0_96,c_0_97]),c_0_45])])).
+
+ fof(c_0_101,plain,(
+     ! [X4,X5,X7] :
+       ( ( ssList(esk6_2(X4,X5))
+         | ~ frontsegP(X4,X5)
+         | ~ ssList(X5)
+         | ~ ssList(X4) )
+       & ( app(X5,esk6_2(X4,X5)) = X4
+         | ~ frontsegP(X4,X5)
+         | ~ ssList(X5)
+         | ~ ssList(X4) )
+       & ( ~ ssList(X7)
+         | app(X5,X7) != X4
+         | frontsegP(X4,X5)
+         | ~ ssList(X5)
+         | ~ ssList(X4) ) ) ),
+     inference(distribute,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(skolemize,[status(esa)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_18])])])])])).
+
+ cnf(c_0_102,negated_conjecture,
+     ( hd(cons(hd(esk50_0),esk51_0)) = hd(esk50_0)
+     | esk50_0 = nil
+     | ~ ssList(cons(hd(esk50_0),nil)) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[73]c_0_85,c_0_98]),c_0_41])])).
+
+ cnf(c_0_103,negated_conjecture,
+     ( esk50_0 = nil
+     | ssList(cons(hd(esk50_0),esk51_0))
+     | ~ ssList(cons(hd(esk50_0),nil)) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[74]c_0_35,c_0_98]),c_0_41])])).
+
+ cnf(c_0_104,negated_conjecture,
+     ( esk50_0 = nil
+     | app(esk50_0,cons(hd(esk50_0),nil)) != nil
+     | ~ ssItem(hd(esk50_0)) ),
+     inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[75]c_0_99,c_0_85]),c_0_41])]),[76]c_0_100])).
+
+ cnf(c_0_105,plain,
+     ( frontsegP(X1,X2)
+     | ~ ssList(X1)
+     | ~ ssList(X2)
+     | app(X2,X3) != X1
+     | ~ ssList(X3) ),
+     inference(split_conjunct,[status(thm)],[[77]c_0_101])).
+
+ cnf(c_0_106,negated_conjecture,
+     ( hd(cons(hd(esk50_0),esk51_0)) = hd(esk50_0)
+     | esk50_0 = nil
+     | ~ ssItem(hd(esk50_0)) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[78]c_0_102,c_0_44]),c_0_45])])).
+
+ cnf(c_0_107,negated_conjecture,
+     ( esk50_0 = nil
+     | ssList(cons(hd(esk50_0),esk51_0))
+     | ~ ssItem(hd(esk50_0)) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[79]c_0_103,c_0_44]),c_0_45])])).
+
+ cnf(c_0_108,negated_conjecture,
+     ( esk50_0 = nil
+     | app(esk50_0,cons(hd(esk50_0),nil)) != nil ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[80]c_0_104,c_0_52]),c_0_41])])).
+
+ fof(c_0_109,plain,(
+     ! [X5,X6,X7,X8] :
+       ( ( X5 = X6
+         | ~ frontsegP(cons(X5,X7),cons(X6,X8))
+         | ~ ssList(X8)
+         | ~ ssList(X7)
+         | ~ ssItem(X6)
+         | ~ ssItem(X5) )
+       & ( frontsegP(X7,X8)
+         | ~ frontsegP(cons(X5,X7),cons(X6,X8))
+         | ~ ssList(X8)
+         | ~ ssList(X7)
+         | ~ ssItem(X6)
+         | ~ ssItem(X5) )
+       & ( X5 != X6
+         | ~ frontsegP(X7,X8)
+         | frontsegP(cons(X5,X7),cons(X6,X8))
+         | ~ ssList(X8)
+         | ~ ssList(X7)
+         | ~ ssItem(X6)
+         | ~ ssItem(X5) ) ) ),
+     inference(distribute,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_19])])])])).
+
+ fof(c_0_110,plain,(
+     ! [X4] :
+       ( ( ssList(esk44_1(X4))
+         | nil = X4
+         | ~ ssList(X4) )
+       & ( ssItem(esk45_1(X4))
+         | nil = X4
+         | ~ ssList(X4) )
+       & ( cons(esk45_1(X4),esk44_1(X4)) = X4
+         | nil = X4
+         | ~ ssList(X4) ) ) ),
+     inference(distribute,[status(thm)],[inference(skolemize,[status(esa)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_20])])])])).
+
+ cnf(c_0_111,plain,
+     ( frontsegP(app(X1,X2),X1)
+     | ~ ssList(X2)
+     | ~ ssList(X1) ),
+     inference(csr,[status(thm)],[inference(er,[status(thm)],[c_0_105]),[81]c_0_35])).
+
+ cnf(c_0_112,negated_conjecture,
+     ( hd(cons(hd(esk50_0),esk51_0)) = hd(esk50_0)
+     | esk50_0 = nil ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[82]c_0_106,c_0_52]),c_0_41])])).
+
+ cnf(c_0_113,negated_conjecture,
+     ( esk50_0 = nil
+     | ssList(cons(hd(esk50_0),esk51_0)) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[83]c_0_107,c_0_52]),c_0_41])])).
+
+ cnf(c_0_114,negated_conjecture,
+     ( esk50_0 = nil
+     | cons(hd(esk50_0),esk51_0) != nil ),
+     inference(spm,[status(thm)],[[84]c_0_108,[85]c_0_98])).
+
+ cnf(c_0_115,plain,
+     ( X1 = X2
+     | ~ ssItem(X1)
+     | ~ ssItem(X2)
+     | ~ ssList(X3)
+     | ~ ssList(X4)
+     | ~ frontsegP(cons(X1,X3),cons(X2,X4)) ),
+     inference(split_conjunct,[status(thm)],[[86]c_0_109])).
+
+ cnf(c_0_116,plain,
+     ( nil = X1
+     | cons(esk45_1(X1),esk44_1(X1)) = X1
+     | ~ ssList(X1) ),
+     inference(split_conjunct,[status(thm)],[[87]c_0_110])).
+
+ cnf(c_0_117,plain,
+     ( nil = X1
+     | ssItem(esk45_1(X1))
+     | ~ ssList(X1) ),
+     inference(split_conjunct,[status(thm)],[[88]c_0_110])).
+
+ cnf(c_0_118,plain,
+     ( nil = X1
+     | ssList(esk44_1(X1))
+     | ~ ssList(X1) ),
+     inference(split_conjunct,[status(thm)],[[89]c_0_110])).
+
+ cnf(c_0_119,negated_conjecture,
+     ( esk50_0 = nil
+     | frontsegP(cons(hd(esk50_0),esk51_0),esk50_0)
+     | ~ ssList(cons(hd(esk50_0),nil)) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[90]c_0_111,c_0_98]),c_0_41])])).
+
+ cnf(c_0_120,negated_conjecture,
+     ( esk50_0 = nil
+     | ssItem(hd(esk50_0)) ),
+     inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[[91]c_0_52,c_0_112]),c_0_113]),[92]c_0_114])).
+
+ cnf(c_0_121,plain,
+     ( X1 = esk45_1(X2)
+     | nil = X2
+     | ~ frontsegP(cons(X1,X3),X2)
+     | ~ ssList(X3)
+     | ~ ssList(X2)
+     | ~ ssItem(X1) ),
+     inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[[93]c_0_115,c_0_116]),c_0_117]),[94]c_0_118])).
+
+ cnf(c_0_122,negated_conjecture,
+     ( esk50_0 = nil
+     | frontsegP(cons(hd(esk50_0),esk51_0),esk50_0) ),
+     inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[95]c_0_119,c_0_44]),c_0_45])]),[96]c_0_120])).
+
+ cnf(c_0_123,plain,
+     ( frontsegP(cons(X1,X3),cons(X2,X4))
+     | ~ ssItem(X1)
+     | ~ ssItem(X2)
+     | ~ ssList(X3)
+     | ~ ssList(X4)
+     | ~ frontsegP(X3,X4)
+     | X1 != X2 ),
+     inference(split_conjunct,[status(thm)],[[97]c_0_109])).
+
+ fof(c_0_124,plain,(
+     ! [X2] :
+       ( ~ ssList(X2)
+       | frontsegP(X2,X2) ) ),
+     inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_21])])).
+
+ cnf(c_0_125,negated_conjecture,
+     ( esk45_1(esk50_0) = hd(esk50_0)
+     | esk50_0 = nil ),
+     inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[98]c_0_121,c_0_122]),c_0_95]),c_0_41])]),[99]c_0_120])).
+
+ cnf(c_0_126,plain,
+     ( frontsegP(cons(X1,X2),cons(X1,X3))
+     | ~ frontsegP(X2,X3)
+     | ~ ssList(X3)
+     | ~ ssList(X2)
+     | ~ ssItem(X1) ),
+     inference(er,[status(thm)],[[100]c_0_123])).
+
+ cnf(c_0_127,plain,
+     ( frontsegP(X1,X1)
+     | ~ ssList(X1) ),
+     inference(split_conjunct,[status(thm)],[[101]c_0_124])).
+
+ cnf(c_0_128,negated_conjecture,
+     ( cons(hd(esk50_0),esk44_1(esk50_0)) = esk50_0
+     | esk50_0 = nil ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[102]c_0_116,c_0_125]),c_0_41])])).
+
+ cnf(c_0_129,plain,
+     ( esk44_1(X1) = tl(X1)
+     | nil = X1
+     | ~ ssList(X1) ),
+     inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[[103]c_0_62,c_0_116]),c_0_117]),[104]c_0_118])).
+
+ cnf(c_0_130,plain,
+     ( frontsegP(cons(X1,X2),cons(X1,X2))
+     | ~ ssList(X2)
+     | ~ ssItem(X1) ),
+     inference(spm,[status(thm)],[[105]c_0_126,[106]c_0_127])).
+
+ cnf(c_0_131,negated_conjecture,
+     ( cons(hd(esk50_0),tl(esk50_0)) = esk50_0
+     | esk50_0 = nil ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[107]c_0_128,c_0_129]),c_0_41])])).
+
+ fof(c_0_132,plain,(
+     ! [X4,X5,X6] :
+       ( ~ ssList(X4)
+       | ~ ssList(X5)
+       | ~ ssList(X6)
+       | app(X5,X6) != app(X5,X4)
+       | X6 = X4 ) ),
+     inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_22])])])).
+
+ cnf(c_0_133,negated_conjecture,
+     ( esk50_0 = nil
+     | frontsegP(esk50_0,esk50_0)
+     | ~ ssList(tl(esk50_0)) ),
+     inference(csr,[status(thm)],[inference(spm,[status(thm)],[[108]c_0_130,c_0_131]),[109]c_0_120])).
+
+ cnf(c_0_134,plain,
+     ( X1 = X2
+     | app(X3,X1) != app(X3,X2)
+     | ~ ssList(X1)
+     | ~ ssList(X3)
+     | ~ ssList(X2) ),
+     inference(split_conjunct,[status(thm)],[[110]c_0_132])).
+
+ cnf(c_0_135,plain,
+     ( app(X2,esk6_2(X1,X2)) = X1
+     | ~ ssList(X1)
+     | ~ ssList(X2)
+     | ~ frontsegP(X1,X2) ),
+     inference(split_conjunct,[status(thm)],[[111]c_0_101])).
+
+ cnf(c_0_136,negated_conjecture,
+     ( esk50_0 = nil
+     | frontsegP(esk50_0,esk50_0) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[112]c_0_133,c_0_40]),c_0_41])])).
+
+ cnf(c_0_137,plain,
+     ( ssList(esk6_2(X1,X2))
+     | ~ ssList(X1)
+     | ~ ssList(X2)
+     | ~ frontsegP(X1,X2) ),
+     inference(split_conjunct,[status(thm)],[[113]c_0_101])).
+
+ fof(c_0_138,plain,(
+     ! [X5,X6,X9,X10] :
+       ( ( ssList(esk8_2(X5,X6))
+         | ~ segmentP(X5,X6)
+         | ~ ssList(X6)
+         | ~ ssList(X5) )
+       & ( ssList(esk9_2(X5,X6))
+         | ~ segmentP(X5,X6)
+         | ~ ssList(X6)
+         | ~ ssList(X5) )
+       & ( app(app(esk8_2(X5,X6),X6),esk9_2(X5,X6)) = X5
+         | ~ segmentP(X5,X6)
+         | ~ ssList(X6)
+         | ~ ssList(X5) )
+       & ( ~ ssList(X9)
+         | ~ ssList(X10)
+         | app(app(X9,X6),X10) != X5
+         | segmentP(X5,X6)
+         | ~ ssList(X6)
+         | ~ ssList(X5) ) ) ),
+     inference(distribute,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(skolemize,[status(esa)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_23])])])])])).
+
+ cnf(c_0_139,plain,
+     ( X1 = nil
+     | app(X2,X1) != X2
+     | ~ ssList(X2)
+     | ~ ssList(X1) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[114]c_0_134,c_0_76]),c_0_45])])).
+
+ cnf(c_0_140,negated_conjecture,
+     ( app(esk50_0,esk6_2(esk50_0,esk50_0)) = esk50_0
+     | esk50_0 = nil ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[115]c_0_135,c_0_136]),c_0_41])])).
+
+ cnf(c_0_141,negated_conjecture,
+     ( esk50_0 = nil
+     | ssList(esk6_2(esk50_0,esk50_0)) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[116]c_0_137,c_0_136]),c_0_41])])).
+
+ cnf(c_0_142,plain,
+     ( segmentP(X1,X2)
+     | ~ ssList(X1)
+     | ~ ssList(X2)
+     | app(app(X3,X2),X4) != X1
+     | ~ ssList(X4)
+     | ~ ssList(X3) ),
+     inference(split_conjunct,[status(thm)],[[117]c_0_138])).
+
+ fof(c_0_143,plain,(
+     ! [X2] :
+       ( ~ ssList(X2)
+       | app(nil,X2) = X2 ) ),
+     inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_24])])).
+
+ cnf(c_0_144,plain,
+     ( app(X1,esk6_2(X1,X1)) = X1
+     | ~ ssList(X1) ),
+     inference(spm,[status(thm)],[[118]c_0_135,[119]c_0_127])).
+
+ cnf(c_0_145,negated_conjecture,
+     ( esk6_2(esk50_0,esk50_0) = nil
+     | esk50_0 = nil ),
+     inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[120]c_0_139,c_0_140]),c_0_41])]),[121]c_0_141])).
+
+ cnf(c_0_146,plain,
+     ( segmentP(app(app(X1,X2),X3),X2)
+     | ~ ssList(app(app(X1,X2),X3))
+     | ~ ssList(X3)
+     | ~ ssList(X1)
+     | ~ ssList(X2) ),
+     inference(er,[status(thm)],[[122]c_0_142])).
+
+ cnf(c_0_147,plain,
+     ( app(nil,X1) = X1
+     | ~ ssList(X1) ),
+     inference(split_conjunct,[status(thm)],[[123]c_0_143])).
+
+ cnf(c_0_148,negated_conjecture,
+     ( app(esk50_0,nil) = esk50_0
+     | esk50_0 = nil ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[124]c_0_144,c_0_145]),c_0_41])])).
+
+ cnf(c_0_149,plain,
+     ( segmentP(app(X1,X2),X1)
+     | ~ ssList(X2)
+     | ~ ssList(X1) ),
+     inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[125]c_0_146,c_0_147]),c_0_45])]),[126]c_0_35])).
+
+ cnf(c_0_150,plain,
+     ( segmentP(app(cons(X1,X2),X3),X2)
+     | ~ ssList(app(cons(X1,X2),X3))
+     | ~ ssList(X3)
+     | ~ ssList(X2)
+     | ~ ssItem(X1) ),
+     inference(csr,[status(thm)],[inference(spm,[status(thm)],[[127]c_0_146,c_0_88]),[128]c_0_100])).
+
+ cnf(c_0_151,plain,
+     ( nil = X1
+     | ssList(app(tl(X1),X2))
+     | ~ ssList(X2)
+     | ~ ssList(X1) ),
+     inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[[129]c_0_40,c_0_58]),c_0_35]),[130]c_0_59])).
+
+ cnf(c_0_152,negated_conjecture,
+     ( app(tl(esk50_0),nil) = tl(esk50_0)
+     | esk50_0 = nil ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[131]c_0_58,c_0_148]),c_0_45]),c_0_41])])).
+
+ cnf(c_0_153,negated_conjecture,
+     ( esk50_0 = nil
+     | segmentP(esk51_0,tl(esk50_0))
+     | ~ ssList(cons(hd(esk50_0),nil))
+     | ~ ssList(tl(esk50_0)) ),
+     inference(spm,[status(thm)],[[132]c_0_149,[133]c_0_68])).
+
+ cnf(c_0_154,negated_conjecture,
+     ( ~ segmentP(esk48_0,X1)
+     | ~ segmentP(esk49_0,X1)
+     | ~ neq(X1,nil)
+     | ~ ssList(X1) ),
+     inference(split_conjunct,[status(thm)],[[134]c_0_28])).
+
+ cnf(c_0_155,plain,
+     ( segmentP(cons(X1,X2),X2)
+     | ~ ssList(X2)
+     | ~ ssItem(X1) ),
+     inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[135]c_0_150,c_0_76]),c_0_45])]),[136]c_0_44])).
+
+ cnf(c_0_156,negated_conjecture,
+     ( esk50_0 = nil
+     | ssList(tl(esk50_0)) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[137]c_0_151,c_0_152]),c_0_45]),c_0_41])])).
+
+ cnf(c_0_157,negated_conjecture,
+     ( esk50_0 = nil
+     | segmentP(esk51_0,tl(esk50_0))
+     | ~ ssList(cons(hd(esk50_0),nil)) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[138]c_0_153,c_0_40]),c_0_41])])).
+
+ cnf(c_0_158,plain,
+     ( segmentP(app(X1,X2),X2)
+     | ~ ssList(X1)
+     | ~ ssList(X2) ),
+     inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[139]c_0_146,c_0_76]),c_0_45])]),[140]c_0_35])).
+
+ cnf(c_0_159,negated_conjecture,
+     ( ~ segmentP(esk50_0,X1)
+     | ~ segmentP(esk51_0,X1)
+     | ~ ssList(X1)
+     | ~ neq(X1,nil) ),
+     inference(rw,[status(thm)],[inference(rw,[status(thm)],[[141]c_0_154,c_0_38]),[142]c_0_31])).
+
+ cnf(c_0_160,negated_conjecture,
+     ( esk50_0 = nil
+     | segmentP(esk50_0,tl(esk50_0)) ),
+     inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[[143]c_0_155,c_0_131]),c_0_120]),[144]c_0_156])).
+
+ cnf(c_0_161,negated_conjecture,
+     ( esk50_0 = nil
+     | segmentP(esk51_0,tl(esk50_0)) ),
+     inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[145]c_0_157,c_0_44]),c_0_45])]),[146]c_0_120])).
+
+ cnf(c_0_162,negated_conjecture,
+     ( esk50_0 = nil
+     | segmentP(esk51_0,cons(hd(esk50_0),nil))
+     | ~ ssList(cons(hd(esk50_0),nil))
+     | ~ ssList(tl(esk50_0)) ),
+     inference(spm,[status(thm)],[[147]c_0_158,[148]c_0_68])).
+
+ cnf(c_0_163,negated_conjecture,
+     ( esk50_0 = nil
+     | ~ neq(tl(esk50_0),nil) ),
+     inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[[149]c_0_159,c_0_160]),c_0_156]),[150]c_0_161])).
+
+ fof(c_0_164,plain,(
+     ! [X2] :
+       ( ~ ssList(X2)
+       | segmentP(X2,X2) ) ),
+     inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_25])])).
+
+ cnf(c_0_165,negated_conjecture,
+     ( neq(esk50_0,nil)
+     | ~ neq(esk51_0,nil) ),
+     inference(split_conjunct,[status(thm)],[[151]c_0_28])).
+
+ fof(c_0_166,plain,(
+     ! [X2] :
+       ( ~ ssList(X2)
+       | segmentP(X2,nil) ) ),
+     inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_26])])).
+
+ cnf(c_0_167,negated_conjecture,
+     ( esk50_0 = nil
+     | segmentP(esk51_0,cons(hd(esk50_0),nil))
+     | ~ ssList(cons(hd(esk50_0),nil)) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[152]c_0_162,c_0_40]),c_0_41])])).
+
+ cnf(c_0_168,negated_conjecture,
+     ( tl(esk50_0) = nil
+     | esk50_0 = nil ),
+     inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[153]c_0_163,c_0_61]),c_0_45])]),[154]c_0_156])).
+
+ cnf(c_0_169,plain,
+     ( segmentP(X1,X1)
+     | ~ ssList(X1) ),
+     inference(split_conjunct,[status(thm)],[[155]c_0_164])).
+
+ cnf(c_0_170,negated_conjecture,
+     ( neq(esk50_0,nil) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[[156]c_0_165,c_0_34])])).
+
+ cnf(c_0_171,plain,
+     ( segmentP(X1,nil)
+     | ~ ssList(X1) ),
+     inference(split_conjunct,[status(thm)],[[157]c_0_166])).
+
+ cnf(c_0_172,negated_conjecture,
+     ( esk50_0 = nil
+     | segmentP(esk51_0,cons(hd(esk50_0),nil)) ),
+     inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[158]c_0_167,c_0_44]),c_0_45])]),[159]c_0_120])).
+
+ cnf(c_0_173,negated_conjecture,
+     ( cons(hd(esk50_0),nil) = esk50_0
+     | esk50_0 = nil ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[160]c_0_57,c_0_168]),c_0_41])])).
+
+ cnf(c_0_174,negated_conjecture,
+     ( ~ segmentP(esk51_0,esk50_0) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[161]c_0_159,c_0_169]),c_0_41]),c_0_170])])).
+
+ cnf(c_0_175,negated_conjecture,
+     ( ~ segmentP(esk51_0,nil)
+     | ~ neq(nil,nil) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[162]c_0_159,c_0_171]),c_0_45]),c_0_41])])).
+
+ cnf(c_0_176,negated_conjecture,
+     ( esk50_0 = nil ),
+     inference(sr,[status(thm)],[inference(spm,[status(thm)],[[163]c_0_172,c_0_173]),[164]c_0_174])).
+
+ cnf(c_0_177,negated_conjecture,
+     ( ~ neq(nil,nil) ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[165]c_0_175,c_0_171]),c_0_95])])).
+
+ cnf(c_0_178,negated_conjecture,
+     ( $false ),
+     inference(sr,[status(thm)],[inference(rw,[status(thm)],[[166]c_0_170,c_0_176]),[167]c_0_177]),
+     [proof]).
+ %------------------------------------------------------------------------------
+ %----ORIGINAL SYSTEM OUTPUT
+ % 0.00/0.03  % Problem    : SWC089+1 : TPTP v6.4.0. Released v2.4.0.
+ % 0.00/0.04  % Command    : eprover --auto-schedule --definitional-cnf=24 -R --print-version --tstp-format -s --proof-object --cpu-limit=%d %s
+ % 0.03/0.22  % Computer   : n151.star.cs.uiowa.edu
+ % 0.03/0.22  % Model      : x86_64 x86_64
+ % 0.03/0.22  % CPU        : Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz
+ % 0.03/0.22  % Memory     : 32218.75MB
+ % 0.03/0.22  % OS         : Linux 3.10.0-327.10.1.el7.x86_64
+ % 0.03/0.22  % CPULimit   : 300
+ % 0.03/0.22  % DateTime   : Tue May 10 20:35:08 CDT 2016
+ % 0.03/0.22  % CPUTime    :
+ % 0.03/0.23  # Version: 1.9.1pre011
+ % 0.03/0.23  # No SInE strategy applied
+ % 0.03/0.23  # Trying AutoSched0 for 151 seconds
+ % 0.06/0.89  # AutoSched0-Mode selected heuristic G_E___208_C18_F1_SE_CS_SP_PS_S4c
+ % 0.06/0.89  # and selection function SelectCQPrecWNTNp.
+ % 0.06/0.89  #
+ % 0.06/0.89  # Preprocessing time       : 0.014 s
+ % 0.06/0.89  # Presaturation interreduction done
+ % 0.06/0.89
+ % 0.06/0.89  # Proof found!
+ % 0.06/0.89  # SZS status Theorem
+ % 0.06/0.89  # SZS output start CNFRefutation
+ % 0.06/0.89  fof(c_0_0, conjecture, (![X1]:(ssList(X1)=>![X2]:(ssList(X2)=>![X3]:(ssList(X3)=>![X4]:(ssList(X4)=>(((((X2!=X4|X1!=X3)|~(neq(X2,nil)))|?[X5]:(((ssList(X5)&neq(X5,nil))&segmentP(X2,X5))&segmentP(X1,X5)))|(nil!=X3&nil=X4))|(neq(X4,nil)&(~(neq(X3,nil))|?[X6]:((ssList(X6)&X4!=X6)&?[X7]:(ssList(X7)&?[X8]:((((ssList(X8)&tl(X3)=X7)&app(X7,X8)=X6)&?[X9]:(((ssItem(X9)&cons(X9,nil)=X8)&hd(X3)=X9)&neq(nil,X3)))&neq(nil,X3)))))))))))), file('/export/starexec/sandbox2/benchmark/theBenchmark.p', co1)).
+ % 0.06/0.89  fof(c_0_1, axiom, (![X1]:(ssList(X1)=>![X2]:(ssList(X2)=>ssList(app(X1,X2))))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax26)).
+ % 0.06/0.89  fof(c_0_2, axiom, (![X1]:(ssList(X1)=>(nil!=X1=>ssList(tl(X1))))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax24)).
+ % 0.06/0.89  fof(c_0_3, axiom, (![X1]:(ssList(X1)=>![X2]:(ssItem(X2)=>ssList(cons(X2,X1))))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax16)).
+ % 0.06/0.89  fof(c_0_4, axiom, (ssList(nil)), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax17)).
+ % 0.06/0.89  fof(c_0_5, axiom, (![X1]:(ssList(X1)=>(nil!=X1=>ssItem(hd(X1))))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax22)).
+ % 0.06/0.89  fof(c_0_6, axiom, (![X1]:(ssList(X1)=>(singletonP(X1)<=>?[X2]:(ssItem(X2)&cons(X2,nil)=X1)))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax4)).
+ % 0.06/0.89  fof(c_0_7, axiom, (![X1]:(ssList(X1)=>(nil!=X1=>cons(hd(X1),tl(X1))=X1))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax78)).
+ % 0.06/0.89  fof(c_0_8, axiom, (![X1]:(ssList(X1)=>![X2]:(ssList(X2)=>(nil!=X1=>tl(app(X1,X2))=app(tl(X1),X2))))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax86)).
+ % 0.06/0.89  fof(c_0_9, axiom, (![X1]:(ssList(X1)=>![X2]:(ssList(X2)=>(nil=app(X1,X2)<=>(nil=X2&nil=X1))))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax83)).
+ % 0.06/0.89  fof(c_0_10, axiom, (![X1]:(ssList(X1)=>![X2]:(ssList(X2)=>(neq(X1,X2)<=>X1!=X2)))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax15)).
+ % 0.06/0.89  fof(c_0_11, axiom, (![X1]:(ssList(X1)=>![X2]:(ssItem(X2)=>tl(cons(X2,X1))=X1))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax25)).
+ % 0.06/0.89  fof(c_0_12, axiom, (![X1]:(ssList(X1)=>![X2]:(ssItem(X2)=>cons(X2,X1)!=X1))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax18)).
+ % 0.06/0.89  fof(c_0_13, axiom, (![X1]:(ssList(X1)=>app(X1,nil)=X1)), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax84)).
+ % 0.06/0.89  fof(c_0_14, axiom, (![X1]:(ssList(X1)=>![X2]:(ssItem(X2)=>nil!=cons(X2,X1)))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax21)).
+ % 0.06/0.89  fof(c_0_15, axiom, (![X1]:(ssList(X1)=>![X2]:(ssList(X2)=>(nil!=X1=>hd(app(X1,X2))=hd(X1))))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax85)).
+ % 0.06/0.89  fof(c_0_16, axiom, (![X1]:(ssList(X1)=>![X2]:(ssItem(X2)=>cons(X2,X1)=app(cons(X2,nil),X1)))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax81)).
+ % 0.06/0.89  fof(c_0_17, axiom, (![X1]:(ssList(X1)=>![X2]:(ssItem(X2)=>hd(cons(X2,X1))=X2))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax23)).
+ % 0.06/0.89  fof(c_0_18, axiom, (![X1]:(ssList(X1)=>![X2]:(ssList(X2)=>(frontsegP(X1,X2)<=>?[X3]:(ssList(X3)&app(X2,X3)=X1))))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax5)).
+ % 0.06/0.89  fof(c_0_19, axiom, (![X1]:(ssItem(X1)=>![X2]:(ssItem(X2)=>![X3]:(ssList(X3)=>![X4]:(ssList(X4)=>(frontsegP(cons(X1,X3),cons(X2,X4))<=>(X1=X2&frontsegP(X3,X4)))))))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax44)).
+ % 0.06/0.89  fof(c_0_20, axiom, (![X1]:(ssList(X1)=>(nil=X1|?[X2]:(ssList(X2)&?[X3]:(ssItem(X3)&cons(X3,X2)=X1))))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax20)).
+ % 0.06/0.89  fof(c_0_21, axiom, (![X1]:(ssList(X1)=>frontsegP(X1,X1))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax42)).
+ % 0.06/0.89  fof(c_0_22, axiom, (![X1]:(ssList(X1)=>![X2]:(ssList(X2)=>![X3]:(ssList(X3)=>(app(X2,X3)=app(X2,X1)=>X3=X1))))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax80)).
+ % 0.06/0.89  fof(c_0_23, axiom, (![X1]:(ssList(X1)=>![X2]:(ssList(X2)=>(segmentP(X1,X2)<=>?[X3]:(ssList(X3)&?[X4]:(ssList(X4)&app(app(X3,X2),X4)=X1)))))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax7)).
+ % 0.06/0.89  fof(c_0_24, axiom, (![X1]:(ssList(X1)=>app(nil,X1)=X1)), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax28)).
+ % 0.06/0.89  fof(c_0_25, axiom, (![X1]:(ssList(X1)=>segmentP(X1,X1))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax55)).
+ % 0.06/0.89  fof(c_0_26, axiom, (![X1]:(ssList(X1)=>segmentP(X1,nil))), file('/export/starexec/sandbox2/benchmark/Axioms/SWC001+0.ax', ax57)).
+ % 0.06/0.89  fof(c_0_27, negated_conjecture, (~(![X1]:(ssList(X1)=>![X2]:(ssList(X2)=>![X3]:(ssList(X3)=>![X4]:(ssList(X4)=>(((((X2!=X4|X1!=X3)|~neq(X2,nil))|?[X5]:(((ssList(X5)&neq(X5,nil))&segmentP(X2,X5))&segmentP(X1,X5)))|(nil!=X3&nil=X4))|(neq(X4,nil)&(~neq(X3,nil)|?[X6]:((ssList(X6)&X4!=X6)&?[X7]:(ssList(X7)&?[X8]:((((ssList(X8)&tl(X3)=X7)&app(X7,X8)=X6)&?[X9]:(((ssItem(X9)&cons(X9,nil)=X8)&hd(X3)=X9)&neq(nil,X3)))&neq(nil,X3))))))))))))), inference(fof_simplification,[status(thm)],[inference(assume_negation,[status(cth)],[c_0_0])])).
+ % 0.06/0.89  fof(c_0_28, negated_conjecture, (![X14]:![X15]:![X16]:![X17]:![X18]:(ssList(esk48_0)&(ssList(esk49_0)&(ssList(esk50_0)&(ssList(esk51_0)&(((((esk49_0=esk51_0&esk48_0=esk50_0)&neq(esk49_0,nil))&(((~ssList(X14)|~neq(X14,nil))|~segmentP(esk49_0,X14))|~segmentP(esk48_0,X14)))&(nil=esk50_0|nil!=esk51_0))&((neq(esk50_0,nil)|~neq(esk51_0,nil))&(((~ssList(X15)|esk51_0=X15)|(~ssList(X16)|((((~ssList(X17)|tl(esk50_0)!=X16)|app(X16,X17)!=X15)|(((~ssItem(X18)|cons(X18,nil)!=X17)|hd(esk50_0)!=X18)|~neq(nil,esk50_0)))|~neq(nil,esk50_0))))|~neq(esk51_0,nil))))))))), inference(distribute,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(skolemize,[status(esa)],[inference(variable_rename,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_27])])])])])])).
+ % 0.06/0.89  cnf(c_0_29, negated_conjecture, (esk51_0=X4|~neq(esk51_0,nil)|~neq(nil,esk50_0)|~neq(nil,esk50_0)|hd(esk50_0)!=X1|cons(X1,nil)!=X2|~ssItem(X1)|app(X3,X2)!=X4|tl(esk50_0)!=X3|~ssList(X2)|~ssList(X3)|~ssList(X4)), inference(split_conjunct,[status(thm)],[c_0_28])).
+ % 0.06/0.89  cnf(c_0_30, negated_conjecture, (neq(esk49_0,nil)), inference(split_conjunct,[status(thm)],[c_0_28])).
+ % 0.06/0.89  cnf(c_0_31, negated_conjecture, (esk49_0=esk51_0), inference(split_conjunct,[status(thm)],[c_0_28])).
+ % 0.06/0.89  fof(c_0_32, plain, (![X3]:![X4]:(~ssList(X3)|(~ssList(X4)|ssList(app(X3,X4))))), inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_1])])])).
+ % 0.06/0.89  cnf(c_0_33, negated_conjecture, (esk51_0=X4|hd(esk50_0)!=X1|tl(esk50_0)!=X3|app(X3,X2)!=X4|cons(X1,nil)!=X2|~ssItem(X1)|~ssList(X4)|~ssList(X3)|~ssList(X2)|~neq(nil,esk50_0)|~neq(esk51_0,nil)), inference(cn,[status(thm)],[c_0_29])).
+ % 0.06/0.89  cnf(c_0_34, negated_conjecture, (neq(esk51_0,nil)), inference(rw,[status(thm)],[c_0_30, c_0_31])).
+ % 0.06/0.89  cnf(c_0_35, plain, (ssList(app(X1,X2))|~ssList(X2)|~ssList(X1)), inference(split_conjunct,[status(thm)],[c_0_32])).
+ % 0.06/0.89  fof(c_0_36, plain, (![X2]:(~ssList(X2)|(nil=X2|ssList(tl(X2))))), inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_2])])).
+ % 0.06/0.89  cnf(c_0_37, negated_conjecture, (ssList(esk48_0)), inference(split_conjunct,[status(thm)],[c_0_28])).
+ % 0.06/0.89  cnf(c_0_38, negated_conjecture, (esk48_0=esk50_0), inference(split_conjunct,[status(thm)],[c_0_28])).
+ % 0.06/0.89  cnf(c_0_39, negated_conjecture, (app(tl(esk50_0),cons(hd(esk50_0),nil))=esk51_0|~ssList(cons(hd(esk50_0),nil))|~ssList(tl(esk50_0))|~neq(nil,esk50_0)|~ssItem(hd(esk50_0))), inference(csr,[status(thm)],[inference(er,[status(thm)],[inference(er,[status(thm)],[inference(er,[status(thm)],[inference(er,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[c_0_33, c_0_34])])])])])]), c_0_35])).
+ % 0.06/0.89  cnf(c_0_40, plain, (ssList(tl(X1))|nil=X1|~ssList(X1)), inference(split_conjunct,[status(thm)],[c_0_36])).
+ % 0.06/0.89  cnf(c_0_41, negated_conjecture, (ssList(esk50_0)), inference(rw,[status(thm)],[c_0_37, c_0_38])).
+ % 0.06/0.89  fof(c_0_42, plain, (![X3]:![X4]:(~ssList(X3)|(~ssItem(X4)|ssList(cons(X4,X3))))), inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_3])])])).
+ % 0.06/0.89  cnf(c_0_43, negated_conjecture, (app(tl(esk50_0),cons(hd(esk50_0),nil))=esk51_0|esk50_0=nil|~ssList(cons(hd(esk50_0),nil))|~neq(nil,esk50_0)|~ssItem(hd(esk50_0))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_39, c_0_40]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_44, plain, (ssList(cons(X1,X2))|~ssItem(X1)|~ssList(X2)), inference(split_conjunct,[status(thm)],[c_0_42])).
+ % 0.06/0.89  cnf(c_0_45, plain, (ssList(nil)), inference(split_conjunct,[status(thm)],[c_0_4])).
+ % 0.06/0.89  fof(c_0_46, plain, (![X2]:(~ssList(X2)|(nil=X2|ssItem(hd(X2))))), inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_5])])).
+ % 0.06/0.89  fof(c_0_47, plain, (![X3]:![X5]:((((ssItem(esk5_1(X3))|~singletonP(X3))|~ssList(X3))&((cons(esk5_1(X3),nil)=X3|~singletonP(X3))|~ssList(X3)))&(((~ssItem(X5)|cons(X5,nil)!=X3)|singletonP(X3))|~ssList(X3)))), inference(distribute,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(skolemize,[status(esa)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_6])])])])])).
+ % 0.06/0.89  fof(c_0_48, plain, (![X2]:(~ssList(X2)|(nil=X2|cons(hd(X2),tl(X2))=X2))), inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_7])])).
+ % 0.06/0.89  fof(c_0_49, plain, (![X3]:![X4]:(~ssList(X3)|(~ssList(X4)|(nil=X3|tl(app(X3,X4))=app(tl(X3),X4))))), inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_8])])])).
+ % 0.06/0.89  fof(c_0_50, plain, (![X3]:![X4]:(((((nil=X4|nil!=app(X3,X4))|~ssList(X4))|~ssList(X3))&(((nil=X3|nil!=app(X3,X4))|~ssList(X4))|~ssList(X3)))&((((nil!=X4|nil!=X3)|nil=app(X3,X4))|~ssList(X4))|~ssList(X3)))), inference(distribute,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_9])])])])).
+ % 0.06/0.89  cnf(c_0_51, negated_conjecture, (app(tl(esk50_0),cons(hd(esk50_0),nil))=esk51_0|esk50_0=nil|~neq(nil,esk50_0)|~ssItem(hd(esk50_0))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_43, c_0_44]), c_0_45])])).
+ % 0.06/0.89  cnf(c_0_52, plain, (ssItem(hd(X1))|nil=X1|~ssList(X1)), inference(split_conjunct,[status(thm)],[c_0_46])).
+ % 0.06/0.89  fof(c_0_53, plain, (![X3]:![X4]:((((~neq(X3,X4)|X3!=X4)|~ssList(X4))|~ssList(X3))&(((X3=X4|neq(X3,X4))|~ssList(X4))|~ssList(X3)))), inference(distribute,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_10])])])])).
+ % 0.06/0.89  fof(c_0_54, plain, (![X3]:![X4]:(~ssList(X3)|(~ssItem(X4)|tl(cons(X4,X3))=X3))), inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_11])])])).
+ % 0.06/0.89  cnf(c_0_55, plain, (singletonP(X1)|~ssList(X1)|cons(X2,nil)!=X1|~ssItem(X2)), inference(split_conjunct,[status(thm)],[c_0_47])).
+ % 0.06/0.89  fof(c_0_56, plain, (![X3]:![X4]:(~ssList(X3)|(~ssItem(X4)|cons(X4,X3)!=X3))), inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_12])])])).
+ % 0.06/0.89  cnf(c_0_57, plain, (cons(hd(X1),tl(X1))=X1|nil=X1|~ssList(X1)), inference(split_conjunct,[status(thm)],[c_0_48])).
+ % 0.06/0.89  cnf(c_0_58, plain, (tl(app(X1,X2))=app(tl(X1),X2)|nil=X1|~ssList(X2)|~ssList(X1)), inference(split_conjunct,[status(thm)],[c_0_49])).
+ % 0.06/0.89  cnf(c_0_59, plain, (nil=X1|~ssList(X1)|~ssList(X2)|nil!=app(X1,X2)), inference(split_conjunct,[status(thm)],[c_0_50])).
+ % 0.06/0.89  cnf(c_0_60, negated_conjecture, (app(tl(esk50_0),cons(hd(esk50_0),nil))=esk51_0|esk50_0=nil|~neq(nil,esk50_0)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_51, c_0_52]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_61, plain, (neq(X1,X2)|X1=X2|~ssList(X1)|~ssList(X2)), inference(split_conjunct,[status(thm)],[c_0_53])).
+ % 0.06/0.89  cnf(c_0_62, plain, (tl(cons(X1,X2))=X2|~ssItem(X1)|~ssList(X2)), inference(split_conjunct,[status(thm)],[c_0_54])).
+ % 0.06/0.89  cnf(c_0_63, plain, (cons(esk5_1(X1),nil)=X1|~ssList(X1)|~singletonP(X1)), inference(split_conjunct,[status(thm)],[c_0_47])).
+ % 0.06/0.89  cnf(c_0_64, plain, (ssItem(esk5_1(X1))|~ssList(X1)|~singletonP(X1)), inference(split_conjunct,[status(thm)],[c_0_47])).
+ % 0.06/0.89  cnf(c_0_65, plain, (singletonP(cons(X1,nil))|~ssList(cons(X1,nil))|~ssItem(X1)), inference(er,[status(thm)],[c_0_55])).
+ % 0.06/0.89  cnf(c_0_66, plain, (cons(X1,X2)!=X2|~ssItem(X1)|~ssList(X2)), inference(split_conjunct,[status(thm)],[c_0_56])).
+ % 0.06/0.89  cnf(c_0_67, plain, (cons(hd(app(X1,X2)),app(tl(X1),X2))=app(X1,X2)|nil=X1|~ssList(X2)|~ssList(X1)), inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[c_0_57, c_0_58]), c_0_35]), c_0_59])).
+ % 0.06/0.89  cnf(c_0_68, negated_conjecture, (app(tl(esk50_0),cons(hd(esk50_0),nil))=esk51_0|esk50_0=nil), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_60, c_0_61]), c_0_41]), c_0_45])])).
+ % 0.06/0.89  cnf(c_0_69, plain, (tl(X1)=nil|~singletonP(X1)|~ssList(X1)), inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_62, c_0_63]), c_0_45])]), c_0_64])).
+ % 0.06/0.89  cnf(c_0_70, plain, (singletonP(cons(X1,nil))|~ssItem(X1)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_65, c_0_44]), c_0_45])])).
+ % 0.06/0.89  cnf(c_0_71, plain, (nil=X1|tl(X1)!=X1|~ssList(X1)), inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[c_0_66, c_0_57]), c_0_52]), c_0_40])).
+ % 0.06/0.89  fof(c_0_72, plain, (![X2]:(~ssList(X2)|app(X2,nil)=X2)), inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_13])])).
+ % 0.06/0.89  cnf(c_0_73, negated_conjecture, (cons(hd(app(esk50_0,cons(hd(esk50_0),nil))),esk51_0)=app(esk50_0,cons(hd(esk50_0),nil))|esk50_0=nil|~ssList(cons(hd(esk50_0),nil))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_67, c_0_68]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_74, plain, (tl(cons(X1,nil))=nil|~ssList(cons(X1,nil))|~ssItem(X1)), inference(spm,[status(thm)],[c_0_69, c_0_70])).
+ % 0.06/0.89  cnf(c_0_75, plain, (nil=X1|app(tl(X1),X2)!=app(X1,X2)|~ssList(X2)|~ssList(X1)), inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[c_0_71, c_0_58]), c_0_35]), c_0_59])).
+ % 0.06/0.89  cnf(c_0_76, plain, (app(X1,nil)=X1|~ssList(X1)), inference(split_conjunct,[status(thm)],[c_0_72])).
+ % 0.06/0.89  fof(c_0_77, plain, (![X3]:![X4]:(~ssList(X3)|(~ssItem(X4)|nil!=cons(X4,X3)))), inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_14])])])).
+ % 0.06/0.89  cnf(c_0_78, negated_conjecture, (cons(hd(app(esk50_0,cons(hd(esk50_0),nil))),esk51_0)=app(esk50_0,cons(hd(esk50_0),nil))|esk50_0=nil|~ssItem(hd(esk50_0))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_73, c_0_44]), c_0_45])])).
+ % 0.06/0.89  fof(c_0_79, plain, (![X3]:![X4]:(~ssList(X3)|(~ssList(X4)|(nil=X3|hd(app(X3,X4))=hd(X3))))), inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_15])])])).
+ % 0.06/0.89  cnf(c_0_80, plain, (tl(cons(X1,nil))=nil|~ssItem(X1)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_74, c_0_44]), c_0_45])])).
+ % 0.06/0.89  cnf(c_0_81, plain, (nil=X1|tl(X1)!=app(X1,nil)|~ssList(X1)), inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_75, c_0_76]), c_0_45])]), c_0_40])).
+ % 0.06/0.89  cnf(c_0_82, plain, (nil!=cons(X1,X2)|~ssItem(X1)|~ssList(X2)), inference(split_conjunct,[status(thm)],[c_0_77])).
+ % 0.06/0.89  fof(c_0_83, plain, (![X3]:![X4]:(~ssList(X3)|(~ssItem(X4)|cons(X4,X3)=app(cons(X4,nil),X3)))), inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_16])])])).
+ % 0.06/0.89  cnf(c_0_84, negated_conjecture, (cons(hd(app(esk50_0,cons(hd(esk50_0),nil))),esk51_0)=app(esk50_0,cons(hd(esk50_0),nil))|esk50_0=nil), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_78, c_0_52]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_85, plain, (hd(app(X1,X2))=hd(X1)|nil=X1|~ssList(X2)|~ssList(X1)), inference(split_conjunct,[status(thm)],[c_0_79])).
+ % 0.06/0.89  cnf(c_0_86, plain, (cons(hd(cons(X1,nil)),nil)=cons(X1,nil)|cons(X1,nil)=nil|~ssList(cons(X1,nil))|~ssItem(X1)), inference(spm,[status(thm)],[c_0_57, c_0_80])).
+ % 0.06/0.89  cnf(c_0_87, plain, (app(cons(X1,X2),nil)!=X2|~ssList(X2)|~ssItem(X1)), inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[c_0_81, c_0_62]), c_0_44]), c_0_82])).
+ % 0.06/0.89  cnf(c_0_88, plain, (cons(X1,X2)=app(cons(X1,nil),X2)|~ssItem(X1)|~ssList(X2)), inference(split_conjunct,[status(thm)],[c_0_83])).
+ % 0.06/0.89  cnf(c_0_89, negated_conjecture, (app(esk50_0,cons(hd(esk50_0),nil))=cons(hd(esk50_0),esk51_0)|esk50_0=nil|~ssList(cons(hd(esk50_0),nil))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_84, c_0_85]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_90, negated_conjecture, (ssList(esk49_0)), inference(split_conjunct,[status(thm)],[c_0_28])).
+ % 0.06/0.89  cnf(c_0_91, plain, (cons(hd(cons(X1,nil)),nil)=cons(X1,nil)|cons(X1,nil)=nil|~ssItem(X1)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_86, c_0_44]), c_0_45])])).
+ % 0.06/0.89  cnf(c_0_92, plain, (cons(X1,nil)!=nil|~ssItem(X1)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_87, c_0_88]), c_0_45])])).
+ % 0.06/0.89  fof(c_0_93, plain, (![X3]:![X4]:(~ssList(X3)|(~ssItem(X4)|hd(cons(X4,X3))=X4))), inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_17])])])).
+ % 0.06/0.89  cnf(c_0_94, negated_conjecture, (app(esk50_0,cons(hd(esk50_0),nil))=cons(hd(esk50_0),esk51_0)|esk50_0=nil|~ssItem(hd(esk50_0))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_89, c_0_44]), c_0_45])])).
+ % 0.06/0.89  cnf(c_0_95, negated_conjecture, (ssList(esk51_0)), inference(rw,[status(thm)],[c_0_90, c_0_31])).
+ % 0.06/0.89  cnf(c_0_96, plain, (ssList(cons(X1,nil))|~ssItem(hd(cons(X1,nil)))|~ssItem(X1)), inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_44, c_0_91]), c_0_45])]), c_0_92])).
+ % 0.06/0.89  cnf(c_0_97, plain, (hd(cons(X1,X2))=X1|~ssItem(X1)|~ssList(X2)), inference(split_conjunct,[status(thm)],[c_0_93])).
+ % 0.06/0.89  cnf(c_0_98, negated_conjecture, (app(esk50_0,cons(hd(esk50_0),nil))=cons(hd(esk50_0),esk51_0)|esk50_0=nil), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_94, c_0_52]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_99, negated_conjecture, (esk50_0=nil|app(esk50_0,cons(hd(esk50_0),nil))!=nil|~ssItem(hd(app(esk50_0,cons(hd(esk50_0),nil))))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_82, c_0_84]), c_0_95])])).
+ % 0.06/0.89  cnf(c_0_100, plain, (ssList(cons(X1,nil))|~ssItem(X1)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_96, c_0_97]), c_0_45])])).
+ % 0.06/0.89  fof(c_0_101, plain, (![X4]:![X5]:![X7]:(((((ssList(esk6_2(X4,X5))|~frontsegP(X4,X5))|~ssList(X5))|~ssList(X4))&(((app(X5,esk6_2(X4,X5))=X4|~frontsegP(X4,X5))|~ssList(X5))|~ssList(X4)))&((((~ssList(X7)|app(X5,X7)!=X4)|frontsegP(X4,X5))|~ssList(X5))|~ssList(X4)))), inference(distribute,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(skolemize,[status(esa)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_18])])])])])).
+ % 0.06/0.89  cnf(c_0_102, negated_conjecture, (hd(cons(hd(esk50_0),esk51_0))=hd(esk50_0)|esk50_0=nil|~ssList(cons(hd(esk50_0),nil))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_85, c_0_98]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_103, negated_conjecture, (esk50_0=nil|ssList(cons(hd(esk50_0),esk51_0))|~ssList(cons(hd(esk50_0),nil))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_35, c_0_98]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_104, negated_conjecture, (esk50_0=nil|app(esk50_0,cons(hd(esk50_0),nil))!=nil|~ssItem(hd(esk50_0))), inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_99, c_0_85]), c_0_41])]), c_0_100])).
+ % 0.06/0.89  cnf(c_0_105, plain, (frontsegP(X1,X2)|~ssList(X1)|~ssList(X2)|app(X2,X3)!=X1|~ssList(X3)), inference(split_conjunct,[status(thm)],[c_0_101])).
+ % 0.06/0.89  cnf(c_0_106, negated_conjecture, (hd(cons(hd(esk50_0),esk51_0))=hd(esk50_0)|esk50_0=nil|~ssItem(hd(esk50_0))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_102, c_0_44]), c_0_45])])).
+ % 0.06/0.89  cnf(c_0_107, negated_conjecture, (esk50_0=nil|ssList(cons(hd(esk50_0),esk51_0))|~ssItem(hd(esk50_0))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_103, c_0_44]), c_0_45])])).
+ % 0.06/0.89  cnf(c_0_108, negated_conjecture, (esk50_0=nil|app(esk50_0,cons(hd(esk50_0),nil))!=nil), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_104, c_0_52]), c_0_41])])).
+ % 0.06/0.89  fof(c_0_109, plain, (![X5]:![X6]:![X7]:![X8]:(((((((X5=X6|~frontsegP(cons(X5,X7),cons(X6,X8)))|~ssList(X8))|~ssList(X7))|~ssItem(X6))|~ssItem(X5))&(((((frontsegP(X7,X8)|~frontsegP(cons(X5,X7),cons(X6,X8)))|~ssList(X8))|~ssList(X7))|~ssItem(X6))|~ssItem(X5)))&((((((X5!=X6|~frontsegP(X7,X8))|frontsegP(cons(X5,X7),cons(X6,X8)))|~ssList(X8))|~ssList(X7))|~ssItem(X6))|~ssItem(X5)))), inference(distribute,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_19])])])])).
+ % 0.06/0.89  fof(c_0_110, plain, (![X4]:(((ssList(esk44_1(X4))|nil=X4)|~ssList(X4))&(((ssItem(esk45_1(X4))|nil=X4)|~ssList(X4))&((cons(esk45_1(X4),esk44_1(X4))=X4|nil=X4)|~ssList(X4))))), inference(distribute,[status(thm)],[inference(skolemize,[status(esa)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_20])])])])).
+ % 0.06/0.89  cnf(c_0_111, plain, (frontsegP(app(X1,X2),X1)|~ssList(X2)|~ssList(X1)), inference(csr,[status(thm)],[inference(er,[status(thm)],[c_0_105]), c_0_35])).
+ % 0.06/0.89  cnf(c_0_112, negated_conjecture, (hd(cons(hd(esk50_0),esk51_0))=hd(esk50_0)|esk50_0=nil), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_106, c_0_52]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_113, negated_conjecture, (esk50_0=nil|ssList(cons(hd(esk50_0),esk51_0))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_107, c_0_52]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_114, negated_conjecture, (esk50_0=nil|cons(hd(esk50_0),esk51_0)!=nil), inference(spm,[status(thm)],[c_0_108, c_0_98])).
+ % 0.06/0.89  cnf(c_0_115, plain, (X1=X2|~ssItem(X1)|~ssItem(X2)|~ssList(X3)|~ssList(X4)|~frontsegP(cons(X1,X3),cons(X2,X4))), inference(split_conjunct,[status(thm)],[c_0_109])).
+ % 0.06/0.89  cnf(c_0_116, plain, (nil=X1|cons(esk45_1(X1),esk44_1(X1))=X1|~ssList(X1)), inference(split_conjunct,[status(thm)],[c_0_110])).
+ % 0.06/0.89  cnf(c_0_117, plain, (nil=X1|ssItem(esk45_1(X1))|~ssList(X1)), inference(split_conjunct,[status(thm)],[c_0_110])).
+ % 0.06/0.89  cnf(c_0_118, plain, (nil=X1|ssList(esk44_1(X1))|~ssList(X1)), inference(split_conjunct,[status(thm)],[c_0_110])).
+ % 0.06/0.89  cnf(c_0_119, negated_conjecture, (esk50_0=nil|frontsegP(cons(hd(esk50_0),esk51_0),esk50_0)|~ssList(cons(hd(esk50_0),nil))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_111, c_0_98]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_120, negated_conjecture, (esk50_0=nil|ssItem(hd(esk50_0))), inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[c_0_52, c_0_112]), c_0_113]), c_0_114])).
+ % 0.06/0.89  cnf(c_0_121, plain, (X1=esk45_1(X2)|nil=X2|~frontsegP(cons(X1,X3),X2)|~ssList(X3)|~ssList(X2)|~ssItem(X1)), inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[c_0_115, c_0_116]), c_0_117]), c_0_118])).
+ % 0.06/0.89  cnf(c_0_122, negated_conjecture, (esk50_0=nil|frontsegP(cons(hd(esk50_0),esk51_0),esk50_0)), inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_119, c_0_44]), c_0_45])]), c_0_120])).
+ % 0.06/0.89  cnf(c_0_123, plain, (frontsegP(cons(X1,X3),cons(X2,X4))|~ssItem(X1)|~ssItem(X2)|~ssList(X3)|~ssList(X4)|~frontsegP(X3,X4)|X1!=X2), inference(split_conjunct,[status(thm)],[c_0_109])).
+ % 0.06/0.89  fof(c_0_124, plain, (![X2]:(~ssList(X2)|frontsegP(X2,X2))), inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_21])])).
+ % 0.06/0.89  cnf(c_0_125, negated_conjecture, (esk45_1(esk50_0)=hd(esk50_0)|esk50_0=nil), inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_121, c_0_122]), c_0_95]), c_0_41])]), c_0_120])).
+ % 0.06/0.89  cnf(c_0_126, plain, (frontsegP(cons(X1,X2),cons(X1,X3))|~frontsegP(X2,X3)|~ssList(X3)|~ssList(X2)|~ssItem(X1)), inference(er,[status(thm)],[c_0_123])).
+ % 0.06/0.89  cnf(c_0_127, plain, (frontsegP(X1,X1)|~ssList(X1)), inference(split_conjunct,[status(thm)],[c_0_124])).
+ % 0.06/0.89  cnf(c_0_128, negated_conjecture, (cons(hd(esk50_0),esk44_1(esk50_0))=esk50_0|esk50_0=nil), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_116, c_0_125]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_129, plain, (esk44_1(X1)=tl(X1)|nil=X1|~ssList(X1)), inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[c_0_62, c_0_116]), c_0_117]), c_0_118])).
+ % 0.06/0.89  cnf(c_0_130, plain, (frontsegP(cons(X1,X2),cons(X1,X2))|~ssList(X2)|~ssItem(X1)), inference(spm,[status(thm)],[c_0_126, c_0_127])).
+ % 0.06/0.89  cnf(c_0_131, negated_conjecture, (cons(hd(esk50_0),tl(esk50_0))=esk50_0|esk50_0=nil), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_128, c_0_129]), c_0_41])])).
+ % 0.06/0.89  fof(c_0_132, plain, (![X4]:![X5]:![X6]:(~ssList(X4)|(~ssList(X5)|(~ssList(X6)|(app(X5,X6)!=app(X5,X4)|X6=X4))))), inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_22])])])).
+ % 0.06/0.89  cnf(c_0_133, negated_conjecture, (esk50_0=nil|frontsegP(esk50_0,esk50_0)|~ssList(tl(esk50_0))), inference(csr,[status(thm)],[inference(spm,[status(thm)],[c_0_130, c_0_131]), c_0_120])).
+ % 0.06/0.89  cnf(c_0_134, plain, (X1=X2|app(X3,X1)!=app(X3,X2)|~ssList(X1)|~ssList(X3)|~ssList(X2)), inference(split_conjunct,[status(thm)],[c_0_132])).
+ % 0.06/0.89  cnf(c_0_135, plain, (app(X2,esk6_2(X1,X2))=X1|~ssList(X1)|~ssList(X2)|~frontsegP(X1,X2)), inference(split_conjunct,[status(thm)],[c_0_101])).
+ % 0.06/0.89  cnf(c_0_136, negated_conjecture, (esk50_0=nil|frontsegP(esk50_0,esk50_0)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_133, c_0_40]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_137, plain, (ssList(esk6_2(X1,X2))|~ssList(X1)|~ssList(X2)|~frontsegP(X1,X2)), inference(split_conjunct,[status(thm)],[c_0_101])).
+ % 0.06/0.89  fof(c_0_138, plain, (![X5]:![X6]:![X9]:![X10]:(((((ssList(esk8_2(X5,X6))|~segmentP(X5,X6))|~ssList(X6))|~ssList(X5))&((((ssList(esk9_2(X5,X6))|~segmentP(X5,X6))|~ssList(X6))|~ssList(X5))&(((app(app(esk8_2(X5,X6),X6),esk9_2(X5,X6))=X5|~segmentP(X5,X6))|~ssList(X6))|~ssList(X5))))&((((~ssList(X9)|(~ssList(X10)|app(app(X9,X6),X10)!=X5))|segmentP(X5,X6))|~ssList(X6))|~ssList(X5)))), inference(distribute,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(skolemize,[status(esa)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_23])])])])])).
+ % 0.06/0.89  cnf(c_0_139, plain, (X1=nil|app(X2,X1)!=X2|~ssList(X2)|~ssList(X1)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_134, c_0_76]), c_0_45])])).
+ % 0.06/0.89  cnf(c_0_140, negated_conjecture, (app(esk50_0,esk6_2(esk50_0,esk50_0))=esk50_0|esk50_0=nil), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_135, c_0_136]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_141, negated_conjecture, (esk50_0=nil|ssList(esk6_2(esk50_0,esk50_0))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_137, c_0_136]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_142, plain, (segmentP(X1,X2)|~ssList(X1)|~ssList(X2)|app(app(X3,X2),X4)!=X1|~ssList(X4)|~ssList(X3)), inference(split_conjunct,[status(thm)],[c_0_138])).
+ % 0.06/0.89  fof(c_0_143, plain, (![X2]:(~ssList(X2)|app(nil,X2)=X2)), inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_24])])).
+ % 0.06/0.89  cnf(c_0_144, plain, (app(X1,esk6_2(X1,X1))=X1|~ssList(X1)), inference(spm,[status(thm)],[c_0_135, c_0_127])).
+ % 0.06/0.89  cnf(c_0_145, negated_conjecture, (esk6_2(esk50_0,esk50_0)=nil|esk50_0=nil), inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_139, c_0_140]), c_0_41])]), c_0_141])).
+ % 0.06/0.89  cnf(c_0_146, plain, (segmentP(app(app(X1,X2),X3),X2)|~ssList(app(app(X1,X2),X3))|~ssList(X3)|~ssList(X1)|~ssList(X2)), inference(er,[status(thm)],[c_0_142])).
+ % 0.06/0.89  cnf(c_0_147, plain, (app(nil,X1)=X1|~ssList(X1)), inference(split_conjunct,[status(thm)],[c_0_143])).
+ % 0.06/0.89  cnf(c_0_148, negated_conjecture, (app(esk50_0,nil)=esk50_0|esk50_0=nil), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_144, c_0_145]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_149, plain, (segmentP(app(X1,X2),X1)|~ssList(X2)|~ssList(X1)), inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_146, c_0_147]), c_0_45])]), c_0_35])).
+ % 0.06/0.89  cnf(c_0_150, plain, (segmentP(app(cons(X1,X2),X3),X2)|~ssList(app(cons(X1,X2),X3))|~ssList(X3)|~ssList(X2)|~ssItem(X1)), inference(csr,[status(thm)],[inference(spm,[status(thm)],[c_0_146, c_0_88]), c_0_100])).
+ % 0.06/0.89  cnf(c_0_151, plain, (nil=X1|ssList(app(tl(X1),X2))|~ssList(X2)|~ssList(X1)), inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[c_0_40, c_0_58]), c_0_35]), c_0_59])).
+ % 0.06/0.89  cnf(c_0_152, negated_conjecture, (app(tl(esk50_0),nil)=tl(esk50_0)|esk50_0=nil), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_58, c_0_148]), c_0_45]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_153, negated_conjecture, (esk50_0=nil|segmentP(esk51_0,tl(esk50_0))|~ssList(cons(hd(esk50_0),nil))|~ssList(tl(esk50_0))), inference(spm,[status(thm)],[c_0_149, c_0_68])).
+ % 0.06/0.89  cnf(c_0_154, negated_conjecture, (~segmentP(esk48_0,X1)|~segmentP(esk49_0,X1)|~neq(X1,nil)|~ssList(X1)), inference(split_conjunct,[status(thm)],[c_0_28])).
+ % 0.06/0.89  cnf(c_0_155, plain, (segmentP(cons(X1,X2),X2)|~ssList(X2)|~ssItem(X1)), inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_150, c_0_76]), c_0_45])]), c_0_44])).
+ % 0.06/0.89  cnf(c_0_156, negated_conjecture, (esk50_0=nil|ssList(tl(esk50_0))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_151, c_0_152]), c_0_45]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_157, negated_conjecture, (esk50_0=nil|segmentP(esk51_0,tl(esk50_0))|~ssList(cons(hd(esk50_0),nil))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_153, c_0_40]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_158, plain, (segmentP(app(X1,X2),X2)|~ssList(X1)|~ssList(X2)), inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_146, c_0_76]), c_0_45])]), c_0_35])).
+ % 0.06/0.89  cnf(c_0_159, negated_conjecture, (~segmentP(esk50_0,X1)|~segmentP(esk51_0,X1)|~ssList(X1)|~neq(X1,nil)), inference(rw,[status(thm)],[inference(rw,[status(thm)],[c_0_154, c_0_38]), c_0_31])).
+ % 0.06/0.89  cnf(c_0_160, negated_conjecture, (esk50_0=nil|segmentP(esk50_0,tl(esk50_0))), inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[c_0_155, c_0_131]), c_0_120]), c_0_156])).
+ % 0.06/0.89  cnf(c_0_161, negated_conjecture, (esk50_0=nil|segmentP(esk51_0,tl(esk50_0))), inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_157, c_0_44]), c_0_45])]), c_0_120])).
+ % 0.06/0.89  cnf(c_0_162, negated_conjecture, (esk50_0=nil|segmentP(esk51_0,cons(hd(esk50_0),nil))|~ssList(cons(hd(esk50_0),nil))|~ssList(tl(esk50_0))), inference(spm,[status(thm)],[c_0_158, c_0_68])).
+ % 0.06/0.89  cnf(c_0_163, negated_conjecture, (esk50_0=nil|~neq(tl(esk50_0),nil)), inference(csr,[status(thm)],[inference(csr,[status(thm)],[inference(spm,[status(thm)],[c_0_159, c_0_160]), c_0_156]), c_0_161])).
+ % 0.06/0.89  fof(c_0_164, plain, (![X2]:(~ssList(X2)|segmentP(X2,X2))), inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_25])])).
+ % 0.06/0.89  cnf(c_0_165, negated_conjecture, (neq(esk50_0,nil)|~neq(esk51_0,nil)), inference(split_conjunct,[status(thm)],[c_0_28])).
+ % 0.06/0.89  fof(c_0_166, plain, (![X2]:(~ssList(X2)|segmentP(X2,nil))), inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_26])])).
+ % 0.06/0.89  cnf(c_0_167, negated_conjecture, (esk50_0=nil|segmentP(esk51_0,cons(hd(esk50_0),nil))|~ssList(cons(hd(esk50_0),nil))), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_162, c_0_40]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_168, negated_conjecture, (tl(esk50_0)=nil|esk50_0=nil), inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_163, c_0_61]), c_0_45])]), c_0_156])).
+ % 0.06/0.89  cnf(c_0_169, plain, (segmentP(X1,X1)|~ssList(X1)), inference(split_conjunct,[status(thm)],[c_0_164])).
+ % 0.06/0.89  cnf(c_0_170, negated_conjecture, (neq(esk50_0,nil)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[c_0_165, c_0_34])])).
+ % 0.06/0.89  cnf(c_0_171, plain, (segmentP(X1,nil)|~ssList(X1)), inference(split_conjunct,[status(thm)],[c_0_166])).
+ % 0.06/0.89  cnf(c_0_172, negated_conjecture, (esk50_0=nil|segmentP(esk51_0,cons(hd(esk50_0),nil))), inference(csr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_167, c_0_44]), c_0_45])]), c_0_120])).
+ % 0.06/0.89  cnf(c_0_173, negated_conjecture, (cons(hd(esk50_0),nil)=esk50_0|esk50_0=nil), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_57, c_0_168]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_174, negated_conjecture, (~segmentP(esk51_0,esk50_0)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_159, c_0_169]), c_0_41]), c_0_170])])).
+ % 0.06/0.89  cnf(c_0_175, negated_conjecture, (~segmentP(esk51_0,nil)|~neq(nil,nil)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_159, c_0_171]), c_0_45]), c_0_41])])).
+ % 0.06/0.89  cnf(c_0_176, negated_conjecture, (esk50_0=nil), inference(sr,[status(thm)],[inference(spm,[status(thm)],[c_0_172, c_0_173]), c_0_174])).
+ % 0.06/0.89  cnf(c_0_177, negated_conjecture, (~neq(nil,nil)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_175, c_0_171]), c_0_95])])).
+ % 0.06/0.89  cnf(c_0_178, negated_conjecture, ($false), inference(sr,[status(thm)],[inference(rw,[status(thm)],[c_0_170, c_0_176]), c_0_177]), ['proof']).
+ % 0.06/0.89  # SZS output end CNFRefutation
+ % 0.06/0.89  # Training examples: 0 positive, 0 negative
+ % 0.06/0.89
+ % 0.06/0.89  # -------------------------------------------------
+ % 0.06/0.89  # User time                : 0.659 s
+ % 0.06/0.89  # System time              : 0.010 s
+ % 0.06/0.89  # Total time               : 0.669 s
+ % 0.06/0.89  # Maximum resident set size: 1880 pages
+ %------------------------------------------------------------------------------
+
+   --------------------------------------------------------------------------

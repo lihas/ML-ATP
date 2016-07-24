@@ -1,0 +1,129 @@
+   --------------------------------------------------------------------------
+
+                   TSTP Solution File: SWC131-1 by E---1.9.1
+
+                     [1]View Problem - [2]Process Solution
+
+   --------------------------------------------------------------------------
+
+ %------------------------------------------------------------------------------
+ % File       : E---1.9.1
+ % Problem    : [3]SWC131-1 : TPTP v6.4.0. Released v2.4.0.
+ % Transform  : none
+ % Format     : tptp:raw
+ % Command    : eprover --auto-schedule --definitional-cnf=24 -R --print-version --tstp-format -s --proof-object --cpu-limit=%d %s
+
+ % Computer   : n142.star.cs.uiowa.edu
+ % Model      : x86_64 x86_64
+ % CPU        : Intel(R) Xeon(R) CPU E5-2609 0 2.40GHz
+ % Memory     : 32218.75MB
+ % OS         : Linux 3.10.0-327.10.1.el7.x86_64
+ % CPULimit   : 300s
+ % DateTime   : Wed May 11 11:16:46 EDT 2016
+
+ % Result     : Unsatisfiable 0.02s
+ % Output     : CNFRefutation 0.02s
+ % Verified   :
+ % Statistics : Number of clauses        :   11 (  12 expanded)
+ %              Number of leaves         :    7 (   8 expanded)
+ %              Depth                    :    3
+ %              Number of atoms          :   14 (  15 expanded)
+ %              Number of equality atoms :    3 (   4 expanded)
+ %              Maximal clause size      :    4 (   1 average)
+ %              Maximal term depth       :    1 (   1 average)
+
+ % Comments   :
+ %------------------------------------------------------------------------------
+ cnf(c_0_0,negated_conjecture,
+     ( ssList(sk2) ),
+     file('/export/starexec/sandbox/benchmark/theBenchmark.p',co1_2)).
+
+ cnf(c_0_1,negated_conjecture,
+     ( sk2 = sk4 ),
+     file('/export/starexec/sandbox/benchmark/theBenchmark.p',co1_5)).
+
+ cnf(c_0_2,negated_conjecture,
+     ( ~ cyclefreeP(sk2) ),
+     file('/export/starexec/sandbox/benchmark/theBenchmark.p',co1_8)).
+
+ cnf(c_0_3,negated_conjecture,
+     ( ~ neq(sk4,nil) ),
+     file('/export/starexec/sandbox/benchmark/theBenchmark.p',co1_7)).
+
+ cnf(c_0_4,axiom,
+     ( neq(X2,X1)
+     | X2 = X1
+     | ~ ssList(X1)
+     | ~ ssList(X2) ),
+     file('/export/starexec/sandbox/benchmark/Axioms/SWC001-0.ax',clause100)).
+
+ cnf(c_0_5,axiom,
+     ( ssList(nil) ),
+     file('/export/starexec/sandbox/benchmark/Axioms/SWC001-0.ax',clause8)).
+
+ cnf(c_0_6,axiom,
+     ( cyclefreeP(nil) ),
+     file('/export/starexec/sandbox/benchmark/Axioms/SWC001-0.ax',clause7)).
+
+ cnf(c_0_7,negated_conjecture,
+     ( ssList(sk4) ),
+     inference(rw,[status(thm)],[[4]c_0_0,[5]c_0_1])).
+
+ cnf(c_0_8,negated_conjecture,
+     ( ~ cyclefreeP(sk4) ),
+     inference(rw,[status(thm)],[[6]c_0_2,[7]c_0_1])).
+
+ cnf(c_0_9,negated_conjecture,
+     ( sk4 = nil ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[[8]c_0_3,c_0_4]),c_0_7]),c_0_5])])).
+
+ cnf(c_0_10,negated_conjecture,
+     ( $false ),
+     inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[[9]c_0_8,c_0_9]),c_0_6])]),
+     [proof]).
+ %------------------------------------------------------------------------------
+ %----ORIGINAL SYSTEM OUTPUT
+ % 0.00/0.03  % Problem    : SWC131-1 : TPTP v6.4.0. Released v2.4.0.
+ % 0.02/0.04  % Command    : eprover --auto-schedule --definitional-cnf=24 -R --print-version --tstp-format -s --proof-object --cpu-limit=%d %s
+ % 0.02/0.23  % Computer   : n142.star.cs.uiowa.edu
+ % 0.02/0.23  % Model      : x86_64 x86_64
+ % 0.02/0.23  % CPU        : Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz
+ % 0.02/0.23  % Memory     : 32218.75MB
+ % 0.02/0.23  % OS         : Linux 3.10.0-327.10.1.el7.x86_64
+ % 0.02/0.23  % CPULimit   : 300
+ % 0.02/0.23  % DateTime   : Tue May 10 20:35:23 CDT 2016
+ % 0.02/0.23  % CPUTime    :
+ % 0.02/0.23  # Version: 1.9.1pre011
+ % 0.02/0.23  # No SInE strategy applied
+ % 0.02/0.23  # Trying AutoSched0 for 151 seconds
+ % 0.02/0.25  # AutoSched0-Mode selected heuristic G_E___208_C18_F1_SE_CS_SP_PS_S2k
+ % 0.02/0.25  # and selection function SelectCQArNTEqFirst.
+ % 0.02/0.25  #
+ % 0.02/0.25  # Preprocessing time       : 0.009 s
+ % 0.02/0.25  # Presaturation interreduction done
+ % 0.02/0.25
+ % 0.02/0.25  # Proof found!
+ % 0.02/0.25  # SZS status Unsatisfiable
+ % 0.02/0.25  # SZS output start CNFRefutation
+ % 0.02/0.25  cnf(c_0_0, negated_conjecture, (ssList(sk2)), file('/export/starexec/sandbox/benchmark/theBenchmark.p', co1_2)).
+ % 0.02/0.25  cnf(c_0_1, negated_conjecture, (sk2=sk4), file('/export/starexec/sandbox/benchmark/theBenchmark.p', co1_5)).
+ % 0.02/0.25  cnf(c_0_2, negated_conjecture, (~cyclefreeP(sk2)), file('/export/starexec/sandbox/benchmark/theBenchmark.p', co1_8)).
+ % 0.02/0.25  cnf(c_0_3, negated_conjecture, (~neq(sk4,nil)), file('/export/starexec/sandbox/benchmark/theBenchmark.p', co1_7)).
+ % 0.02/0.25  cnf(c_0_4, axiom, (neq(X2,X1)|X2=X1|~ssList(X1)|~ssList(X2)), file('/export/starexec/sandbox/benchmark/Axioms/SWC001-0.ax', clause100)).
+ % 0.02/0.25  cnf(c_0_5, axiom, (ssList(nil)), file('/export/starexec/sandbox/benchmark/Axioms/SWC001-0.ax', clause8)).
+ % 0.02/0.25  cnf(c_0_6, axiom, (cyclefreeP(nil)), file('/export/starexec/sandbox/benchmark/Axioms/SWC001-0.ax', clause7)).
+ % 0.02/0.25  cnf(c_0_7, negated_conjecture, (ssList(sk4)), inference(rw,[status(thm)],[c_0_0, c_0_1])).
+ % 0.02/0.25  cnf(c_0_8, negated_conjecture, (~cyclefreeP(sk4)), inference(rw,[status(thm)],[c_0_2, c_0_1])).
+ % 0.02/0.25  cnf(c_0_9, negated_conjecture, (sk4=nil), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_3, c_0_4]), c_0_7]), c_0_5])])).
+ % 0.02/0.25  cnf(c_0_10, negated_conjecture, ($false), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[c_0_8, c_0_9]), c_0_6])]), ['proof']).
+ % 0.02/0.25  # SZS output end CNFRefutation
+ % 0.02/0.25  # Training examples: 0 positive, 0 negative
+ % 0.02/0.25
+ % 0.02/0.25  # -------------------------------------------------
+ % 0.02/0.25  # User time                : 0.019 s
+ % 0.02/0.25  # System time              : 0.003 s
+ % 0.02/0.25  # Total time               : 0.022 s
+ % 0.02/0.25  # Maximum resident set size: 1860 pages
+ %------------------------------------------------------------------------------
+
+   --------------------------------------------------------------------------
