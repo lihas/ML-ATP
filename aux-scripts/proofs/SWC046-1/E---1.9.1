@@ -1,0 +1,185 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>TSTP Solution File: SWC046-1 by E---1.9.1</title>
+<meta name="ROBOTS" content="NOINDEX,NOFOLLOW" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body>
+<HR><CENTER>
+<H2>TSTP Solution File: SWC046-1 by E---1.9.1</H2><A HREF=SeeTPTP?Category=Problems&Domain=SWC&File=SWC046-1.p>View Problem</A>
+- <A HREF="http://www.cs.miami.edu/~tptp/cgi-bin/SystemOnTSTP?TPTPProblem=SWC046-1&SystemAndVersion=E---1.9.1" TARGET="_blank">Process Solution</A>
+</CENTER><HR>
+<pre>
+%------------------------------------------------------------------------------
+% File       : E---1.9.1
+% Problem    : <a href="SeeTPTP?Category=Problems&Domain=SWC&File=SWC046-1.p">SWC046-1</a> : TPTP v6.4.0. Released v2.4.0.
+% Transform  : none
+% Format     : tptp:raw
+% Command    : eprover --auto-schedule --definitional-cnf=24 -R --print-version --tstp-format -s --proof-object --cpu-limit=%d %s
+
+% Computer   : n141.star.cs.uiowa.edu
+% Model      : x86_64 x86_64
+% CPU        : Intel(R) Xeon(R) CPU E5-2609 0 2.40GHz
+% Memory     : 32218.75MB
+% OS         : Linux 3.10.0-327.10.1.el7.x86_64
+% CPULimit   : 300s
+% DateTime   : Wed May 11 11:16:25 EDT 2016
+
+% Result     : Unsatisfiable 0.03s
+% Output     : CNFRefutation 0.03s
+% Verified   : 
+% Statistics : Number of clauses        :   18 (  20 expanded)
+%              Number of leaves         :   11 (  13 expanded)
+%              Depth                    :    3
+%              Number of atoms          :   32 (  34 expanded)
+%              Number of equality atoms :   10 (  11 expanded)
+%              Maximal clause size      :    5 (   2 average)
+%              Maximal term depth       :    3 (   1 average)
+
+% Comments   : 
+%------------------------------------------------------------------------------
+<A NAME="c_0_0"></A>cnf(c_0_0,negated_conjecture,
+    ( sk2 = sk4 ),
+    file('/export/starexec/sandbox/benchmark/theBenchmark.p',co1_6)).
+
+<A NAME="c_0_1"></A>cnf(c_0_1,negated_conjecture,
+    ( nil = sk2 ),
+    file('/export/starexec/sandbox/benchmark/theBenchmark.p',co1_5)).
+
+<A NAME="c_0_2"></A>cnf(c_0_2,axiom,
+    ( memberP(cons(X2,X3),X1)
+    | X1 != X2
+    | ~ ssList(X3)
+    | ~ ssItem(X2)
+    | ~ ssItem(X1) ),
+    file('/export/starexec/sandbox/benchmark/Axioms/SWC001-0.ax',clause138)).
+
+<A NAME="c_0_3"></A>cnf(c_0_3,negated_conjecture,
+    ( memberP(sk4,X1)
+    | ~ ssItem(X1)
+    | ~ memberP(sk3,X1) ),
+    file('/export/starexec/sandbox/benchmark/theBenchmark.p',co1_11)).
+
+<A NAME="c_0_4"></A>cnf(c_0_4,axiom,
+    ( ~ memberP(nil,X1)
+    | ~ ssItem(X1) ),
+    file('/export/starexec/sandbox/benchmark/Axioms/SWC001-0.ax',clause71)).
+
+<A NAME="c_0_5"></A>cnf(c_0_5,axiom,
+    ( cons(skaf83(X1),skaf82(X1)) = X1
+    | nil = X1
+    | ~ ssList(X1) ),
+    file('/export/starexec/sandbox/benchmark/Axioms/SWC001-0.ax',clause109)).
+
+<A NAME="c_0_6"></A>cnf(c_0_6,axiom,
+    ( ssItem(skaf83(X1)) ),
+    file('/export/starexec/sandbox/benchmark/Axioms/SWC001-0.ax',clause12)).
+
+<A NAME="c_0_7"></A>cnf(c_0_7,axiom,
+    ( ssList(skaf82(X1)) ),
+    file('/export/starexec/sandbox/benchmark/Axioms/SWC001-0.ax',clause13)).
+
+<A NAME="c_0_8"></A>cnf(c_0_8,negated_conjecture,
+    ( ssList(sk1) ),
+    file('/export/starexec/sandbox/benchmark/theBenchmark.p',co1_1)).
+
+<A NAME="c_0_9"></A>cnf(c_0_9,negated_conjecture,
+    ( sk1 = sk3 ),
+    file('/export/starexec/sandbox/benchmark/theBenchmark.p',co1_7)).
+
+<A NAME="c_0_10"></A>cnf(c_0_10,negated_conjecture,
+    ( nil != sk1 ),
+    file('/export/starexec/sandbox/benchmark/theBenchmark.p',co1_8)).
+
+<A NAME="c_0_11"></A>cnf(c_0_11,negated_conjecture,
+    ( sk4 = nil ),
+    inference(rw,[status(thm)],[<A HREF="#c_0_0">c_0_0</A>,<A HREF="#c_0_1">c_0_1</A>])).
+
+<A NAME="c_0_12"></A>cnf(c_0_12,plain,
+    ( memberP(cons(X1,X2),X1)
+    | ~ ssItem(X1)
+    | ~ ssList(X2) ),
+    inference(er,[status(thm)],[<A HREF="#c_0_2">c_0_2</A>])).
+
+<A NAME="c_0_13"></A>cnf(c_0_13,negated_conjecture,
+    ( ~ memberP(sk3,X1)
+    | ~ ssItem(X1) ),
+    inference(csr,[status(thm)],[inference(rw,[status(thm)],[<A HREF="#c_0_3">c_0_3</A>,c_0_11]),<A HREF="#c_0_4">c_0_4</A>])).
+
+<A NAME="c_0_14"></A>cnf(c_0_14,plain,
+    ( nil = X1
+    | memberP(X1,skaf83(X1))
+    | ~ ssList(X1) ),
+    inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[<A HREF="#c_0_12">c_0_12</A>,c_0_5]),c_0_6]),c_0_7])])).
+
+<A NAME="c_0_15"></A>cnf(c_0_15,negated_conjecture,
+    ( ssList(sk3) ),
+    inference(rw,[status(thm)],[<A HREF="#c_0_8">c_0_8</A>,<A HREF="#c_0_9">c_0_9</A>])).
+
+<A NAME="c_0_16"></A>cnf(c_0_16,negated_conjecture,
+    ( sk3 != nil ),
+    inference(rw,[status(thm)],[<A HREF="#c_0_10">c_0_10</A>,<A HREF="#c_0_9">c_0_9</A>])).
+
+<A NAME="c_0_17"></A>cnf(c_0_17,negated_conjecture,
+    ( $false ),
+    inference(sr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[<A HREF="#c_0_13">c_0_13</A>,c_0_14]),c_0_6]),c_0_15])]),<A HREF="#c_0_16">c_0_16</A>]),
+    [proof]).
+%------------------------------------------------------------------------------
+%----ORIGINAL SYSTEM OUTPUT
+% 0.00/0.03  % Problem    : SWC046-1 : TPTP v6.4.0. Released v2.4.0.
+% 0.00/0.04  % Command    : eprover --auto-schedule --definitional-cnf=24 -R --print-version --tstp-format -s --proof-object --cpu-limit=%d %s
+% 0.03/0.23  % Computer   : n141.star.cs.uiowa.edu
+% 0.03/0.23  % Model      : x86_64 x86_64
+% 0.03/0.23  % CPU        : Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz
+% 0.03/0.23  % Memory     : 32218.75MB
+% 0.03/0.23  % OS         : Linux 3.10.0-327.10.1.el7.x86_64
+% 0.03/0.23  % CPULimit   : 300
+% 0.03/0.23  % DateTime   : Tue May 10 20:34:53 CDT 2016
+% 0.03/0.23  % CPUTime    : 
+% 0.03/0.23  # Version: 1.9.1pre011
+% 0.03/0.23  # No SInE strategy applied
+% 0.03/0.23  # Trying AutoSched0 for 151 seconds
+% 0.03/0.27  # AutoSched0-Mode selected heuristic G_E___208_C18_F1_SE_CS_SP_PS_S2k
+% 0.03/0.27  # and selection function SelectCQArNTEqFirst.
+% 0.03/0.27  #
+% 0.03/0.27  # Preprocessing time       : 0.010 s
+% 0.03/0.27  # Presaturation interreduction done
+% 0.03/0.27  
+% 0.03/0.27  # Proof found!
+% 0.03/0.27  # SZS status Unsatisfiable
+% 0.03/0.27  # SZS output start CNFRefutation
+% 0.03/0.27  cnf(c_0_0, negated_conjecture, (sk2=sk4), file('/export/starexec/sandbox/benchmark/theBenchmark.p', co1_6)).
+% 0.03/0.27  cnf(c_0_1, negated_conjecture, (nil=sk2), file('/export/starexec/sandbox/benchmark/theBenchmark.p', co1_5)).
+% 0.03/0.27  cnf(c_0_2, axiom, (memberP(cons(X2,X3),X1)|X1!=X2|~ssList(X3)|~ssItem(X2)|~ssItem(X1)), file('/export/starexec/sandbox/benchmark/Axioms/SWC001-0.ax', clause138)).
+% 0.03/0.27  cnf(c_0_3, negated_conjecture, (memberP(sk4,X1)|~ssItem(X1)|~memberP(sk3,X1)), file('/export/starexec/sandbox/benchmark/theBenchmark.p', co1_11)).
+% 0.03/0.27  cnf(c_0_4, axiom, (~memberP(nil,X1)|~ssItem(X1)), file('/export/starexec/sandbox/benchmark/Axioms/SWC001-0.ax', clause71)).
+% 0.03/0.27  cnf(c_0_5, axiom, (cons(skaf83(X1),skaf82(X1))=X1|nil=X1|~ssList(X1)), file('/export/starexec/sandbox/benchmark/Axioms/SWC001-0.ax', clause109)).
+% 0.03/0.27  cnf(c_0_6, axiom, (ssItem(skaf83(X1))), file('/export/starexec/sandbox/benchmark/Axioms/SWC001-0.ax', clause12)).
+% 0.03/0.27  cnf(c_0_7, axiom, (ssList(skaf82(X1))), file('/export/starexec/sandbox/benchmark/Axioms/SWC001-0.ax', clause13)).
+% 0.03/0.27  cnf(c_0_8, negated_conjecture, (ssList(sk1)), file('/export/starexec/sandbox/benchmark/theBenchmark.p', co1_1)).
+% 0.03/0.27  cnf(c_0_9, negated_conjecture, (sk1=sk3), file('/export/starexec/sandbox/benchmark/theBenchmark.p', co1_7)).
+% 0.03/0.27  cnf(c_0_10, negated_conjecture, (nil!=sk1), file('/export/starexec/sandbox/benchmark/theBenchmark.p', co1_8)).
+% 0.03/0.27  cnf(c_0_11, negated_conjecture, (sk4=nil), inference(rw,[status(thm)],[c_0_0, c_0_1])).
+% 0.03/0.27  cnf(c_0_12, plain, (memberP(cons(X1,X2),X1)|~ssItem(X1)|~ssList(X2)), inference(er,[status(thm)],[c_0_2])).
+% 0.03/0.27  cnf(c_0_13, negated_conjecture, (~memberP(sk3,X1)|~ssItem(X1)), inference(csr,[status(thm)],[inference(rw,[status(thm)],[c_0_3, c_0_11]), c_0_4])).
+% 0.03/0.27  cnf(c_0_14, plain, (nil=X1|memberP(X1,skaf83(X1))|~ssList(X1)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_12, c_0_5]), c_0_6]), c_0_7])])).
+% 0.03/0.27  cnf(c_0_15, negated_conjecture, (ssList(sk3)), inference(rw,[status(thm)],[c_0_8, c_0_9])).
+% 0.03/0.27  cnf(c_0_16, negated_conjecture, (sk3!=nil), inference(rw,[status(thm)],[c_0_10, c_0_9])).
+% 0.03/0.27  cnf(c_0_17, negated_conjecture, ($false), inference(sr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_13, c_0_14]), c_0_6]), c_0_15])]), c_0_16]), ['proof']).
+% 0.03/0.27  # SZS output end CNFRefutation
+% 0.03/0.27  # Training examples: 0 positive, 0 negative
+% 0.03/0.27  
+% 0.03/0.27  # -------------------------------------------------
+% 0.03/0.27  # User time                : 0.038 s
+% 0.03/0.27  # System time              : 0.002 s
+% 0.03/0.27  # Total time               : 0.040 s
+% 0.03/0.27  # Maximum resident set size: 1864 pages
+%------------------------------------------------------------------------------
+</pre>
+<HR>
+
+</body>
+</html>

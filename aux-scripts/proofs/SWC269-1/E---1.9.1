@@ -1,0 +1,106 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>TSTP Solution File: SWC269-1 by E---1.9.1</title>
+<meta name="ROBOTS" content="NOINDEX,NOFOLLOW" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body>
+<HR><CENTER>
+<H2>TSTP Solution File: SWC269-1 by E---1.9.1</H2><A HREF=SeeTPTP?Category=Problems&Domain=SWC&File=SWC269-1.p>View Problem</A>
+- <A HREF="http://www.cs.miami.edu/~tptp/cgi-bin/SystemOnTSTP?TPTPProblem=SWC269-1&SystemAndVersion=E---1.9.1" TARGET="_blank">Process Solution</A>
+</CENTER><HR>
+<pre>
+%------------------------------------------------------------------------------
+% File       : E---1.9.1
+% Problem    : <a href="SeeTPTP?Category=Problems&Domain=SWC&File=SWC269-1.p">SWC269-1</a> : TPTP v6.4.0. Released v2.4.0.
+% Transform  : none
+% Format     : tptp:raw
+% Command    : eprover --auto-schedule --definitional-cnf=24 -R --print-version --tstp-format -s --proof-object --cpu-limit=%d %s
+
+% Computer   : n150.star.cs.uiowa.edu
+% Model      : x86_64 x86_64
+% CPU        : Intel(R) Xeon(R) CPU E5-2609 0 2.40GHz
+% Memory     : 32218.75MB
+% OS         : Linux 3.10.0-327.10.1.el7.x86_64
+% CPULimit   : 300s
+% DateTime   : Wed May 11 11:17:16 EDT 2016
+
+% Result     : Unsatisfiable 0.03s
+% Output     : CNFRefutation 0.03s
+% Verified   : 
+% Statistics : Number of clauses        :    5 (   5 expanded)
+%              Number of leaves         :    3 (   3 expanded)
+%              Depth                    :    2
+%              Number of atoms          :    5 (   5 expanded)
+%              Number of equality atoms :    1 (   1 expanded)
+%              Maximal clause size      :    1 (   1 average)
+%              Maximal term depth       :    1 (   1 average)
+
+% Comments   : 
+%------------------------------------------------------------------------------
+<A NAME="c_0_0"></A>cnf(c_0_0,negated_conjecture,
+    ( ~ totalorderedP(sk1) ),
+    file('/export/starexec/sandbox/benchmark/theBenchmark.p',co1_10)).
+
+<A NAME="c_0_1"></A>cnf(c_0_1,negated_conjecture,
+    ( sk1 = sk3 ),
+    file('/export/starexec/sandbox/benchmark/theBenchmark.p',co1_6)).
+
+<A NAME="c_0_2"></A>cnf(c_0_2,negated_conjecture,
+    ( totalorderedP(sk3) ),
+    file('/export/starexec/sandbox/benchmark/theBenchmark.p',co1_8)).
+
+<A NAME="c_0_3"></A>cnf(c_0_3,negated_conjecture,
+    ( ~ totalorderedP(sk3) ),
+    inference(rw,[status(thm)],[<A HREF="#c_0_0">c_0_0</A>,<A HREF="#c_0_1">c_0_1</A>])).
+
+<A NAME="c_0_4"></A>cnf(c_0_4,negated_conjecture,
+    ( $false ),
+    inference(sr,[status(thm)],[<A HREF="#c_0_2">c_0_2</A>,<A HREF="#c_0_3">c_0_3</A>]),
+    [proof]).
+%------------------------------------------------------------------------------
+%----ORIGINAL SYSTEM OUTPUT
+% 0.00/0.03  % Problem    : SWC269-1 : TPTP v6.4.0. Released v2.4.0.
+% 0.00/0.04  % Command    : eprover --auto-schedule --definitional-cnf=24 -R --print-version --tstp-format -s --proof-object --cpu-limit=%d %s
+% 0.03/0.24  % Computer   : n150.star.cs.uiowa.edu
+% 0.03/0.24  % Model      : x86_64 x86_64
+% 0.03/0.24  % CPU        : Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz
+% 0.03/0.24  % Memory     : 32218.75MB
+% 0.03/0.24  % OS         : Linux 3.10.0-327.10.1.el7.x86_64
+% 0.03/0.24  % CPULimit   : 300
+% 0.03/0.24  % DateTime   : Tue May 10 20:38:22 CDT 2016
+% 0.03/0.24  % CPUTime    : 
+% 0.03/0.24  # Version: 1.9.1pre011
+% 0.03/0.24  # No SInE strategy applied
+% 0.03/0.24  # Trying AutoSched0 for 151 seconds
+% 0.03/0.26  # AutoSched0-Mode selected heuristic G_E___208_C18_F1_SE_CS_SP_PS_S2k
+% 0.03/0.26  # and selection function SelectCQArNTEqFirst.
+% 0.03/0.26  #
+% 0.03/0.26  # Preprocessing time       : 0.018 s
+% 0.03/0.26  # Presaturation interreduction done
+% 0.03/0.26  
+% 0.03/0.26  # Proof found!
+% 0.03/0.26  # SZS status Unsatisfiable
+% 0.03/0.26  # SZS output start CNFRefutation
+% 0.03/0.26  cnf(c_0_0, negated_conjecture, (~totalorderedP(sk1)), file('/export/starexec/sandbox/benchmark/theBenchmark.p', co1_10)).
+% 0.03/0.26  cnf(c_0_1, negated_conjecture, (sk1=sk3), file('/export/starexec/sandbox/benchmark/theBenchmark.p', co1_6)).
+% 0.03/0.26  cnf(c_0_2, negated_conjecture, (totalorderedP(sk3)), file('/export/starexec/sandbox/benchmark/theBenchmark.p', co1_8)).
+% 0.03/0.26  cnf(c_0_3, negated_conjecture, (~totalorderedP(sk3)), inference(rw,[status(thm)],[c_0_0, c_0_1])).
+% 0.03/0.26  cnf(c_0_4, negated_conjecture, ($false), inference(sr,[status(thm)],[c_0_2, c_0_3]), ['proof']).
+% 0.03/0.26  # SZS output end CNFRefutation
+% 0.03/0.26  # Training examples: 0 positive, 0 negative
+% 0.03/0.26  
+% 0.03/0.26  # -------------------------------------------------
+% 0.03/0.26  # User time                : 0.019 s
+% 0.03/0.26  # System time              : 0.003 s
+% 0.03/0.26  # Total time               : 0.022 s
+% 0.03/0.26  # Maximum resident set size: 1860 pages
+%------------------------------------------------------------------------------
+</pre>
+<HR>
+
+</body>
+</html>
