@@ -1,0 +1,20 @@
+% i(end) = i(u(end)).
+% i(i(i(X))) = u(X).
+% u(u(X)) = X.
+% m(X) = t(X,X).
+% t(end, X) = m(X).
+% t(i(X),Y) = t(X, i(Y)).
+% t(u(X),Y) = t(X, u(Y)).
+
+
+rev(nil) = nil.
+rev(cons(i, Y)) = cons(rev(Y), cons(i, nil)).
+rev(cons(u, Y)) = cons(rev(Y), cons(u, nil)).
+
+rev(cons(i, cons(u, cons (u, cons(u, nil))))) != 
+    cons(u, cons(u,cons(u, cons(i, nil)))).
+
+% xI    -> xIU
+% xIIIy -> xUy
+% xUUy  -> xy
+% Mx    -> Mxx

@@ -1,0 +1,373 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>TPTP Axioms</title>
+<meta name="ROBOTS" content="NOINDEX,NOFOLLOW" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body>
+<HR><CENTER>
+<H2>TPTP Axioms</H2></CENTER><HR>
+<CENTER><TABLE cellpadding=3><TR VALIGN=TOP><TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=AGT001+0.ax><tt>AGT001+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=AGT001+1.ax><tt>AGT001+1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=AGT001+2.ax><tt>AGT001+2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=ALG001-0.ax><tt>ALG001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=ALG002+0.ax><tt>ALG002+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=ALG003^0.ax><tt>ALG003^0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=ANA001-0.ax><tt>ANA001-0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=ANA002-0.ax><tt>ANA002-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=ANA003-0.ax><tt>ANA003-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=BIO001+0.ax><tt>BIO001+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=BOO001-0.ax><tt>BOO001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=BOO002-0.ax><tt>BOO002-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=BOO003-0.ax><tt>BOO003-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=BOO004-0.ax><tt>BOO004-0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CAT001-0.ax><tt>CAT001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CAT002-0.ax><tt>CAT002-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CAT003-0.ax><tt>CAT003-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CAT004-0.ax><tt>CAT004-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=COL001-0.ax><tt>COL001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=COL002-0.ax><tt>COL002-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=COL002-1.ax><tt>COL002-1.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=COM001+0.ax><tt>COM001+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=COM001+1.ax><tt>COM001+1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CSR001+0.ax><tt>CSR001+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CSR001+1.ax><tt>CSR001+1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CSR001+2.ax><tt>CSR001+2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CSR001+3.ax><tt>CSR001+3.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CSR002+0.ax><tt>CSR002+0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CSR002+1.ax><tt>CSR002+1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CSR002+2.ax><tt>CSR002+2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CSR002+3.ax><tt>CSR002+3.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CSR002+4.ax><tt>CSR002+4.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CSR002+5.ax><tt>CSR002+5.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CSR003+0.ax><tt>CSR003+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CSR003+1.ax><tt>CSR003+1.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CSR003+2.ax><tt>CSR003+2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CSR003+3.ax><tt>CSR003+3.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CSR003+4.ax><tt>CSR003+4.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CSR003+5.ax><tt>CSR003+5.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CSR004+0.ax><tt>CSR004+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=CSR005^0.ax><tt>CSR005^0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=DAT001=0.ax><tt>DAT001=0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=DAT002=0.ax><tt>DAT002=0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=DAT002=1.ax><tt>DAT002=1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=DAT003=0.ax><tt>DAT003=0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=DAT004=0.ax><tt>DAT004=0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=DAT005=0.ax><tt>DAT005=0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=DAT006=0.ax><tt>DAT006=0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=FLD001-0.ax><tt>FLD001-0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=FLD002-0.ax><tt>FLD002-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO001-0.ax><tt>GEO001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO001-1.ax><tt>GEO001-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO002-0.ax><tt>GEO002-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO002-1.ax><tt>GEO002-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO002-2.ax><tt>GEO002-2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO002-3.ax><tt>GEO002-3.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO003-0.ax><tt>GEO003-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO004+0.ax><tt>GEO004+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO004-0.ax><tt>GEO004-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO004+1.ax><tt>GEO004+1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO004-1.ax><tt>GEO004-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO004+2.ax><tt>GEO004+2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO004-2.ax><tt>GEO004-2.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO004+3.ax><tt>GEO004+3.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO004-3.ax><tt>GEO004-3.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO005-0.ax><tt>GEO005-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO006+0.ax><tt>GEO006+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO006+1.ax><tt>GEO006+1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO006+2.ax><tt>GEO006+2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO006+3.ax><tt>GEO006+3.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO006+4.ax><tt>GEO006+4.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO006+5.ax><tt>GEO006+5.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO006+6.ax><tt>GEO006+6.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO007+0.ax><tt>GEO007+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO007+1.ax><tt>GEO007+1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO008+0.ax><tt>GEO008+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GEO009+0.ax><tt>GEO009+0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GRA001+0.ax><tt>GRA001+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GRP001-0.ax><tt>GRP001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GRP002-0.ax><tt>GRP002-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GRP003+0.ax><tt>GRP003+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GRP003-0.ax><tt>GRP003-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GRP003-1.ax><tt>GRP003-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GRP003-2.ax><tt>GRP003-2.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GRP004+0.ax><tt>GRP004+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GRP004-0.ax><tt>GRP004-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GRP004-1.ax><tt>GRP004-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GRP004-2.ax><tt>GRP004-2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GRP005-0.ax><tt>GRP005-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GRP006-0.ax><tt>GRP006-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GRP007+0.ax><tt>GRP007+0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GRP008-0.ax><tt>GRP008-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=GRP008-1.ax><tt>GRP008-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=HAL001+0.ax><tt>HAL001+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=HEN001-0.ax><tt>HEN001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=HEN002-0.ax><tt>HEN002-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=HEN003-0.ax><tt>HEN003-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=HWC001-0.ax><tt>HWC001-0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=HWC002-0.ax><tt>HWC002-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=HWV001-0.ax><tt>HWV001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=HWV001-1.ax><tt>HWV001-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=HWV001-2.ax><tt>HWV001-2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=HWV002-0.ax><tt>HWV002-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=HWV002-1.ax><tt>HWV002-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=HWV002-2.ax><tt>HWV002-2.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=HWV003-0.ax><tt>HWV003-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=HWV004-0.ax><tt>HWV004-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=KLE001+0.ax><tt>KLE001+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=KLE001+1.ax><tt>KLE001+1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=KLE001+2.ax><tt>KLE001+2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=KLE001+3.ax><tt>KLE001+3.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=KLE001+4.ax><tt>KLE001+4.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=KLE001+5.ax><tt>KLE001+5.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=KLE001+6.ax><tt>KLE001+6.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=KLE001+7.ax><tt>KLE001+7.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=KLE002+0.ax><tt>KLE002+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=KLE003+0.ax><tt>KLE003+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=KLE004+0.ax><tt>KLE004+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=KRS001+0.ax><tt>KRS001+0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=KRS001+1.ax><tt>KRS001+1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LAT001-0.ax><tt>LAT001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LAT001-1.ax><tt>LAT001-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LAT001-2.ax><tt>LAT001-2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LAT001-3.ax><tt>LAT001-3.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LAT001-4.ax><tt>LAT001-4.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LAT002-0.ax><tt>LAT002-0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LAT003-0.ax><tt>LAT003-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LAT004-0.ax><tt>LAT004-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LAT005-0.ax><tt>LAT005-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LAT006-0.ax><tt>LAT006-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LAT006-1.ax><tt>LAT006-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LAT006-2.ax><tt>LAT006-2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL001-0.ax><tt>LCL001-0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL001-1.ax><tt>LCL001-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL001-2.ax><tt>LCL001-2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL002-0.ax><tt>LCL002-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL002-1.ax><tt>LCL002-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL003-0.ax><tt>LCL003-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL004-0.ax><tt>LCL004-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL004-1.ax><tt>LCL004-1.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL004-2.ax><tt>LCL004-2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL005-0.ax><tt>LCL005-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL006+0.ax><tt>LCL006+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL006+1.ax><tt>LCL006+1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL006+2.ax><tt>LCL006+2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL006+3.ax><tt>LCL006+3.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL006+4.ax><tt>LCL006+4.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL006+5.ax><tt>LCL006+5.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL007+0.ax><tt>LCL007+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL007+1.ax><tt>LCL007+1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL007+2.ax><tt>LCL007+2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL007+3.ax><tt>LCL007+3.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL007+4.ax><tt>LCL007+4.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL007+5.ax><tt>LCL007+5.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL007+6.ax><tt>LCL007+6.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL008^0.ax><tt>LCL008^0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL009^0.ax><tt>LCL009^0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL010^0.ax><tt>LCL010^0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL011^0.ax><tt>LCL011^0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL012^0.ax><tt>LCL012^0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL013^0.ax><tt>LCL013^0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL013^1.ax><tt>LCL013^1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL013^2.ax><tt>LCL013^2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL013^3.ax><tt>LCL013^3.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL013^4.ax><tt>LCL013^4.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL013^5.ax><tt>LCL013^5.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL013^6.ax><tt>LCL013^6.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL014^0.ax><tt>LCL014^0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL015^0.ax><tt>LCL015^0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL015^1.ax><tt>LCL015^1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL016^0.ax><tt>LCL016^0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL016^1.ax><tt>LCL016^1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LCL017^0.ax><tt>LCL017^0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=LDA001-0.ax><tt>LDA001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=MED001+0.ax><tt>MED001+0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=MED001+1.ax><tt>MED001+1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=MED002+0.ax><tt>MED002+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=MGT001+0.ax><tt>MGT001+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=MGT001-0.ax><tt>MGT001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=MSC001-0.ax><tt>MSC001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=MSC001-1.ax><tt>MSC001-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=MSC001-2.ax><tt>MSC001-2.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=NLP001+0.ax><tt>NLP001+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=NUM001-0.ax><tt>NUM001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=NUM001-1.ax><tt>NUM001-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=NUM001-2.ax><tt>NUM001-2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=NUM002-0.ax><tt>NUM002-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=NUM003-0.ax><tt>NUM003-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=NUM004-0.ax><tt>NUM004-0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=NUM005+0.ax><tt>NUM005+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=NUM005+1.ax><tt>NUM005+1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=NUM005+2.ax><tt>NUM005+2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=NUM006^0.ax><tt>NUM006^0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=PHI001^0.ax><tt>PHI001^0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=PLA001-0.ax><tt>PLA001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=PLA001-1.ax><tt>PLA001-1.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=PLA002+0.ax><tt>PLA002+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=PRD001+0.ax><tt>PRD001+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=PUZ001-0.ax><tt>PUZ001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=PUZ002-0.ax><tt>PUZ002-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=PUZ003-0.ax><tt>PUZ003-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=PUZ004-0.ax><tt>PUZ004-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=PUZ005+0.ax><tt>PUZ005+0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=PUZ005-0.ax><tt>PUZ005-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=PUZ006+0.ax><tt>PUZ006+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=QUA001^0.ax><tt>QUA001^0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=QUA001^1.ax><tt>QUA001^1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=REL001+0.ax><tt>REL001+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=REL001-0.ax><tt>REL001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=REL001+1.ax><tt>REL001+1.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=REL001-1.ax><tt>REL001-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=RNG001-0.ax><tt>RNG001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=RNG002-0.ax><tt>RNG002-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=RNG003-0.ax><tt>RNG003-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=RNG004-0.ax><tt>RNG004-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=RNG005-0.ax><tt>RNG005-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=ROB001-0.ax><tt>ROB001-0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=ROB001-1.ax><tt>ROB001-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET001-0.ax><tt>SET001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET001-1.ax><tt>SET001-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET001-2.ax><tt>SET001-2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET001-3.ax><tt>SET001-3.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET002-0.ax><tt>SET002-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET003-0.ax><tt>SET003-0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET004-0.ax><tt>SET004-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET004-1.ax><tt>SET004-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET005+0.ax><tt>SET005+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET006+0.ax><tt>SET006+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET006+1.ax><tt>SET006+1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET006+2.ax><tt>SET006+2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET006+3.ax><tt>SET006+3.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET006+4.ax><tt>SET006+4.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET007><tt>SET007</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET008^0.ax><tt>SET008^0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET008^1.ax><tt>SET008^1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET008^2.ax><tt>SET008^2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SET009^0.ax><tt>SET009^0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWB001+0.ax><tt>SWB001+0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWB002+0.ax><tt>SWB002+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWB003+0.ax><tt>SWB003+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWB003+1.ax><tt>SWB003+1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWC001+0.ax><tt>SWC001+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWC001-0.ax><tt>SWC001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV001-0.ax><tt>SWV001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV002-0.ax><tt>SWV002-0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV003+0.ax><tt>SWV003+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV004-0.ax><tt>SWV004-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV005-0.ax><tt>SWV005-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV005-1.ax><tt>SWV005-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV005-2.ax><tt>SWV005-2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV005-3.ax><tt>SWV005-3.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV005-4.ax><tt>SWV005-4.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV005-5.ax><tt>SWV005-5.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV005-6.ax><tt>SWV005-6.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV005-7.ax><tt>SWV005-7.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV006-0.ax><tt>SWV006-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV006-1.ax><tt>SWV006-1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV006-2.ax><tt>SWV006-2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV006-3.ax><tt>SWV006-3.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV007+0.ax><tt>SWV007+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV007+1.ax><tt>SWV007+1.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV007+2.ax><tt>SWV007+2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV007+3.ax><tt>SWV007+3.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV007+4.ax><tt>SWV007+4.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV008^0.ax><tt>SWV008^0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV008^1.ax><tt>SWV008^1.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV008^2.ax><tt>SWV008^2.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV009+0.ax><tt>SWV009+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV010^0.ax><tt>SWV010^0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV011+0.ax><tt>SWV011+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV012+0.ax><tt>SWV012+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SWV013-0.ax><tt>SWV013-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SYN000+0.ax><tt>SYN000+0.ax</tt></a></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SYN000-0.ax><tt>SYN000-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SYN000^0.ax><tt>SYN000^0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SYN000_0.ax><tt>SYN000_0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SYN001-0.ax><tt>SYN001-0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=SYN002+0.ax><tt>SYN002+0.ax</tt></a></TD>
+<TD WIDTH=14%><a href=SeeTPTP?Category=Axioms&File=TOP001-0.ax><tt>TOP001-0.ax</tt></a></TD>
+<TD WIDTH=14%></TABLE></CENTER><HR>
+
+</body>
+</html>

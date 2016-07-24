@@ -1,0 +1,21 @@
+fof(conjecture1,conjecture, ( ( ? [V__X] : s__subclass(V__X,s__Object) ) )).
+
+go.
+
+job Test2.
+fof(conjecture1,conjecture, ( ( ? [V__X] :
+                            s__subclass(V__X,s__Object)|
+                            s__subclass(s__Artifact,s__Object)))).
+go.
+
+job Test3.
+fof(conjecture1,conjecture, ( ( ? [V__X] :
+                            s__subclass(V__X,s__Object)&
+                            s__subclass(s__Artifact,s__Object)))).
+go.
+
+
+quit
+go.
+
+

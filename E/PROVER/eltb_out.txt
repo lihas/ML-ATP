@@ -1,0 +1,173 @@
+<open file '<fdopen>', mode 'wb' at 0x100deb6f0> <open file '<fdopen>', mode 'rb' at 0x100deb8a0>
+Result
+# Parsing SUMO.tptp
+
+
+# == WCT:    0s, Solved:    0/   0    ==
+# Enter job, 'help' or 'quit', followed by 'go.' on a line of its own:
+
+# Processing started for unnamed_job
+# Filtering for Threshold(10000) (857)
+# Filtering for GSinE(CountFormulas, hypos, 6.000000, 9223372036854775807, 5, 20000, 1.000000) (857)
+# Filtering for GSinE(CountFormulas, hypos, 1.200000, 9223372036854775807, 2, 20000, 1.000000) (857)
+# Filtering for GSinE(CountFormulas, nohypos, 2.000000, 9223372036854775807, 2147483647, 20000, 1.000000) (857)
+# Filtering for GSinE(CountFormulas, hypos, 2.000000, 9223372036854775807, 3, 20000, 1.000000) (857)
+# Filtering for GSinE(CountFormulas, hypos, 1.200000, 9223372036854775807, 2147483647, 100, 1.000000) (857)
+# Filtering for GSinE(CountFormulas, hypos, 5.000000, 9223372036854775807, 4, 20000, 1.000000) (857)
+# Filtering for GSinE(CountFormulas, nohypos, 1.500000, 9223372036854775807, 2147483647, 20000, 1.000000) (857)
+# Filtering for GSinE(CountFormulas, hypos, 1.200000, 9223372036854775807, 2147483647, 500, 1.000000) (857)
+# Filtering for GSinE(CountFormulas, nohypos, 1.200000, 9223372036854775807, 2147483647, 1000, 1.000000) (857)
+# Filtering for GSinE(CountFormulas, nohypos, 1.200000, 9223372036854775807, 2, 20000, 1.000000 (858)
+# Filtering for GSinE(CountFormulas, nohypos, 5.000000, 9223372036854775807, 4, 20000, 1.000000 (858)
+# Filtering for GSinE(CountFormulas, nohypos, 6.000000, 9223372036854775807, 5, 20000, 1.000000 (858)
+# No proof found by GSinE(CountFormulas, hypos, 1.200000, 9223372036854775807, 2, 20000, 1.000000)
+# No proof found by GSinE(CountFormulas, nohypos, 2.000000, 9223372036854775807, 2147483647, 20000, 1.000000)
+# No proof found by GSinE(CountFormulas, hypos, 2.000000, 9223372036854775807, 3, 20000, 1.000000)
+# No proof found by GSinE(CountFormulas, hypos, 1.200000, 9223372036854775807, 2147483647, 100, 1.000000)
+# No proof found by GSinE(CountFormulas, nohypos, 1.500000, 9223372036854775807, 2147483647, 20000, 1.000000)
+# No proof found by GSinE(CountFormulas, hypos, 1.200000, 9223372036854775807, 2147483647, 500, 1.000000)
+# No proof found by GSinE(CountFormulas, nohypos, 1.200000, 9223372036854775807, 2147483647, 1000, 1.000000)
+# No proof found by GSinE(CountFormulas, nohypos, 1.200000, 9223372036854775807, 2, 20000, 1.000000)
+# SZS status Theorem for unnamed_job
+# Solution found by GSinE(CountFormulas, hypos, 5.000000, 9223372036854775807, 4, 20000, 1.000000) (started 1389517857, remaining 59)
+# Pid: 15140
+# Auto-Mode selected heuristic G_E___208_B07_F1_SE_CS_SP_PS_S0Y
+# and selection function SelectMaxLComplexAvoidPosPred.
+#
+# Preprocessing time       : 0.115 s
+# Presaturation interreduction done
+# SZS status Theorem
+# SZS answers Tuple [[s__Artifact]|_]
+
+# Proof found!
+# SZS output start CNFRefutation.
+fof(c_0_0, conjecture, (?[X1]:s__subclass(X1,s__Object)), file('/var/folders/__/ss_kh09s5_l9s1twdz7k5y900000gn/T//epr_az7Fme', i_0_7233)).
+fof(c_0_1, axiom, (s__subclass(s__Artifact,s__Object)), file('/var/folders/__/ss_kh09s5_l9s1twdz7k5y900000gn/T//epr_az7Fme', i_0_6329)).
+fof(c_0_2, negated_conjecture, (~(?[X1]:(s__subclass(X1,s__Object)&~$answer(esk1_1(X1))))), inference(assume_negation,[status(cth)],[inference(add_answer_literal,[status(thm)],[c_0_0, theory(answers)])])).
+fof(c_0_3, axiom, (s__subclass(s__Artifact,s__Object)), c_0_1).
+fof(c_0_4, negated_conjecture, (![X2]:(~s__subclass(X2,s__Object)|$answer(esk1_1(X2)))), inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_2])])).
+fof(c_0_5, axiom, (s__subclass(s__Artifact,s__Object)), c_0_3).
+cnf(c_0_6,negated_conjecture,($answer(esk1_1(X1))|~s__subclass(X1,s__Object)), inference(split_conjunct,[status(thm)],[c_0_4])).
+cnf(c_0_7,plain,(s__subclass(s__Artifact,s__Object)), inference(split_conjunct,[status(thm)],[c_0_5])).
+cnf(c_0_8,negated_conjecture,($answer(esk1_1(X1))|~s__subclass(X1,s__Object)), c_0_6).
+cnf(c_0_9,plain,(s__subclass(s__Artifact,s__Object)), c_0_7).
+cnf(c_0_10,negated_conjecture,($answer(esk1_1(X1))|~s__subclass(X1,s__Object)), c_0_8).
+cnf(c_0_11,plain,(s__subclass(s__Artifact,s__Object)), c_0_9).
+cnf(c_0_12,negated_conjecture,($answer(esk1_1(X1))|~s__subclass(X1,s__Object)), c_0_10).
+cnf(c_0_13,plain,(s__subclass(s__Artifact,s__Object)), c_0_11).
+cnf(c_0_14,negated_conjecture,($false), inference(eval_answer_literal,[status(thm)],[inference(spm,[status(thm)],[c_0_12, c_0_13, theory(equality)]), theory(answers)]), ['proof']).
+# SZS output end CNFRefutation.
+
+# -------------------------------------------------
+# User time                : 0.253 s
+# System time              : 0.019 s
+# Total time               : 0.272 s
+# Maximum resident set size: 16322560 pages
+
+# Processing finished for unnamed_job
+
+# Enter job, 'help' or 'quit', followed by 'go.' on a line of its own:
+
+# Processing started for Test2
+# Filtering for Threshold(10000) (858)
+# Filtering for GSinE(CountFormulas, hypos, 6.000000, 9223372036854775807, 5, 20000, 1.000000) (858)
+# Filtering for GSinE(CountFormulas, hypos, 1.200000, 9223372036854775807, 2, 20000, 1.000000) (858)
+# Filtering for GSinE(CountFormulas, nohypos, 2.000000, 9223372036854775807, 2147483647, 20000, 1.000000) (858)
+# Filtering for GSinE(CountFormulas, hypos, 2.000000, 9223372036854775807, 3, 20000, 1.000000) (858)
+# Filtering for GSinE(CountFormulas, hypos, 1.200000, 9223372036854775807, 2147483647, 100, 1.000000) (858)
+# Filtering for GSinE(CountFormulas, hypos, 5.000000, 9223372036854775807, 4, 20000, 1.000000) (858)
+# Filtering for GSinE(CountFormulas, nohypos, 1.500000, 9223372036854775807, 2147483647, 20000, 1.000000) (859)
+# Filtering for GSinE(CountFormulas, hypos, 1.200000, 9223372036854775807, 2147483647, 500, 1.000000) (859)
+# Filtering for GSinE(CountFormulas, nohypos, 1.200000, 9223372036854775807, 2147483647, 1000, 1.000000) (859)
+# Filtering for GSinE(CountFormulas, nohypos, 1.200000, 9223372036854775807, 2, 20000, 1.000000 (859)
+# Filtering for GSinE(CountFormulas, nohypos, 5.000000, 9223372036854775807, 4, 20000, 1.000000 (859)
+# Filtering for GSinE(CountFormulas, nohypos, 6.000000, 9223372036854775807, 5, 20000, 1.000000 (859)
+# SZS status Theorem for Test2
+# Solution found by GSinE(CountFormulas, nohypos, 1.200000, 9223372036854775807, 2, 20000, 1.000000) (started 1389517859, remaining 60)
+# Pid: 15157
+# Auto-Mode selected heuristic G_E___208_C18_F1_SE_CS_SP_PS_S0Y
+# and selection function SelectMaxLComplexAvoidPosPred.
+#
+# Preprocessing time       : 0.015 s
+# Presaturation interreduction done
+
+# Proof found!
+# SZS status Theorem
+# SZS output start CNFRefutation.
+fof(c_0_0, axiom, (s__subclass(s__Artifact,s__Object)), file('/var/folders/__/ss_kh09s5_l9s1twdz7k5y900000gn/T//epr_wyYLYO', i_0_6329)).
+fof(c_0_1, conjecture, ((?[X1]:s__subclass(X1,s__Object)|s__subclass(s__Artifact,s__Object))), file('/var/folders/__/ss_kh09s5_l9s1twdz7k5y900000gn/T//epr_wyYLYO', i_0_7234)).
+fof(c_0_2, axiom, (s__subclass(s__Artifact,s__Object)), c_0_0).
+fof(c_0_3, negated_conjecture, (~((?[X1]:s__subclass(X1,s__Object)|s__subclass(s__Artifact,s__Object)))), inference(assume_negation,[status(cth)],[inference(add_answer_literal,[status(thm)],[c_0_1, theory(answers)])])).
+fof(c_0_4, axiom, (s__subclass(s__Artifact,s__Object)), c_0_2).
+fof(c_0_5, negated_conjecture, (![X2]:(~s__subclass(X2,s__Object)&~s__subclass(s__Artifact,s__Object))), inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_3])])])).
+cnf(c_0_6,plain,(s__subclass(s__Artifact,s__Object)), inference(split_conjunct,[status(thm)],[c_0_4])).
+cnf(c_0_7,negated_conjecture,(~s__subclass(s__Artifact,s__Object)), inference(split_conjunct,[status(thm)],[c_0_5])).
+cnf(c_0_8,plain,(s__subclass(s__Artifact,s__Object)), c_0_6).
+cnf(c_0_9,negated_conjecture,(~s__subclass(s__Artifact,s__Object)), c_0_7).
+cnf(c_0_10,plain,(s__subclass(s__Artifact,s__Object)), c_0_8).
+cnf(c_0_11,negated_conjecture,($false), inference(cn,[status(thm)],[inference(rw,[status(thm)],[c_0_9, c_0_10, theory(equality)]), theory(equality,[symmetry])]), ['proof']).
+# SZS output end CNFRefutation.
+
+# -------------------------------------------------
+# User time                : 0.011 s
+# System time              : 0.005 s
+# Total time               : 0.015 s
+# Maximum resident set size: 2748416 pages
+
+# Processing finished for Test2
+
+# Enter job, 'help' or 'quit', followed by 'go.' on a line of its own:
+
+# Processing started for Test3
+# Filtering for Threshold(10000) (859)
+# Filtering for GSinE(CountFormulas, hypos, 6.000000, 9223372036854775807, 5, 20000, 1.000000) (859)
+# Filtering for GSinE(CountFormulas, hypos, 1.200000, 9223372036854775807, 2, 20000, 1.000000) (860)
+# Filtering for GSinE(CountFormulas, nohypos, 2.000000, 9223372036854775807, 2147483647, 20000, 1.000000) (860)
+# Filtering for GSinE(CountFormulas, hypos, 2.000000, 9223372036854775807, 3, 20000, 1.000000) (860)
+# Filtering for GSinE(CountFormulas, hypos, 1.200000, 9223372036854775807, 2147483647, 100, 1.000000) (860)
+# Filtering for GSinE(CountFormulas, hypos, 5.000000, 9223372036854775807, 4, 20000, 1.000000) (860)
+# Filtering for GSinE(CountFormulas, nohypos, 1.500000, 9223372036854775807, 2147483647, 20000, 1.000000) (860)
+# Filtering for GSinE(CountFormulas, hypos, 1.200000, 9223372036854775807, 2147483647, 500, 1.000000) (860)
+# Filtering for GSinE(CountFormulas, nohypos, 1.200000, 9223372036854775807, 2147483647, 1000, 1.000000) (860)
+# Filtering for GSinE(CountFormulas, nohypos, 1.200000, 9223372036854775807, 2, 20000, 1.000000 (860)
+# Filtering for GSinE(CountFormulas, nohypos, 5.000000, 9223372036854775807, 4, 20000, 1.000000 (860)
+# Filtering for GSinE(CountFormulas, nohypos, 6.000000, 9223372036854775807, 5, 20000, 1.000000 (860)
+# SZS status Theorem for Test3
+# Solution found by GSinE(CountFormulas, nohypos, 1.200000, 9223372036854775807, 2, 20000, 1.000000) (started 1389517860, remaining 60)
+# Pid: 15171
+# Auto-Mode selected heuristic G_E___208_C18_F1_SE_CS_SP_PS_S0Y
+# and selection function SelectMaxLComplexAvoidPosPred.
+#
+# Preprocessing time       : 0.015 s
+# Presaturation interreduction done
+
+# Proof found!
+# SZS status Theorem
+# SZS output start CNFRefutation.
+fof(c_0_0, axiom, (s__subclass(s__Artifact,s__Object)), file('/var/folders/__/ss_kh09s5_l9s1twdz7k5y900000gn/T//epr_VfXWc1', i_0_6329)).
+fof(c_0_1, conjecture, ((?[X1]:s__subclass(X1,s__Object)&s__subclass(s__Artifact,s__Object))), file('/var/folders/__/ss_kh09s5_l9s1twdz7k5y900000gn/T//epr_VfXWc1', i_0_7235)).
+fof(c_0_2, axiom, (s__subclass(s__Artifact,s__Object)), c_0_0).
+fof(c_0_3, negated_conjecture, (~((?[X1]:s__subclass(X1,s__Object)&s__subclass(s__Artifact,s__Object)))), inference(assume_negation,[status(cth)],[inference(add_answer_literal,[status(thm)],[c_0_1, theory(answers)])])).
+fof(c_0_4, axiom, (s__subclass(s__Artifact,s__Object)), c_0_2).
+fof(c_0_5, negated_conjecture, (![X2]:(~s__subclass(X2,s__Object)|~s__subclass(s__Artifact,s__Object))), inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_3])])])).
+cnf(c_0_6,plain,(s__subclass(s__Artifact,s__Object)), inference(split_conjunct,[status(thm)],[c_0_4])).
+cnf(c_0_7,negated_conjecture,(~s__subclass(s__Artifact,s__Object)|~s__subclass(X1,s__Object)), inference(split_conjunct,[status(thm)],[c_0_5])).
+cnf(c_0_8,plain,(s__subclass(s__Artifact,s__Object)), c_0_6).
+cnf(c_0_9,negated_conjecture,(~s__subclass(X1,s__Object)|~s__subclass(s__Artifact,s__Object)), c_0_7).
+cnf(c_0_10,plain,(s__subclass(s__Artifact,s__Object)), c_0_8).
+cnf(c_0_11,negated_conjecture,(~s__subclass(X1,s__Object)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[c_0_9, c_0_10, theory(equality)]), theory(equality,[symmetry])])).
+cnf(c_0_12,plain,($false), inference(sr,[status(thm)],[c_0_10, c_0_11, theory(equality)]), ['proof']).
+# SZS output end CNFRefutation.
+
+# -------------------------------------------------
+# User time                : 0.011 s
+# System time              : 0.005 s
+# Total time               : 0.016 s
+# Maximum resident set size: 2752512 pages
+
+# Processing finished for Test3
+
+# Enter job, 'help' or 'quit', followed by 'go.' on a line of its own:
+# =============== Batch done ===========
+
+
