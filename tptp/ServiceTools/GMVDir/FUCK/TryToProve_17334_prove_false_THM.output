@@ -1,0 +1,150 @@
+Vampire---4.0   system information being retrieved
+Vampire---4.0's non-default parameters being retrieved
+Vampire---4.0   being checked for execution
+Vampire---4.0   checking time limit 10
+Vampire---4.0   checking problem name FUCK/TryToProve_17334_prove_false_THM
+
+Vampire---4.0's TPTP format FUCK/TryToProve_17334_prove_false_THM is ...
+fof(domain,axiom,( ! [X] : X = d1 )).
+fof(a_truth,axiom,( a_truth(d1) <=> $false )).
+fof(female,axiom,( female(d1) <=> $false )).
+fof(from_mars,axiom,( from_mars(d1) <=> $true )).
+fof(from_venus,axiom,( from_venus(d1) <=> $true )).
+fof(liar,axiom,( liar(d1) <=> $true )).
+fof(male,axiom,( male(d1) <=> $true )).
+fof(says,axiom,( ! [X1] : ! [X2] : ( says(X1,X2) <=> $false ) )).
+fof(statement_by,axiom,( statement_by(d1) = d1 )).
+fof(truthteller,axiom,( truthteller(d1) <=> $false )).
+fof(from_mars_or_venus,axiom,( ! [X] : ( from_mars(X) | from_venus(X) ) )).
+fof(not_from_mars_and_venus,axiom,( ! [X] : ( ~ from_mars(X) | ~ from_venus(X) ) )).
+fof(male_or_female,axiom,( ! [X] : ( male(X) | female(X) ) )).
+fof(not_male_and_female,axiom,( ! [X] : ( ~ male(X) | ~ female(X) ) )).
+fof(truthteller_or_liar,axiom,( ! [X] : ( truthteller(X) | liar(X) ) )).
+fof(not_truthteller_and_liar,axiom,( ! [X] : ( ~ truthteller(X) | ~ liar(X) ) )).
+fof(statements_are_true_or_not,axiom,( ! [X] : ! [Y] : ( ~ says(X,Y) | a_truth(Y) | ~ a_truth(Y) ) )).
+fof(people_say_their_statements,axiom,( ! [X] : ! [Y] : ( ~ says(X,Y) | Y = statement_by(X) ) )).
+fof(true_statements_made_by_truthtellers,axiom,( ! [X] : ( ~ a_truth(statement_by(X)) | truthteller(X) ) )).
+fof(false_statements_made_by_liars,axiom,( ! [X] : ( a_truth(statement_by(X)) | liar(X) ) )).
+fof(venusian_female_are_truthtellers,axiom,( ! [X] : ( ~ from_venus(X) | ~ female(X) | truthteller(X) ) )).
+fof(venusian_males_are_liars,axiom,( ! [X] : ( ~ from_venus(X) | ~ male(X) | liar(X) ) )).
+fof(marsian_males_are_truthtellers,axiom,( ! [X] : ( ~ from_mars(X) | ~ male(X) | truthteller(X) ) )).
+fof(marsian_females_are_liars,axiom,( ! [X] : ( ~ from_mars(X) | ~ female(X) | liar(X) ) )).
+fof(truthtellers_make_true_statements,axiom,( ! [X] : ! [Y] : ( ~ truthteller(X) | ~ says(X,Y) | a_truth(Y) ) )).
+fof(liars_make_false_statements,axiom,( ! [X] : ! [Y] : ( ~ liar(X) | ~ says(X,Y) | ~ a_truth(Y) ) )).
+fof(prove_false,conjecture,$false).
+
+Vampire---4.0's TryToProve_17334_prove_false_THM does not need preparation
+Vampire---4.0   will use FUCK/TryToProve_17334_prove_false_THM
+Vampire---4.0's own format source file is ...
+fof(domain,axiom,( ! [X] : X = d1 )).
+fof(a_truth,axiom,( a_truth(d1) <=> $false )).
+fof(female,axiom,( female(d1) <=> $false )).
+fof(from_mars,axiom,( from_mars(d1) <=> $true )).
+fof(from_venus,axiom,( from_venus(d1) <=> $true )).
+fof(liar,axiom,( liar(d1) <=> $true )).
+fof(male,axiom,( male(d1) <=> $true )).
+fof(says,axiom,( ! [X1] : ! [X2] : ( says(X1,X2) <=> $false ) )).
+fof(statement_by,axiom,( statement_by(d1) = d1 )).
+fof(truthteller,axiom,( truthteller(d1) <=> $false )).
+fof(from_mars_or_venus,axiom,( ! [X] : ( from_mars(X) | from_venus(X) ) )).
+fof(not_from_mars_and_venus,axiom,( ! [X] : ( ~ from_mars(X) | ~ from_venus(X) ) )).
+fof(male_or_female,axiom,( ! [X] : ( male(X) | female(X) ) )).
+fof(not_male_and_female,axiom,( ! [X] : ( ~ male(X) | ~ female(X) ) )).
+fof(truthteller_or_liar,axiom,( ! [X] : ( truthteller(X) | liar(X) ) )).
+fof(not_truthteller_and_liar,axiom,( ! [X] : ( ~ truthteller(X) | ~ liar(X) ) )).
+fof(statements_are_true_or_not,axiom,( ! [X] : ! [Y] : ( ~ says(X,Y) | a_truth(Y) | ~ a_truth(Y) ) )).
+fof(people_say_their_statements,axiom,( ! [X] : ! [Y] : ( ~ says(X,Y) | Y = statement_by(X) ) )).
+fof(true_statements_made_by_truthtellers,axiom,( ! [X] : ( ~ a_truth(statement_by(X)) | truthteller(X) ) )).
+fof(false_statements_made_by_liars,axiom,( ! [X] : ( a_truth(statement_by(X)) | liar(X) ) )).
+fof(venusian_female_are_truthtellers,axiom,( ! [X] : ( ~ from_venus(X) | ~ female(X) | truthteller(X) ) )).
+fof(venusian_males_are_liars,axiom,( ! [X] : ( ~ from_venus(X) | ~ male(X) | liar(X) ) )).
+fof(marsian_males_are_truthtellers,axiom,( ! [X] : ( ~ from_mars(X) | ~ male(X) | truthteller(X) ) )).
+fof(marsian_females_are_liars,axiom,( ! [X] : ( ~ from_mars(X) | ~ female(X) | liar(X) ) )).
+fof(truthtellers_make_true_statements,axiom,( ! [X] : ! [Y] : ( ~ truthteller(X) | ~ says(X,Y) | a_truth(Y) ) )).
+fof(liars_make_false_statements,axiom,( ! [X] : ! [Y] : ( ~ liar(X) | ~ says(X,Y) | ~ a_truth(Y) ) )).
+fof(prove_false,conjecture,$false).
+
+Vampire---4.0   being executed on TryToProve_17334_prove_false_THM using /exp/home/tptp/Systems/Vampire---4.0/vampire --mode casc -m 20000 -t 10 'FUCK/TryToProve_17334_prove_false_THM'
+% START OF SYSTEM OUTPUT
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 99 next slice time: 5
+dis+11_7_3 on TryToProve_17334_prove_false_T
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for TryToProve_17334_prove_false_T
+% SZS output start Proof for TryToProve_17334_prove_false_T
+fof(f1,axiom,(
+  ! [X0] : d1 = X0),
+  file('FUCK/TryToProve_17334_prove_false_THM',domain)).
+fof(f4,axiom,(
+  from_mars(d1) <=> $true),
+  file('FUCK/TryToProve_17334_prove_false_THM',from_mars)).
+fof(f5,axiom,(
+  from_venus(d1) <=> $true),
+  file('FUCK/TryToProve_17334_prove_false_THM',from_venus)).
+fof(f12,axiom,(
+  ! [X0] : (~from_mars(X0) | ~from_venus(X0))),
+  file('FUCK/TryToProve_17334_prove_false_THM',not_from_mars_and_venus)).
+fof(f32,plain,(
+  from_mars(d1)),
+  inference(true_and_false_elimination,[],[f4])).
+fof(f33,plain,(
+  from_venus(d1)),
+  inference(true_and_false_elimination,[],[f5])).
+fof(f40,plain,(
+  ! [X0] : (~from_mars(X0) | ~from_venus(X0))),
+  inference(flattening,[],[f12])).
+fof(f66,plain,(
+  from_mars(d1)),
+  inference(cnf_transformation,[],[f32])).
+fof(f67,plain,(
+  from_venus(d1)),
+  inference(cnf_transformation,[],[f33])).
+fof(f72,plain,(
+  ( ! [X0] : (d1 = X0) )),
+  inference(cnf_transformation,[],[f1])).
+fof(f77,plain,(
+  ( ! [X0] : (~from_venus(X0) | ~from_mars(X0)) )),
+  inference(cnf_transformation,[],[f40])).
+fof(f88,plain,(
+  ( ! [X0] : (from_mars(X0)) )),
+  inference(superposition,[],[f66,f72])).
+fof(f89,plain,(
+  ( ! [X0] : (from_venus(X0)) )),
+  inference(superposition,[],[f67,f72])).
+fof(f117,plain,(
+  ( ! [X0] : (~from_mars(X0)) )),
+  inference(subsumption_resolution,[],[f77,f89])).
+fof(f118,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f117,f88])).
+% SZS output end Proof for TryToProve_17334_prove_false_T
+% ------------------------------
+% Version: Vampire 4.0 (commit 2fedff6 on 2015-09-23 00:16:07 +0200)
+% Termination reason: Refutation
+
+% Active clauses: 16
+% Passive clauses: 29
+% Generated clauses: 55
+% Final active clauses: 16
+% Final passive clauses: 8
+% Input formulas: 27
+% Initial clauses: 21
+% 
+% Pure predicates: 1
+% 
+% Fw subsumption resolutions: 2
+% 
+% Forward subsumptions: 28
+% 
+% Backward superposition: 30
+% Self superposition: 2
+% 
+% Memory used [KB]: 511
+% Time elapsed: 0.017 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.018 s
+
+% END OF SYSTEM OUTPUT
+RESULT: TryToProve_17334_prove_false_THM - Vampire---4.0 says Theorem - CPU = 0.00 WC = 0.02 
+OUTPUT: TryToProve_17334_prove_false_THM - Vampire---4.0 says Refutation - CPU = 0.00 WC = 0.02 

@@ -1,0 +1,197 @@
+Paradox---3.0   system information being retrieved
+Paradox---3.0's non-default parameters being retrieved
+Paradox---3.0   being checked for execution
+Paradox---3.0   checking time limit 10
+Paradox---3.0   checking problem name OutputFiles//EP---1.0.THM-CRf.s.gdv/axioms.sat_model.dis.p
+
+Paradox---3.0's TPTP format OutputFiles//EP---1.0.THM-CRf.s.gdv/axioms.sat_model.dis.p is ...
+fof(13,axiom,(
+    agatha != butler ),
+    file('/home/graph/tptp/TPTP/Problems/PUZ/PUZ001+1.p',pel55_11)).
+fof(12,axiom,(
+    ! [X1] :
+    ? [X2] : ~ hates(X1,X2) ),
+    file('/home/graph/tptp/TPTP/Problems/PUZ/PUZ001+1.p',pel55_10)).
+fof(11,axiom,(
+    ! [X1] :
+      ( hates(agatha,X1)
+     => hates(butler,X1) ) ),
+    file('/home/graph/tptp/TPTP/Problems/PUZ/PUZ001+1.p',pel55_9)).
+fof(10,axiom,(
+    ! [X1] :
+      ( ~ richer(X1,agatha)
+     => hates(butler,X1) ) ),
+    file('/home/graph/tptp/TPTP/Problems/PUZ/PUZ001+1.p',pel55_8)).
+fof(9,axiom,(
+    ! [X1] :
+      ( X1 != butler
+     => hates(agatha,X1) ) ),
+    file('/home/graph/tptp/TPTP/Problems/PUZ/PUZ001+1.p',pel55_7)).
+fof(8,axiom,(
+    ! [X1] :
+      ( hates(agatha,X1)
+     => ~ hates(charles,X1) ) ),
+    file('/home/graph/tptp/TPTP/Problems/PUZ/PUZ001+1.p',pel55_6)).
+fof(7,axiom,(
+    ! [X1,X2] :
+      ( killed(X1,X2)
+     => ~ richer(X1,X2) ) ),
+    file('/home/graph/tptp/TPTP/Problems/PUZ/PUZ001+1.p',pel55_5)).
+fof(6,axiom,(
+    ! [X1,X2] :
+      ( killed(X1,X2)
+     => hates(X1,X2) ) ),
+    file('/home/graph/tptp/TPTP/Problems/PUZ/PUZ001+1.p',pel55_4)).
+fof(5,axiom,(
+    ! [X1] :
+      ( lives(X1)
+     => ( X1 = agatha
+        | X1 = butler
+        | X1 = charles ) ) ),
+    file('/home/graph/tptp/TPTP/Problems/PUZ/PUZ001+1.p',pel55_3)).
+fof(1,axiom,(
+    ? [X1] :
+      ( lives(X1)
+      & killed(X1,agatha) ) ),
+    file('/home/graph/tptp/TPTP/Problems/PUZ/PUZ001+1.p',pel55_1)).
+
+Paradox---3.0's axioms.sat_model.dis being prepared by /home/graph/tptp/ServiceTools/tptp4X
+    -d /tmp/SystemOnTPTP30978 
+    -t none 
+    -f tptp:short
+    -x
+    OutputFiles//EP---1.0.THM-CRf.s.gdv/axioms.sat_model.dis.p
+Paradox---3.0   will use /tmp/SystemOnTPTP30978/axioms.sat_model.dis.tptp:short
+Paradox---3.0's own format source file is ...
+fof(13,axiom,(
+    agatha != butler )).
+fof(12,axiom,(
+    ! [X1] :
+    ? [X2] : ~ hates(X1,X2) )).
+fof(11,axiom,(
+    ! [X1] :
+      ( hates(agatha,X1)
+     => hates(butler,X1) ) )).
+fof(10,axiom,(
+    ! [X1] :
+      ( ~ richer(X1,agatha)
+     => hates(butler,X1) ) )).
+fof(9,axiom,(
+    ! [X1] :
+      ( X1 != butler
+     => hates(agatha,X1) ) )).
+fof(8,axiom,(
+    ! [X1] :
+      ( hates(agatha,X1)
+     => ~ hates(charles,X1) ) )).
+fof(7,axiom,(
+    ! [X1,X2] :
+      ( killed(X1,X2)
+     => ~ richer(X1,X2) ) )).
+fof(6,axiom,(
+    ! [X1,X2] :
+      ( killed(X1,X2)
+     => hates(X1,X2) ) )).
+fof(5,axiom,(
+    ! [X1] :
+      ( lives(X1)
+     => ( X1 = agatha
+        | X1 = butler
+        | X1 = charles ) ) )).
+fof(1,axiom,(
+    ? [X1] :
+      ( lives(X1)
+      & killed(X1,agatha) ) )).
+Paradox---3.0   being executed on axioms.sat_model.dis using /home/graph/tptp/Systems/Paradox---3.0/paradox --tstp --model '/tmp/SystemOnTPTP30978/axioms.sat_model.dis.tptp:short'
+% START OF SYSTEM OUTPUT
+TreeLimitedRun: ----------------------------------------------------------
+TreeLimitedRun: /home/graph/tptp/Systems/Paradox---3.0/paradox --tstp --model /tmp/SystemOnTPTP30978/axioms.sat_model.dis.tptp:short 
+TreeLimitedRun: CPU time limit is 10s
+TreeLimitedRun: WC  time limit is 20s
+TreeLimitedRun: PID is 30994
+TreeLimitedRun: ----------------------------------------------------------
+WATCH: 0.0 CPU 0.0 WC
+Paradox, version 3.0, 2008-07-29.
++++ PROBLEM: /tmp/SystemOnTPTP30978/axioms.sat_model.dis.tptp:short
+Reading '/tmp/SystemOnTPTP30978/axioms.sat_model.dis.tptp:short' ... OK
++++ SOLVING: /tmp/SystemOnTPTP30978/axioms.sat_model.dis.tptp:short
+domain size 1
+domain size 2
+domain size 3
++++ BEGIN MODEL
+SZS output start FiniteModel for /tmp/SystemOnTPTP30978/axioms.sat_model.dis.tptp:short
+% domain size is 3
+fof(domain, fi_domain,
+  (![X] : (X = "1" | X = "2" | X = "3"))
+).
+
+fof(agatha, fi_functors,
+  ( agatha = "1"
+  )
+).
+
+fof(butler, fi_functors,
+  ( butler = "2"
+  )
+).
+
+fof(charles, fi_functors,
+  ( charles = "3"
+  )
+).
+
+fof(hates, fi_predicates,
+  ( hates("1","1") <=> $true
+  & hates("1","2") <=> $false
+  & hates("1","3") <=> $true
+  & hates("2","1") <=> $true
+  & hates("2","2") <=> $false
+  & hates("2","3") <=> $true
+  & hates("3","1") <=> $false
+  & hates("3","2") <=> $false
+  & hates("3","3") <=> $false
+  )
+).
+
+fof(killed, fi_predicates,
+  ( killed("1","1") <=> $true
+  & killed("1","2") <=> $false
+  & killed("1","3") <=> $false
+  & killed("2","1") <=> $false
+  & killed("2","2") <=> $false
+  & killed("2","3") <=> $false
+  & killed("3","1") <=> $false
+  & killed("3","2") <=> $false
+  & killed("3","3") <=> $false
+  )
+).
+
+fof(lives, fi_predicates,
+  ( lives("1") <=> $true
+  & lives("2") <=> $false
+  & lives("3") <=> $false
+  )
+).
+
+fof(richer, fi_predicates,
+  ( richer("1","1") <=> $false
+  & richer("1","2") <=> $false
+  & richer("1","3") <=> $false
+  & richer("2","1") <=> $true
+  & richer("2","2") <=> $false
+  & richer("2","3") <=> $false
+  & richer("3","1") <=> $false
+  & richer("3","2") <=> $false
+  & richer("3","3") <=> $false
+  )
+).
+SZS output end FiniteModel for /tmp/SystemOnTPTP30978/axioms.sat_model.dis.tptp:short
++++ END MODEL
++++ RESULT: Satisfiable
+SZS status Satisfiable for /tmp/SystemOnTPTP30978/axioms.sat_model.dis.tptp:short
+WATCH: 0.0 CPU 0.0 WC
+FINAL WATCH: 0.0 CPU 0.0 WC
+
+% END OF SYSTEM OUTPUT
+RESULT: axioms.sat_model.dis - Paradox---3.0 says Satisfiable - CPU = 0.0 WC = 0.0  Size = 3
+OUTPUT: axioms.sat_model.dis - Paradox---3.0 says FiniteModel - CPU = 0.0 WC = 0.0 

@@ -1,0 +1,11 @@
+fof(domain,axiom,( ! [X] : X = d1 )).
+fof(a_truth,axiom,( a_truth(d1) <=> $false )).
+fof(female,axiom,( female(d1) <=> $false )).
+fof(from_mars,axiom,( from_mars(d1) <=> $false )).
+fof(from_venus,axiom,( from_venus(d1) <=> $true )).
+fof(liar,axiom,( liar(d1) <=> $true )).
+fof(male,axiom,( male(d1) <=> $true )).
+fof(says,axiom,( ! [X1] : ! [X2] : ( says(X1,X2) <=> $false ) )).
+fof(statement_by,axiom,( statement_by(d1) = d1 )).
+fof(truthteller,axiom,( truthteller(d1) <=> $false )).
+fof(venusian_female_are_truthtellers,conjecture,( ! [X] : ( ~ from_venus(X) | ~ female(X) | truthteller(X) ) )).

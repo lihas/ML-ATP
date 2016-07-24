@@ -1,0 +1,76 @@
+Vampire---4.0   system information being retrieved
+Vampire---4.0's non-default parameters being retrieved
+Vampire---4.0   being checked for execution
+Vampire---4.0   checking time limit 10
+Vampire---4.0   checking problem name FUCK/TryToProve_17286_not_from_mars_and_venus_THM
+
+Vampire---4.0's TPTP format FUCK/TryToProve_17286_not_from_mars_and_venus_THM is ...
+fof(domain,axiom,( ! [X] : X = d1 )).
+fof(a_truth,axiom,( a_truth(d1) <=> $false )).
+fof(female,axiom,( female(d1) <=> $false )).
+fof(from_mars,axiom,( from_mars(d1) <=> $true )).
+fof(from_venus,axiom,( from_venus(d1) <=> $true )).
+fof(liar,axiom,( liar(d1) <=> $true )).
+fof(male,axiom,( male(d1) <=> $true )).
+fof(says,axiom,( ! [X1] : ! [X2] : ( says(X1,X2) <=> $false ) )).
+fof(statement_by,axiom,( statement_by(d1) = d1 )).
+fof(truthteller,axiom,( truthteller(d1) <=> $false )).
+fof(not_from_mars_and_venus,conjecture,( ! [X] : ( ~ from_mars(X) | ~ from_venus(X) ) )).
+
+Vampire---4.0's TryToProve_17286_not_from_mars_and_venus_THM does not need preparation
+Vampire---4.0   will use FUCK/TryToProve_17286_not_from_mars_and_venus_THM
+Vampire---4.0's own format source file is ...
+fof(domain,axiom,( ! [X] : X = d1 )).
+fof(a_truth,axiom,( a_truth(d1) <=> $false )).
+fof(female,axiom,( female(d1) <=> $false )).
+fof(from_mars,axiom,( from_mars(d1) <=> $true )).
+fof(from_venus,axiom,( from_venus(d1) <=> $true )).
+fof(liar,axiom,( liar(d1) <=> $true )).
+fof(male,axiom,( male(d1) <=> $true )).
+fof(says,axiom,( ! [X1] : ! [X2] : ( says(X1,X2) <=> $false ) )).
+fof(statement_by,axiom,( statement_by(d1) = d1 )).
+fof(truthteller,axiom,( truthteller(d1) <=> $false )).
+fof(not_from_mars_and_venus,conjecture,( ! [X] : ( ~ from_mars(X) | ~ from_venus(X) ) )).
+
+Vampire---4.0   being executed on TryToProve_17286_not_from_mars_and_venus_THM using /exp/home/tptp/Systems/Vampire---4.0/vampire --mode casc -m 20000 -t 10 'FUCK/TryToProve_17286_not_from_mars_and_venus_THM'
+% START OF SYSTEM OUTPUT
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 100 next slice time: 5
+dis+11_7_3 on TryToProve_17286_not_from_mars_and_venus_T
+Satisfiable!
+% SZS status CounterSatisfiable for TryToProve_17286_not_from_mars_and_venus_T
+% # SZS output start Saturation.
+tff(u44,axiom,
+    (![X0] : (d1 = X0) )).
+
+tff(u43,axiom,
+    (![X1,X0] : (X0 = X1) )).
+
+% # SZS output end Saturation.
+% ------------------------------
+% Version: Vampire 4.0 (commit 2fedff6 on 2015-09-23 00:16:07 +0200)
+% Termination reason: Satisfiable
+
+% Active clauses: 2
+% Passive clauses: 3
+% Generated clauses: 6
+% Final active clauses: 2
+% Input formulas: 11
+% Initial clauses: 2
+% 
+% Pure predicates: 8
+% 
+% Forward subsumptions: 4
+% 
+% Backward superposition: 2
+% Self superposition: 2
+% 
+% Memory used [KB]: 511
+% Time elapsed: 0.015 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.017 s
+
+% END OF SYSTEM OUTPUT
+RESULT: TryToProve_17286_not_from_mars_and_venus_THM - Vampire---4.0 says CounterSatisfiable - CPU = 0.00 WC = 0.01 
+OUTPUT: TryToProve_17286_not_from_mars_and_venus_THM - Vampire---4.0 says Saturation - CPU = 0.00 WC = 0.01 

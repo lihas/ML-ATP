@@ -1,0 +1,121 @@
+Vampire---4.0   system information being retrieved
+Vampire---4.0's non-default parameters being retrieved
+Vampire---4.0   being checked for execution
+Vampire---4.0   checking time limit 10
+Vampire---4.0   checking problem name FUCK/TryToProve_17971_truthtellers_make_true_statements_THM
+
+Vampire---4.0's TPTP format FUCK/TryToProve_17971_truthtellers_make_true_statements_THM is ...
+fof(domain,axiom,( ! [X] : X = d1 )).
+fof(a_truth,axiom,( a_truth(d1) <=> $false )).
+fof(female,axiom,( female(d1) <=> $false )).
+fof(from_mars,axiom,( from_mars(d1) <=> $false )).
+fof(from_venus,axiom,( from_venus(d1) <=> $true )).
+fof(liar,axiom,( liar(d1) <=> $true )).
+fof(male,axiom,( male(d1) <=> $true )).
+fof(says,axiom,( ! [X1] : ! [X2] : ( says(X1,X2) <=> $false ) )).
+fof(statement_by,axiom,( statement_by(d1) = d1 )).
+fof(truthteller,axiom,( truthteller(d1) <=> $false )).
+fof(truthtellers_make_true_statements,conjecture,( ! [X] : ! [Y] : ( ~ truthteller(X) | ~ says(X,Y) | a_truth(Y) ) )).
+
+Vampire---4.0's TryToProve_17971_truthtellers_make_true_statements_THM does not need preparation
+Vampire---4.0   will use FUCK/TryToProve_17971_truthtellers_make_true_statements_THM
+Vampire---4.0's own format source file is ...
+fof(domain,axiom,( ! [X] : X = d1 )).
+fof(a_truth,axiom,( a_truth(d1) <=> $false )).
+fof(female,axiom,( female(d1) <=> $false )).
+fof(from_mars,axiom,( from_mars(d1) <=> $false )).
+fof(from_venus,axiom,( from_venus(d1) <=> $true )).
+fof(liar,axiom,( liar(d1) <=> $true )).
+fof(male,axiom,( male(d1) <=> $true )).
+fof(says,axiom,( ! [X1] : ! [X2] : ( says(X1,X2) <=> $false ) )).
+fof(statement_by,axiom,( statement_by(d1) = d1 )).
+fof(truthteller,axiom,( truthteller(d1) <=> $false )).
+fof(truthtellers_make_true_statements,conjecture,( ! [X] : ! [Y] : ( ~ truthteller(X) | ~ says(X,Y) | a_truth(Y) ) )).
+
+Vampire---4.0   being executed on TryToProve_17971_truthtellers_make_true_statements_THM using /exp/home/tptp/Systems/Vampire---4.0/vampire --mode casc -m 20000 -t 10 'FUCK/TryToProve_17971_truthtellers_make_true_statements_THM'
+% START OF SYSTEM OUTPUT
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 100 next slice time: 5
+dis+11_7_3 on TryToProve_17971_truthtellers_make_true_statements_T
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for TryToProve_17971_truthtellers_make_true_statements_T
+% SZS output start Proof for TryToProve_17971_truthtellers_make_true_statements_T
+fof(f1,axiom,(
+  ! [X0] : d1 = X0),
+  file('FUCK/TryToProve_17971_truthtellers_make_true_statements_THM',domain)).
+fof(f10,axiom,(
+  truthteller(d1) <=> $false),
+  file('FUCK/TryToProve_17971_truthtellers_make_true_statements_THM',truthteller)).
+fof(f11,conjecture,(
+  ! [X0] : ! [X3] : (~truthteller(X0) | ~says(X0,X3) | a_truth(X3))),
+  file('FUCK/TryToProve_17971_truthtellers_make_true_statements_THM',truthtellers_make_true_statements)).
+fof(f12,negated_conjecture,(
+  ~! [X0] : ! [X3] : (~truthteller(X0) | ~says(X0,X3) | a_truth(X3))),
+  inference(negated_conjecture,[],[f11])).
+fof(f13,plain,(
+  ~! [X0] : ! [X1] : (~truthteller(X0) | ~says(X0,X1) | a_truth(X1))),
+  inference(rectify,[],[f12])).
+fof(f14,plain,(
+  ~! [X0,X1] : (~truthteller(X0) | ~says(X0,X1) | a_truth(X1))),
+  inference(flattening,[],[f13])).
+fof(f24,plain,(
+  ~truthteller(d1)),
+  inference(true_and_false_elimination,[],[f10])).
+fof(f25,plain,(
+  ~truthteller(d1)),
+  inference(flattening,[],[f24])).
+fof(f34,plain,(
+  ~! [X0,X1] : (~truthteller(X0) | ~says(X0,X1))),
+  inference(pure_predicate_removal,[],[f14])).
+fof(f36,plain,(
+  ? [X0,X1] : (truthteller(X0) & says(X0,X1))),
+  inference(ennf_transformation,[],[f34])).
+fof(f37,plain,(
+  truthteller(sK0) & says(sK0,sK1)),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0,sK1])],[f36])).
+fof(f38,plain,(
+  truthteller(sK0)),
+  inference(cnf_transformation,[],[f37])).
+fof(f41,plain,(
+  ~truthteller(d1)),
+  inference(cnf_transformation,[],[f25])).
+fof(f42,plain,(
+  ( ! [X0] : (d1 = X0) )),
+  inference(cnf_transformation,[],[f1])).
+fof(f45,plain,(
+  truthteller(d1)),
+  inference(backward_demodulation,[],[f42,f38])).
+fof(f51,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f45,f41])).
+% SZS output end Proof for TryToProve_17971_truthtellers_make_true_statements_T
+% ------------------------------
+% Version: Vampire 4.0 (commit 2fedff6 on 2015-09-23 00:16:07 +0200)
+% Termination reason: Refutation
+
+% Active clauses: 4
+% Passive clauses: 7
+% Generated clauses: 14
+% Final active clauses: 2
+% Final passive clauses: 3
+% Input formulas: 11
+% Initial clauses: 6
+% 
+% Pure predicates: 6
+% 
+% Fw subsumption resolutions: 1
+% Fw demodulations: 1
+% Bw demodulations: 2
+% 
+% Backward superposition: 2
+% Self superposition: 2
+% 
+% Memory used [KB]: 511
+% Time elapsed: 0.010 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.012 s
+
+% END OF SYSTEM OUTPUT
+RESULT: TryToProve_17971_truthtellers_make_true_statements_THM - Vampire---4.0 says Theorem - CPU = 0.00 WC = 0.01 
+OUTPUT: TryToProve_17971_truthtellers_make_true_statements_THM - Vampire---4.0 says Refutation - CPU = 0.00 WC = 0.01 

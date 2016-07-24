@@ -1,0 +1,347 @@
+Otter---3.3   system information being retrieved
+Otter---3.3's non-default parameters being retrieved
+Otter---3.3   being checked for execution
+Otter---3.3   checking time limit 10
+Otter---3.3   checking problem name OutputFiles//EP---1.0.THM-CRf.s.gdv/47.thm.dis.p
+
+Otter---3.3's TPTP format OutputFiles//EP---1.0.THM-CRf.s.gdv/47.thm.dis.p is ...
+fof(46,axiom,(
+    ! [X1] :
+      ( ~ hates(agatha,X1)
+      | hates(butler,X1) ) ),
+    inference(fof_nnf,[status(thm)],[11]),
+    [verified(thm)]).
+fof(47,conjecture,(
+    ! [X2] :
+      ( ~ hates(agatha,X2)
+      | hates(butler,X2) ) ),
+    inference(variable_rename,[status(thm)],[46])).
+
+Otter---3.3's 47.thm.dis being prepared by /home/graph/tptp/ServiceTools/tptp4X
+    -d /tmp/SystemOnTPTP1804 
+    -t none 
+    -f tptp
+    -x
+    OutputFiles//EP---1.0.THM-CRf.s.gdv/47.thm.dis.p
+Otter---3.3   will use /tmp/SystemOnTPTP1804/47.thm.dis.tptp
+Otter---3.3's own format source file is ...
+fof(46,axiom,(
+    ! [X1] :
+      ( ~ hates(agatha,X1)
+      | hates(butler,X1) ) ),
+    inference(fof_nnf,[status(thm)],[11]),
+    [verified(thm)]).
+fof(47,conjecture,(
+    ! [X2] :
+      ( ~ hates(agatha,X2)
+      | hates(butler,X2) ) ),
+    inference(variable_rename,[status(thm)],[46])).
+Otter---3.3   being executed on 47.thm.dis using /home/graph/tptp/Systems/Otter---3.3/otter-tptp-script '/tmp/SystemOnTPTP1804/47.thm.dis.tptp'
+% START OF SYSTEM OUTPUT
+TreeLimitedRun: ----------------------------------------------------------
+TreeLimitedRun: /home/graph/tptp/Systems/Otter---3.3/otter-tptp-script /tmp/SystemOnTPTP1804/47.thm.dis.tptp 
+TreeLimitedRun: CPU time limit is 10s
+TreeLimitedRun: WC  time limit is 20s
+TreeLimitedRun: PID is 1820
+TreeLimitedRun: ----------------------------------------------------------
+WATCH: 0.0 CPU 0.0 WC
+----- Otter 3.3f, August 2004 -----
+The process was started by tptp on quokka.cs.miami.edu,
+Wed Nov 19 07:54:02 2008
+The command was "/home/graph/tptp/Systems/Otter---3.3/otter".  The process ID is 1840.
+
+set(prolog_style_variables).
+set(auto).
+   dependent: set(auto1).
+   dependent: set(process_input).
+   dependent: clear(print_kept).
+   dependent: clear(print_new_demod).
+   dependent: clear(print_back_demod).
+   dependent: clear(print_back_sub).
+   dependent: set(control_memory).
+   dependent: assign(max_mem, 12000).
+   dependent: assign(pick_given_ratio, 4).
+   dependent: assign(stats_level, 1).
+   dependent: assign(max_seconds, 10800).
+clear(print_given).
+
+formula_list(usable).
+all X1 (-hates(agatha,X1)|hates(butler,X1)).
+-(all X2 (-hates(agatha,X2)|hates(butler,X2))).
+end_of_list.
+
+-------> usable clausifies to:
+
+list(usable).
+0 [] -hates(agatha,X1)|hates(butler,X1).
+0 [] hates(agatha,$c1).
+0 [] -hates(butler,$c1).
+end_of_list.
+
+SCAN INPUT: prop=0, horn=1, equality=0, symmetry=0, max_lits=2.
+
+This is a Horn set without equality.  The strategy will
+be hyperresolution, with satellites in sos and nuclei
+in usable.
+
+   dependent: set(hyper_res).
+   dependent: clear(order_hyper).
+
+------------> process usable:
+** KEPT (pick-wt=6): 1 [] -hates(agatha,A)|hates(butler,A).
+** KEPT (pick-wt=3): 2 [] -hates(butler,$c1).
+
+------------> process sos:
+** KEPT (pick-wt=3): 3 [] hates(agatha,$c1).
+
+======= end of input processing =======
+
+=========== start of search ===========
+
+-------- PROOF -------- 
+
+----> UNIT CONFLICT at   0.00 sec ----> 5 [binary,4.1,2.1] $F.
+
+Length of proof is 1.  Level of proof is 1.
+
+---------------- PROOF ----------------
+
+1 [] -hates(agatha,A)|hates(butler,A).
+2 [] -hates(butler,$c1).
+3 [] hates(agatha,$c1).
+4 [hyper,3,1] hates(butler,$c1).
+5 [binary,4.1,2.1] $F.
+
+------------ end of proof -------------
+
+
+Search stopped by max_proofs option.
+
+
+Search stopped by max_proofs option.
+
+============ end of search ============
+
+-------------- statistics -------------
+clauses given                  1
+clauses generated              1
+clauses kept                   4
+clauses forward subsumed       0
+clauses back subsumed          0
+Kbytes malloced              976
+
+----------- times (seconds) -----------
+user CPU time          0.00          (0 hr, 0 min, 0 sec)
+system CPU time        0.00          (0 hr, 0 min, 0 sec)
+wall-clock time        0             (0 hr, 0 min, 0 sec)
+
+That finishes the proof of the theorem.
+
+Process 1840 finished Wed Nov 19 07:54:02 2008
+Otter interrupted
+PROOF FOUND
+WATCH: 0.1 CPU 0.1 WC
+FINAL WATCH: 0.1 CPU 0.1 WC
+
+% END OF SYSTEM OUTPUT
+RESULT: 47.thm.dis - Otter---3.3 says Theorem - CPU = 0.1 WC = 0.1  Given = 1 Generated = 1 Kept = 4
+OUTPUT: 47.thm.dis - Otter---3.3 says Refutation - CPU = 0.1 WC = 0.1 
+Otter---3.3-T   system information being retrieved
+Otter---3.3-T's non-default parameters being retrieved
+Otter---3.3-T   being checked for execution
+Otter---3.3-T   checking time limit 10
+Otter---3.3-T   checking problem name OutputFiles//EP---1.0.THM-CRf.s.gdv/47.thm.dis.p
+
+Otter---3.3-T's TPTP format OutputFiles//EP---1.0.THM-CRf.s.gdv/47.thm.dis.p is ...
+fof(46,axiom,(
+    ! [X1] :
+      ( ~ hates(agatha,X1)
+      | hates(butler,X1) ) ),
+    inference(fof_nnf,[status(thm)],[11]),
+    [verified(thm)]).
+fof(47,conjecture,(
+    ! [X2] :
+      ( ~ hates(agatha,X2)
+      | hates(butler,X2) ) ),
+    inference(variable_rename,[status(thm)],[46])).
+
+Otter---3.3-T's 47.thm.dis being prepared by /home/graph/tptp/TPTP/TPTP2X/tptp2X
+    -d /tmp/SystemOnTPTP1804 
+    -t add_equality:r 
+    -f otter:all:set(binary_res),set(para_into),set(para_from),set(para_from_vars),set(process_input),set(order_eq),clear(print_back_sub),clear(print_kept),clear(print_given)
+    OutputFiles//EP---1.0.THM-CRf.s.gdv/47.thm.dis.p
+Otter---3.3-T   will use /tmp/SystemOnTPTP1804//47.thm.dis+noeq.in
+Otter---3.3-T's own format source file is ...
+%------------------------------------------------------------------------------
+%----This is the conjecture with negated conjecture
+set(prolog_style_variables).
+set(tptp_eq).
+set(binary_res).
+set(para_into).
+set(para_from).
+set(para_from_vars).
+set(process_input).
+set(order_eq).
+clear(print_back_sub).
+clear(print_kept).
+clear(print_given).
+
+formula_list(sos).
+
+% 46, axiom.
+    ( ( all X1 
+        ( -(hates(agatha, X1))
+         | hates(butler, X1) ) ) ).
+
+% 47, negated_conjecture.
+    -(( ( all X2 
+          ( -(hates(agatha, X2))
+           | hates(butler, X2) ) )) ).
+end_of_list.
+
+%------------------------------------------------------------------------------
+Otter---3.3-T   being executed on 47.thm using /home/graph/tptp/Systems/Otter---3.3-T/otter-script '/tmp/SystemOnTPTP1804//47.thm.dis+noeq.in'
+% START OF SYSTEM OUTPUT
+TreeLimitedRun: ----------------------------------------------------------
+TreeLimitedRun: /home/graph/tptp/Systems/Otter---3.3-T/otter-script /tmp/SystemOnTPTP1804//47.thm.dis+noeq.in 
+TreeLimitedRun: CPU time limit is 10s
+TreeLimitedRun: WC  time limit is 20s
+TreeLimitedRun: PID is 1889
+TreeLimitedRun: ----------------------------------------------------------
+WATCH: 0.0 CPU 0.0 WC
+----- Otter 3.3x1, 9 Feb 2004 -----
+The process was started by tptp on quokka.cs.miami.edu,
+Wed Nov 19 07:54:02 2008
+The command was "/home/graph/tptp/Systems/Otter---3.3-T/otter".  The process ID is 1908.
+
+set(prolog_style_variables).
+set(tptp_eq).
+set(binary_res).
+   dependent: set(factor).
+   dependent: set(unit_deletion).
+set(para_into).
+set(para_from).
+set(para_from_vars).
+set(process_input).
+set(order_eq).
+clear(print_back_sub).
+clear(print_kept).
+clear(print_given).
+
+formula_list(sos).
+all X1 (-hates(agatha,X1)|hates(butler,X1)).
+-(all X2 (-hates(agatha,X2)|hates(butler,X2))).
+end_of_list.
+
+-------> sos clausifies to:
+
+list(sos).
+0 [] -hates(agatha,X1)|hates(butler,X1).
+0 [] hates(agatha,$c1).
+0 [] -hates(butler,$c1).
+end_of_list.
+
+------------> process usable:
+
+------------> process sos:
+** KEPT (pick-wt=6): 1 [] -hates(agatha,A)|hates(butler,A).
+** KEPT (pick-wt=3): 2 [] hates(agatha,$c1).
+** KEPT (pick-wt=3): 3 [] -hates(butler,$c1).
+
+======= end of input processing =======
+
+=========== start of search ===========
+
+-------- PROOF -------- 
+
+----> UNIT CONFLICT at   0.00 sec ----> 5 [binary,4.1,3.1] $F.
+
+Length of proof is 1.  Level of proof is 1.
+
+---------------- PROOF ----------------
+
+1 [] -hates(agatha,A)|hates(butler,A).
+2 [] hates(agatha,$c1).
+3 [] -hates(butler,$c1).
+4 [binary,1.1,2.1] hates(butler,$c1).
+5 [binary,4.1,3.1] $F.
+
+------------ end of proof -------------
+
+
+Search stopped by max_proofs option.
+
+
+Search stopped by max_proofs option.
+
+============ end of search ============
+
+-------------- statistics -------------
+clauses given                  3
+clauses generated              1
+  binary_res generated         1
+  para_from generated          0
+  para_into generated          0
+  factors generated            0
+demod & eval rewrites          0
+clauses wt,lit,sk delete       0
+tautologies deleted            0
+clauses forward subsumed       0
+  (subsumed by sos)            0
+unit deletions                 0
+factor simplifications         0
+clauses kept                   4
+new demodulators               0
+empty clauses                  1
+clauses back demodulated       0
+clauses back subsumed          0
+usable size                    3
+sos size                       1
+demodulators size              0
+passive size                   0
+hot size                       0
+Kbytes malloced              976
+
+----------- times (seconds) -----------
+user CPU time          0.00          (0 hr, 0 min, 0 sec)
+system CPU time        0.00          (0 hr, 0 min, 0 sec)
+wall-clock time        0             (0 hr, 0 min, 0 sec)
+input time             0.00
+  clausify time        0.00
+  process input        0.00
+pick given time        0.00
+binary_res time        0.00
+para_into time         0.00
+para_from time         0.00
+pre_process time       0.00
+  renumber time        0.00
+  demod time           0.00
+  order equalities     0.00
+  unit deleletion      0.00
+  factor simplify      0.00
+  weigh cl time        0.00
+  hints keep time      0.00
+  sort lits time       0.00
+  forward subsume      0.00
+  delete cl time       0.00
+  keep cl time         0.00
+    hints time         0.00
+  print_cl time        0.00
+  conflict time        0.00
+  new demod time       0.00
+post_process time      0.00
+  back demod time      0.00
+  back subsume         0.00
+  factor time          0.00
+  unindex time         0.00
+
+That finishes the proof of the theorem.
+
+Process 1908 finished Wed Nov 19 07:54:02 2008
+PROOF FOUND
+WATCH: 0.1 CPU 0.1 WC
+FINAL WATCH: 0.1 CPU 0.1 WC
+
+% END OF SYSTEM OUTPUT
+RESULT: 47.thm - Otter---3.3-T says Theorem - CPU = 0.1 WC = 0.1 
+OUTPUT: 47.thm - Otter---3.3-T says Refutation - CPU = 0.1 WC = 0.1 

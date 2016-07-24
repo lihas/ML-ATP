@@ -1,0 +1,111 @@
+Vampire---4.0   system information being retrieved
+Vampire---4.0's non-default parameters being retrieved
+Vampire---4.0   being checked for execution
+Vampire---4.0   checking time limit 10
+Vampire---4.0   checking problem name FUCK/TryToProve_17929_marsian_females_are_liars_THM
+
+Vampire---4.0's TPTP format FUCK/TryToProve_17929_marsian_females_are_liars_THM is ...
+fof(domain,axiom,( ! [X] : X = d1 )).
+fof(a_truth,axiom,( a_truth(d1) <=> $false )).
+fof(female,axiom,( female(d1) <=> $false )).
+fof(from_mars,axiom,( from_mars(d1) <=> $false )).
+fof(from_venus,axiom,( from_venus(d1) <=> $true )).
+fof(liar,axiom,( liar(d1) <=> $true )).
+fof(male,axiom,( male(d1) <=> $true )).
+fof(says,axiom,( ! [X1] : ! [X2] : ( says(X1,X2) <=> $false ) )).
+fof(statement_by,axiom,( statement_by(d1) = d1 )).
+fof(truthteller,axiom,( truthteller(d1) <=> $false )).
+fof(marsian_females_are_liars,conjecture,( ! [X] : ( ~ from_mars(X) | ~ female(X) | liar(X) ) )).
+
+Vampire---4.0's TryToProve_17929_marsian_females_are_liars_THM does not need preparation
+Vampire---4.0   will use FUCK/TryToProve_17929_marsian_females_are_liars_THM
+Vampire---4.0's own format source file is ...
+fof(domain,axiom,( ! [X] : X = d1 )).
+fof(a_truth,axiom,( a_truth(d1) <=> $false )).
+fof(female,axiom,( female(d1) <=> $false )).
+fof(from_mars,axiom,( from_mars(d1) <=> $false )).
+fof(from_venus,axiom,( from_venus(d1) <=> $true )).
+fof(liar,axiom,( liar(d1) <=> $true )).
+fof(male,axiom,( male(d1) <=> $true )).
+fof(says,axiom,( ! [X1] : ! [X2] : ( says(X1,X2) <=> $false ) )).
+fof(statement_by,axiom,( statement_by(d1) = d1 )).
+fof(truthteller,axiom,( truthteller(d1) <=> $false )).
+fof(marsian_females_are_liars,conjecture,( ! [X] : ( ~ from_mars(X) | ~ female(X) | liar(X) ) )).
+
+Vampire---4.0   being executed on TryToProve_17929_marsian_females_are_liars_THM using /exp/home/tptp/Systems/Vampire---4.0/vampire --mode casc -m 20000 -t 10 'FUCK/TryToProve_17929_marsian_females_are_liars_THM'
+% START OF SYSTEM OUTPUT
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 100 next slice time: 5
+dis+11_7_3 on TryToProve_17929_marsian_females_are_liars_T
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for TryToProve_17929_marsian_females_are_liars_T
+% SZS output start Proof for TryToProve_17929_marsian_females_are_liars_T
+fof(f1,axiom,(
+  ! [X0] : d1 = X0),
+  file('FUCK/TryToProve_17929_marsian_females_are_liars_THM',domain)).
+fof(f6,axiom,(
+  liar(d1) <=> $true),
+  file('FUCK/TryToProve_17929_marsian_females_are_liars_THM',liar)).
+fof(f11,conjecture,(
+  ! [X0] : (~from_mars(X0) | ~female(X0) | liar(X0))),
+  file('FUCK/TryToProve_17929_marsian_females_are_liars_THM',marsian_females_are_liars)).
+fof(f12,negated_conjecture,(
+  ~! [X0] : (~from_mars(X0) | ~female(X0) | liar(X0))),
+  inference(negated_conjecture,[],[f11])).
+fof(f13,plain,(
+  ~! [X0] : (~from_mars(X0) | ~female(X0) | liar(X0))),
+  inference(flattening,[],[f12])).
+fof(f20,plain,(
+  liar(d1)),
+  inference(true_and_false_elimination,[],[f6])).
+fof(f33,plain,(
+  ? [X0] : (from_mars(X0) & female(X0) & ~liar(X0))),
+  inference(ennf_transformation,[],[f13])).
+fof(f34,plain,(
+  from_mars(sK0) & female(sK0) & ~liar(sK0)),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK0])],[f33])).
+fof(f37,plain,(
+  ~liar(sK0)),
+  inference(cnf_transformation,[],[f34])).
+fof(f39,plain,(
+  liar(d1)),
+  inference(cnf_transformation,[],[f20])).
+fof(f42,plain,(
+  ( ! [X0] : (d1 = X0) )),
+  inference(cnf_transformation,[],[f1])).
+fof(f43,plain,(
+  ~liar(d1)),
+  inference(backward_demodulation,[],[f42,f37])).
+fof(f54,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f43,f39])).
+% SZS output end Proof for TryToProve_17929_marsian_females_are_liars_T
+% ------------------------------
+% Version: Vampire 4.0 (commit 2fedff6 on 2015-09-23 00:16:07 +0200)
+% Termination reason: Refutation
+
+% Active clauses: 7
+% Passive clauses: 8
+% Generated clauses: 20
+% Final active clauses: 4
+% Final passive clauses: 1
+% Input formulas: 11
+% Initial clauses: 8
+% 
+% Pure predicates: 5
+% 
+% Fw subsumption resolutions: 1
+% Bw demodulations: 3
+% 
+% Backward superposition: 6
+% Self superposition: 2
+% 
+% Memory used [KB]: 511
+% Time elapsed: 0.011 s
+% ------------------------------
+% ------------------------------
+% Success in time 0.013 s
+
+% END OF SYSTEM OUTPUT
+RESULT: TryToProve_17929_marsian_females_are_liars_THM - Vampire---4.0 says Theorem - CPU = 0.00 WC = 0.01 
+OUTPUT: TryToProve_17929_marsian_females_are_liars_THM - Vampire---4.0 says Refutation - CPU = 0.00 WC = 0.01 
