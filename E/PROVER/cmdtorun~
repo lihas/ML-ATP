@@ -1,0 +1,1 @@
+./eprover --auto-schedule --definitional-cnf=24 -R --print-version --tstp-format -s --proof-object --cpu-limit=300 prob.p 
