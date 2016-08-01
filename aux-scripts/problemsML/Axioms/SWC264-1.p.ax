@@ -262,12 +262,8 @@ cnf(clause146,axiom,
     | ~ ssItem(U)
     | gt(U,W) )).
 
-cnf(clause145,axiom,
-    ( nil != U
-    | nil != V
-    | ~ ssList(V)
-    | ~ ssList(U)
-    | app(U,V) = nil )).
+cnf(clause8,axiom,
+    ( ssList(nil) )).
 
 cnf(clause5,axiom,
     ( strictorderP(nil) )).
@@ -342,8 +338,12 @@ cnf(clause155,axiom,
     | ~ ssItem(U)
     | lt(U,W) )).
 
-cnf(clause8,axiom,
-    ( ssList(nil) )).
+cnf(clause145,axiom,
+    ( nil != U
+    | nil != V
+    | ~ ssList(V)
+    | ~ ssList(U)
+    | app(U,V) = nil )).
 
 cnf(clause77,axiom,
     ( ~ ssList(U)

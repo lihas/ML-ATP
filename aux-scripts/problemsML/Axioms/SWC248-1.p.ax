@@ -67,6 +67,18 @@ cnf(clause181,axiom,
     | ~ ssList(Z)
     | lt(V,X) )).
 
+cnf(clause184,axiom,
+    ( app(app(U,cons(V,W)),cons(X,Y)) != Z
+    | ~ ssList(Y)
+    | ~ ssList(W)
+    | ~ ssList(U)
+    | ~ ssItem(X)
+    | ~ ssItem(V)
+    | ~ totalorderP(Z)
+    | ~ ssList(Z)
+    | leq(V,X)
+    | leq(X,V) )).
+
 cnf(clause183,axiom,
     ( app(app(U,cons(V,W)),cons(X,Y)) != Z
     | ~ ssList(Y)
@@ -231,6 +243,9 @@ cnf(clause150,axiom,
 
 cnf(clause9,axiom,
     ( ssItem(skac3) )).
+
+cnf(clause10,axiom,
+    ( ssItem(skac2) )).
 
 cnf(clause142,axiom,
     ( ~ ssList(U)
@@ -432,6 +447,10 @@ cnf(clause162,axiom,
     ( ~ ssList(U)
     | duplicatefreeP(U)
     | app(app(skaf75(U),cons(skaf74(U),skaf76(U))),cons(skaf74(U),skaf77(U))) = U )).
+
+cnf(clause69,axiom,
+    ( ~ ssItem(U)
+    | totalorderP(cons(U,nil)) )).
 
 cnf(clause62,axiom,
     ( ~ ssItem(U)

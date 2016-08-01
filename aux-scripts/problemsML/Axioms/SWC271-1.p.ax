@@ -237,12 +237,8 @@ cnf(clause142,axiom,
     | equalelemsP(U)
     | app(skaf80(U),cons(skaf78(U),cons(skaf79(U),skaf81(U)))) = U )).
 
-cnf(clause141,axiom,
-    ( ~ memberP(U,V)
-    | ~ ssList(U)
-    | ~ ssList(W)
-    | ~ ssItem(V)
-    | memberP(app(W,U),V) )).
+cnf(clause4,axiom,
+    ( totalorderedP(nil) )).
 
 cnf(clause144,axiom,
     ( app(U,V) != W
@@ -292,8 +288,12 @@ cnf(clause159,axiom,
     | totalorderedP(cons(U,V))
     | nil = V )).
 
-cnf(clause4,axiom,
-    ( totalorderedP(nil) )).
+cnf(clause141,axiom,
+    ( ~ memberP(U,V)
+    | ~ ssList(U)
+    | ~ ssList(W)
+    | ~ ssItem(V)
+    | memberP(app(W,U),V) )).
 
 cnf(clause153,axiom,
     ( ~ rearsegP(U,V)

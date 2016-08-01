@@ -82,12 +82,14 @@ for problem in relevanceMatrix:
 	#print ax_ls
 	ax_ls_uniq=list(set(ax_ls))
 	f=open("problemsML/Axioms/SWC001-0.ax","w")
+	f1=open("problemsML/Axioms/"+problem+".ax","w")
 	#print ax_ls_uniq
 	for axiom in ax_ls_uniq:
 		axiom_index=int(axiom[6:]) #remove string clause from starting
 		f.write(clauses[axiom_index]+"\n\n") 
+		f1.write(clauses[axiom_index]+"\n\n")
 	f.close()
 	print "entering e-prover"
-	call ([ "../E/PROVER/eprover", "--auto-schedule", "--definitional-cnf=24", "-R", "--print-version", "--tstp-format", "-s", "--proof-object", "--cpu-limit=300", "problemsML/"+problem],stdout=file("solutions/"+problem+".soln","w"))
+	call ([ "../E/PROVER/eprover", "--auto-schedule", "--definitional-cnf=24", "-R", "--print-version", "--tstp-format", "-s", "--proof-object", "--cpu-limit=300", "problemsML/"+problem ],stdout=file("solutions/"+problem+".soln","w"))
 	print "exiting e-prover"
 

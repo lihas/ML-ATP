@@ -10,12 +10,6 @@ cnf(clause118,axiom,
     | ~ ssList(U)
     | nil = U )).
 
-cnf(clause115,axiom,
-    ( U != V
-    | ~ neq(U,V)
-    | ~ ssList(V)
-    | ~ ssList(U) )).
-
 cnf(clause116,axiom,
     ( cons(U,nil) != V
     | ~ ssItem(U)
@@ -38,6 +32,9 @@ cnf(clause120,axiom,
     ( ~ ssItem(U)
     | ~ ssList(V)
     | app(cons(U,nil),V) = cons(U,V) )).
+
+cnf(clause5,axiom,
+    ( strictorderP(nil) )).
 
 cnf(clause31,axiom,
     ( ssItem(skaf64(U)) )).
@@ -67,18 +64,6 @@ cnf(clause181,axiom,
     | ~ ssList(Z)
     | lt(V,X) )).
 
-cnf(clause183,axiom,
-    ( app(app(U,cons(V,W)),cons(X,Y)) != Z
-    | ~ ssList(Y)
-    | ~ ssList(W)
-    | ~ ssList(U)
-    | ~ ssItem(X)
-    | ~ ssItem(V)
-    | ~ strictorderP(Z)
-    | ~ ssList(Z)
-    | lt(V,X)
-    | lt(X,V) )).
-
 cnf(clause130,axiom,
     ( ~ leq(U,V)
     | ~ leq(V,U)
@@ -92,13 +77,6 @@ cnf(clause124,axiom,
     | ~ ssItem(U)
     | strictorderedP(V)
     | nil = V )).
-
-cnf(clause122,axiom,
-    ( ~ leq(U,V)
-    | ~ ssItem(V)
-    | ~ ssItem(U)
-    | lt(U,V)
-    | U = V )).
 
 cnf(clause121,axiom,
     ( ~ leq(U,V)
@@ -125,14 +103,6 @@ cnf(clause30,axiom,
 
 cnf(clause29,axiom,
     ( ssList(skaf66(U)) )).
-
-cnf(clause148,axiom,
-    ( ~ geq(U,V)
-    | ~ geq(V,W)
-    | ~ ssItem(W)
-    | ~ ssItem(V)
-    | ~ ssItem(U)
-    | geq(U,W) )).
 
 cnf(clause139,axiom,
     ( ~ memberP(U,V)
@@ -168,12 +138,6 @@ cnf(clause138,axiom,
     | ~ ssItem(V)
     | ~ ssItem(U)
     | memberP(cons(V,W),U) )).
-
-cnf(clause131,axiom,
-    ( ~ rearsegP(U,V)
-    | ~ ssList(V)
-    | ~ ssList(U)
-    | app(skaf46(U,V),V) = U )).
 
 cnf(clause132,axiom,
     ( ~ frontsegP(U,V)
@@ -237,12 +201,8 @@ cnf(clause142,axiom,
     | equalelemsP(U)
     | app(skaf80(U),cons(skaf78(U),cons(skaf79(U),skaf81(U)))) = U )).
 
-cnf(clause141,axiom,
-    ( ~ memberP(U,V)
-    | ~ ssList(U)
-    | ~ ssList(W)
-    | ~ ssItem(V)
-    | memberP(app(W,U),V) )).
+cnf(clause4,axiom,
+    ( totalorderedP(nil) )).
 
 cnf(clause144,axiom,
     ( app(U,V) != W
@@ -269,8 +229,13 @@ cnf(clause145,axiom,
     | ~ ssList(U)
     | app(U,V) = nil )).
 
-cnf(clause5,axiom,
-    ( strictorderP(nil) )).
+cnf(clause148,axiom,
+    ( ~ geq(U,V)
+    | ~ geq(V,W)
+    | ~ ssItem(W)
+    | ~ ssItem(V)
+    | ~ ssItem(U)
+    | geq(U,W) )).
 
 cnf(clause48,axiom,
     ( ssList(skaf48(U,V)) )).
@@ -281,9 +246,6 @@ cnf(clause50,axiom,
 cnf(clause49,axiom,
     ( ssList(skaf47(U,V)) )).
 
-cnf(clause3,axiom,
-    ( strictorderedP(nil) )).
-
 cnf(clause159,axiom,
     ( ~ leq(U,hd(V))
     | ~ totalorderedP(V)
@@ -292,8 +254,12 @@ cnf(clause159,axiom,
     | totalorderedP(cons(U,V))
     | nil = V )).
 
-cnf(clause4,axiom,
-    ( totalorderedP(nil) )).
+cnf(clause141,axiom,
+    ( ~ memberP(U,V)
+    | ~ ssList(U)
+    | ~ ssList(W)
+    | ~ ssItem(V)
+    | memberP(app(W,U),V) )).
 
 cnf(clause153,axiom,
     ( ~ rearsegP(U,V)
@@ -448,10 +414,6 @@ cnf(clause64,axiom,
 cnf(clause63,axiom,
     ( ~ lt(U,U)
     | ~ ssItem(U) )).
-
-cnf(clause66,axiom,
-    ( ~ ssItem(U)
-    | strictorderedP(cons(U,nil)) )).
 
 cnf(clause65,axiom,
     ( ~ ssItem(U)
