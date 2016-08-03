@@ -17,14 +17,14 @@
 # AutoSched2-Mode selected heuristic G_E___208_B07_F1_SE_CS_SP_PS_S2q
 # and selection function SelectCQArNTNp.
 #
-# Preprocessing time       : 0.014 s
+# Preprocessing time       : 0.017 s
 # Presaturation interreduction done
 # No success with AutoSched2
 # Trying AutoSched3 for 17 seconds
 # AutoSched3-Mode selected heuristic G_E___208_B07_F1_SE_CS_SP_PS_S4d
 # and selection function SelectCQIPrecWNTNp.
 #
-# Preprocessing time       : 0.014 s
+# Preprocessing time       : 0.012 s
 # Presaturation interreduction done
 # No success with AutoSched3
 # Trying AutoSched4 for 12 seconds
@@ -37,13 +37,13 @@
 # AutoSched5-Mode selected heuristic G_E___200_C41_F1_AE_CS_SP_PI_S0Y
 # and selection function SelectMaxLComplexAvoidPosPred.
 #
-# Preprocessing time       : 0.016 s
+# Preprocessing time       : 0.015 s
 # No success with AutoSched5
 # Trying AutoSched6 for 4 seconds
 # AutoSched6-Mode selected heuristic G_E___107_C45_F1_PI_AE_Q7_CS_SP_PS_S0Y
 # and selection function SelectMaxLComplexAvoidPosPred.
 #
-# Preprocessing time       : 0.015 s
+# Preprocessing time       : 0.017 s
 # Presaturation interreduction done
 # No success with AutoSched6
 # Trying AutoSched7 for 11 seconds
@@ -58,7 +58,7 @@
 # No success with AutoSched7
 
 # -------------------------------------------------
-# User time                : 292.891 s
-# System time              : 6.610 s
-# Total time               : 299.501 s
+# User time                : 292.991 s
+# System time              : 6.532 s
+# Total time               : 299.523 s
 # Maximum resident set size: 4776 pages

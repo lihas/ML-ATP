@@ -11,13 +11,13 @@
 # AutoSched1-Mode selected heuristic G_E___200_B02_F1_AE_CS_SP_PI_S0S
 # and selection function SelectComplexG.
 #
-# Preprocessing time       : 0.012 s
+# Preprocessing time       : 0.011 s
 # No success with AutoSched1
 # Trying AutoSched2 for 23 seconds
 # AutoSched2-Mode selected heuristic G_E___208_B07_F1_SE_CS_SP_PS_S2q
 # and selection function SelectCQArNTNp.
 #
-# Preprocessing time       : 0.015 s
+# Preprocessing time       : 0.016 s
 # Presaturation interreduction done
 
 # Proof found!
@@ -121,7 +121,7 @@ cnf(c_0_94, negated_conjecture, ($false), inference(cn,[status(thm)],[inference(
 # SZS output end CNFRefutation.
 
 # -------------------------------------------------
-# User time                : 232.508 s
-# System time              : 10.043 s
-# Total time               : 242.551 s
+# User time                : 233.706 s
+# System time              : 8.529 s
+# Total time               : 242.235 s
 # Maximum resident set size: 4780 pages

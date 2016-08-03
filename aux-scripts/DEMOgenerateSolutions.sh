@@ -1,5 +1,5 @@
 #!/bin/bash
-PATH="$PATH:/home/singh/ML-ATP/E/PROVER/"
+PATH="$PATH:/home/apoorv/nb/ML-ATP/E/PROVER/"
 cd problemsDEMO
 for i in *.p
 do

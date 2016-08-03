@@ -4,7 +4,7 @@
 # AutoSched0-Mode selected heuristic G_E___207_C01_F1_AE_CS_SP_PI_S0Y
 # and selection function SelectMaxLComplexAvoidPosPred.
 #
-# Preprocessing time       : 0.008 s
+# Preprocessing time       : 0.012 s
 
 # Proof found!
 # SZS status Unsatisfiable
@@ -103,7 +103,7 @@ cnf(c_0_90, negated_conjecture, ($false), inference(cn,[status(thm)],[inference(
 # SZS output end CNFRefutation.
 
 # -------------------------------------------------
-# User time                : 11.432 s
-# System time              : 0.100 s
-# Total time               : 11.532 s
-# Maximum resident set size: 6960 pages
+# User time                : 9.475 s
+# System time              : 0.156 s
+# Total time               : 9.631 s
+# Maximum resident set size: 4784 pages

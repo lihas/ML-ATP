@@ -4,13 +4,13 @@
 # AutoSched0-Mode selected heuristic G_E___207_C01_F1_AE_CS_SP_PI_S0Y
 # and selection function SelectMaxLComplexAvoidPosPred.
 #
-# Preprocessing time       : 0.013 s
+# Preprocessing time       : 0.017 s
 # No success with AutoSched0
 # Trying AutoSched1 for 73 seconds
 # AutoSched1-Mode selected heuristic G_E___200_B07_F1_AE_CS_SP_PI_S0Y
 # and selection function SelectMaxLComplexAvoidPosPred.
 #
-# Preprocessing time       : 0.014 s
+# Preprocessing time       : 0.011 s
 # No success with AutoSched1
 # Trying AutoSched2 for 23 seconds
 # AutoSched2-Mode selected heuristic G_E___107_C45_F1_PI_AE_Q7_CS_SP_PS_S0Y
@@ -99,7 +99,7 @@ cnf(c_0_73, negated_conjecture, ($false), inference(cn,[status(thm)],[inference(
 # SZS output end CNFRefutation.
 
 # -------------------------------------------------
-# User time                : 220.848 s
-# System time              : 4.109 s
-# Total time               : 224.957 s
+# User time                : 220.945 s
+# System time              : 3.984 s
+# Total time               : 224.928 s
 # Maximum resident set size: 4780 pages

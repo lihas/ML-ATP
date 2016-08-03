@@ -115,7 +115,7 @@ cnf(c_0_102, negated_conjecture, ($false), inference(cn,[status(thm)],[inference
 # SZS output end CNFRefutation.
 
 # -------------------------------------------------
-# User time                : 10.883 s
-# System time              : 0.183 s
-# Total time               : 11.066 s
+# User time                : 11.293 s
+# System time              : 0.152 s
+# Total time               : 11.444 s
 # Maximum resident set size: 4780 pages

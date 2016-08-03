@@ -4,7 +4,7 @@
 # AutoSched0-Mode selected heuristic G_E___208_C18_F1_SE_CS_SP_PS_S2k
 # and selection function SelectCQArNTEqFirst.
 #
-# Preprocessing time       : 0.014 s
+# Preprocessing time       : 0.016 s
 # Presaturation interreduction done
 
 # Proof found!
@@ -195,7 +195,7 @@ cnf(c_0_181, negated_conjecture, ($false), inference(cn,[status(thm)],[inference
 # SZS output end CNFRefutation.
 
 # -------------------------------------------------
-# User time                : 1.867 s
-# System time              : 0.049 s
-# Total time               : 1.916 s
+# User time                : 2.353 s
+# System time              : 0.052 s
+# Total time               : 2.406 s
 # Maximum resident set size: 4776 pages
