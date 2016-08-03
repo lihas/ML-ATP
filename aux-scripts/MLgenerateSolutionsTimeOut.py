@@ -90,6 +90,6 @@ for problem in relevanceMatrix:
 		f1.write(clauses[axiom_index]+"\n\n")
 	f.close()
 	print "entering e-prover"
-	call ([ "../E/PROVER/eprover", "--auto-schedule", "--definitional-cnf=24", "-R", "--print-version", "--tstp-format", "-s", "--proof-object", "--cpu-limit=300", "problemsML/"+problem ],stdout=file("solutionsTimeOut/"+problem+".soln","w"))
+	call ([ "../E/PROVER/eprover", "--auto-schedule", "--definitional-cnf=24", "-R", "--print-version", "--tstp-format", "-s", "--proof-object", "--cpu-limit=300", "problemsTimeOut/"+problem ],stdout=file("solutionsTimeOut/"+problem+".soln","w"))
 	print "exiting e-prover"
 

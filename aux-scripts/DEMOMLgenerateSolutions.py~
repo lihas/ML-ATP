@@ -4,13 +4,14 @@ import re
 import os
 from subprocess import call
 #config
-axiomfile="problemsDEMO/Axioms/SWC001-0-original.ax"
+axiomfile="problemsDEMOML/Axioms/SWC001-0-original.ax"
 relMatSor="relevanceMatrixSorted.csv"
 clausesUsed="problems/solutions/clauses_used.csv"
 
 #global variables
 clauses=[]
 relevanceMatrix={}
+relevanceMatrixDEMO={}
 clauseMapping={}
 
 def generateAxiomDB():
@@ -46,6 +47,12 @@ def generateRelevanceDB():
 			relevanceMatrix[m[0]]=[m[1]]
 	print "relevance-DB generated"
 
+def generateRelevanceDBDEMO():
+	global relevanceMatrixDEMO
+	relevanceMatrixDEMO["SWC088-1.p"]=relevanceMatrix["SWC088-1.p"]
+	relevanceMatrixDEMO["SWC341-1.p"]=relevanceMatrix["SWC341-1.p"]
+	relevanceMatrixDEMO["SWC412-1.p"]=relevanceMatrix["SWC412-1.p"]
+	print "relevance-DB for DEMO generated"
 
 def generateClauseMappingDB():	
 	global clauseMapping
@@ -67,10 +74,11 @@ def generateClauseMappingDB():
 generateAxiomDB()
 generateRelevanceDB()
 generateClauseMappingDB()
+generateRelevanceDBDEMO()
 
 #print clauseMapping["SWC390-1.p.soln"]
 
-for problem in relevanceMatrix:
+for problem in relevanceMatrixDEMO:
 	print problem
 	#print relevanceMatrix[problem]
 	#problem_key=problem+".soln"
@@ -81,8 +89,8 @@ for problem in relevanceMatrix:
 		ax_ls.extend(clauseMapping[pb+".soln"])
 	#print ax_ls
 	ax_ls_uniq=list(set(ax_ls))
-	f=open("problemsML/Axioms/SWC001-0.ax","w")
-	f1=open("problemsML/Axioms/"+problem+".ax","w")
+	f=open("problemsDEMOML/Axioms/SWC001-0.ax","w")
+	f1=open("problemsDEMOML/Axioms/"+problem+".ax","w")
 	#print ax_ls_uniq
 	for axiom in ax_ls_uniq:
 		axiom_index=int(axiom[6:]) #remove string clause from starting
@@ -90,6 +98,6 @@ for problem in relevanceMatrix:
 		f1.write(clauses[axiom_index]+"\n\n")
 	f.close()
 	print "entering e-prover"
-	call ([ "../E/PROVER/eprover", "--auto-schedule", "--definitional-cnf=24", "-R", "--print-version", "--tstp-format", "-s", "--proof-object", "--cpu-limit=300", "problemsDEMO/"+problem ],stdout=file("solutionsML/"+problem+".soln","w"))
+	call ([ "../E/PROVER/eprover", "--auto-schedule", "--definitional-cnf=24", "-R", "--print-version", "--tstp-format", "-s", "--proof-object", "--cpu-limit=300", "problemsDEMOML/"+problem ],stdout=file("problemsDEMOML/solutions/"+problem+".soln","w"))
 	print "exiting e-prover"
 

@@ -5,7 +5,7 @@ import os
 from subprocess import call
 #config
 axiomfile="problemsTimeOut/Axioms/SWC001-0-original.ax"
-relMatSor="relevanceMatrixSorted.csv"
+relMatSor="relevanceMatrixSortedTimeOut.csv"
 clausesUsed="problems/solutions/clauses_used.csv"
 
 #global variables
@@ -81,8 +81,8 @@ for problem in relevanceMatrix:
 		ax_ls.extend(clauseMapping[pb+".soln"])
 	#print ax_ls
 	ax_ls_uniq=list(set(ax_ls))
-	f=open("problemsML/Axioms/SWC001-0.ax","w")
-	f1=open("problemsML/Axioms/"+problem+".ax","w")
+	f=open("problemsTimeOut/Axioms/SWC001-0.ax","w")
+	f1=open("problemsTimeOut/Axioms/"+problem+".ax","w")
 	#print ax_ls_uniq
 	for axiom in ax_ls_uniq:
 		axiom_index=int(axiom[6:]) #remove string clause from starting
@@ -90,6 +90,6 @@ for problem in relevanceMatrix:
 		f1.write(clauses[axiom_index]+"\n\n")
 	f.close()
 	print "entering e-prover"
-	call ([ "../E/PROVER/eprover", "--auto-schedule", "--definitional-cnf=24", "-R", "--print-version", "--tstp-format", "-s", "--proof-object", "--cpu-limit=300", "problemsML/"+problem ],stdout=file("solutions/"+problem+".soln","w"))
+	call ([ "../E/PROVER/eprover", "--auto-schedule", "--definitional-cnf=24", "-R", "--print-version", "--tstp-format", "-s", "--proof-object", "--cpu-limit=300", "problemsML/"+problem ],stdout=file("solutionsTimeOut/"+problem+".soln","w"))
 	print "exiting e-prover"
 
